@@ -1,0 +1,53 @@
+Subject: Your complaint - unauthorised access on 7 July 2026
+
+Dear [Customer Name],
+
+Thank you for your patience while we carried out a full review of your complaint. Firstly, I would like to apologise for the delay in providing our final response.
+
+My name is [Senior Name], and I am one of the Senior Customer Support Agents at Smarkets. I have now completed an independent review of your complaint regarding unauthorised access to your account on 7 July 2026 and the subsequent loss of £142.73.
+
+I understand your position that you did not authorise the activity on 7 July, that you were the victim of cybercrime, that you have never shared your password and have no connection to the Netherlands, and that you therefore believe the £142.73 should be refunded. I also understand you feel our previous responses have relied on terms and conditions without common sense, and that £142 is a significant amount to you as a loyal customer who has paid commission over many years.
+
+Having carefully reviewed the account and all correspondence, including the PDF chronology you provided, I can confirm that our position remains unchanged.
+
+On 7 July 2026 at 19:18 you received an email regarding an attempted sign in from the Netherlands. This was followed by notification that a new payment method had been added to your account, and that a £10 deposit had been made from that method. Your prior balance of £142.73 was subsequently reduced to £0 through bets placed while logged in with valid credentials.
+
+For clarity, the applicable Smarkets Terms and Conditions state the following:
+
+Rule 2.14
+"You must keep your login credentials secret at all times, and you remain solely responsible for the security and confidentiality of your account."
+
+Rule 2.16
+"If a bet is placed using your account, the bet will be considered to have been made by you and therefore once accepted by us, it shall be considered valid unless it contravenes any other term."
+
+The bets that reduced your balance were placed while logged in with your login credentials and were accepted at the time. Under Rule 2.16 they are therefore treated as having been placed by you and stand as valid. This reflects the position previously provided by our support team, which I have reviewed and confirm is correct under the Terms.
+
+You asked whether we can investigate the IP address and whether the new card was added by you. I have reviewed this. We have a record of the notifications you described, including the attempted sign in from the Netherlands on 7 July. We can also see that a new payment method was subsequently added to your account. As you noted, that card has now been removed and blacklisted so it cannot be used again. However, the location of an attempted sign in does not change how Rules 2.14 and 2.16 apply, as those rules turn on whether the correct credentials were used.
+
+You also asked why Smarkets does not pursue the individual who obtained the password and where the funds went. We have taken the steps available to us on the platform: freezing your account upon your report, removing the new card and blacklisting it so it cannot be used again on Smarkets, and requiring ID verification before restoring access. You have now also enabled two-factor login, which is the right step to reduce the risk of further unauthorised access. We do not have the ability to trace funds beyond the platform or to pursue a third party who may have obtained credentials externally, and we cannot reverse settled bets that were valid under the Terms. Reporting to Action Fraud and cybercrime, as you have done, is the correct route for the criminal matter. Please retain any crime reference number for your records.
+
+I also note and appreciate your comments that we handled the securing of your account extremely well after you reported the incident. I am glad that part of the response was handled well.
+
+We also acknowledge your comments that cybercrime and the solicitors you contacted were unable to progress the matter given the amount involved. While we appreciate your perspective, that does not alter the application of our published rules and contractual terms to bets placed with valid credentials.
+
+In summary, we are satisfied that your account was correctly secured after your report, and that the bets that reduced your balance of £142.73 to £0 have been settled correctly and in accordance with the Smarkets Terms and Conditions. Rules 2.14 and 2.16 apply whenever valid login credentials are used, and do not provide for a refund in these circumstances. We are therefore not able to refund the £142.73.
+
+This email constitutes Smarkets' final response to your complaint. As such, our position on this matter is final and we will not be revisiting the decision.
+
+If you remain dissatisfied with the outcome, you are entitled to refer your complaint to IBAS (Independent Betting Adjudication Service) for an independent review. All contact with IBAS regarding a dispute is carried out in writing and an adjudication form must be requested in the first instance:
+
+IBAS
+PO Box 62639
+London
+EC3P 3AS
+Email: adjudication@ibas-uk.co.uk
+Website: http://www.ibas-uk.com/
+
+Customers outside the UK can also contact eCOGRA at https://ecogra.org/ata/policies_procedures.php or the Malta Gaming Authority at support.mga@mga.org.mt after alternative dispute resolution has been exhausted. If an IBAS case reference is issued for this complaint, we will provide it on request.
+
+Thank you again for your patience throughout our investigation.
+
+Kind regards,
+[Senior Name]
+Senior Customer Support Agent
+Smarkets Customer Operations

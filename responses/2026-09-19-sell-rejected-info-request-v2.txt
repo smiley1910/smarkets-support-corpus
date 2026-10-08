@@ -1,0 +1,13 @@
+Hi [name],
+
+Thanks for the details on both rejected sells, including the checks you had already run. We've compared the requests against our market and contract records, and they check out: the IDs and the payload shape are right. Your questions are still being worked, and I'll come back with the full picture once these are matched up.
+
+What will help most now is the timing. You've already sent both the request and the response, so the missing piece is when each rejection happened; a rejected attempt doesn't produce an order ID, which makes its time the only thing to go on. If your logs can give the date, time and timezone of one or two of the rejections, ideally the two you sent, that would help us match each attempt up on our side.
+
+You mentioned buys go through on the same markets, and a couple of buy order IDs with their times would help us put the two side by side. The clearest comparison is a buy on the same contract as a rejection, within the same few minutes while the line was still live: the contracts from your examples were 450427996 on market 162795373 and 447634954 on market 161798808. If none of your buys sit on those exact contracts, buys on the same two markets, closest to a rejection first, would still tell us a lot.
+
+On the wider shape of this: has it been that way since your first API sell, or did sells work for a while and then stop? A rough date for the first rejection would pin that down. It would also help to know whether you've tried sells on other market types, and when your last sell did go through, from the app or the API.
+
+Kind regards,
+[name]
+Smarkets Support

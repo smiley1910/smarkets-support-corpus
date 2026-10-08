@@ -1,0 +1,20 @@
+Hi [name],
+
+The API doesn't offer websockets or a streaming feed: it is REST only, so there is no websocket interface to connect to, and price updates come from polling the documented endpoints. If you tell me which instructions you were following and what the attempt returned, I can tell you whether they apply to our API.
+
+Every API account is subject to 1200 requests per 60 seconds across all endpoints, and six endpoints carry their own stricter caps on top of that:
+
+1. quotes (GET /v3/markets/{market_ids}/quotes/): 50 requests per 60 seconds for API users
+2. login (POST /v3/sessions/): 5 requests per 300 seconds
+3. logout (DELETE /v3/sessions/): 30 requests per 60 seconds
+4. place an order (POST /v3/orders/): 10 requests per second
+5. cancel one order (DELETE /v3/orders/{order_id}/): 10 requests per second
+6. cancel all orders (DELETE /v3/orders/): 1 request per 60 seconds
+
+When a limit is reached, the API returns a 429 with error_type RATE_LIMIT_EXCEEDED, and responses usually include the X-RateLimit-Limit, X-RateLimit-Remaining and X-RateLimit-Reset headers, which show the cap, the remaining allowance and the seconds until the window resets. Where the 429 body includes count, limit and expiry, the limit value tells you which cap you hit and expiry is when you can resume. Some endpoints, including quotes, orders and sessions, return a plainer 429 without those fields, so allow a short pause before retrying there. Limits apply per account, so several clients or session tokens on one account share the same allowance.
+
+Let me know which endpoints you are calling and roughly how many requests per minute, and whether more than one client runs against the account. If you can send one full 429 response with its headers, I should be able to point to the cap you are hitting. If you are not seeing 429 responses, tell me what you do see and I can check.
+
+Kind regards,
+[name]
+Smarkets Support

@@ -1,0 +1,38 @@
+[
+  [
+    200,
+    200,
+    99902,
+    "{\"445856705\": {\"bids\": [{\"price\": 5618, \"quantity\": 160199}, {\"price\": 5587, \"quantity\": 125290}, {\"price\": 5525, \"quantity\": 1809955}, {\"price\": 5495, \"quantit"
+  ],
+  [
+    201,
+    404,
+    82,
+    "{\"data\":{\"description\":\"Nothing matches the given URI\"},\"error_type\":\"NOT_FOUND\"} "
+  ],
+  [
+    210,
+    404,
+    82,
+    "{\"data\":{\"description\":\"Nothing matches the given URI\"},\"error_type\":\"NOT_FOUND\"} "
+  ],
+  [
+    250,
+    404,
+    82,
+    "{\"data\":{\"description\":\"Nothing matches the given URI\"},\"error_type\":\"NOT_FOUND\"} "
+  ],
+  [
+    300,
+    404,
+    82,
+    "{\"data\":{\"description\":\"Nothing matches the given URI\"},\"error_type\":\"NOT_FOUND\"} "
+  ],
+  [
+    350,
+    404,
+    82,
+    "{\"data\":{\"description\":\"Nothing matches the given URI\"},\"error_type\":\"NOT_FOUND\"} "
+  ]
+]

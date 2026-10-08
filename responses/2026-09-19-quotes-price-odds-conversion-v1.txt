@@ -1,0 +1,15 @@
+Hi [name],
+
+The price converts to odds directly: prices are quoted in percentage basis points out of 10,000, so decimal odds = 10,000 / price. For example:
+
+5000 = 50% = decimal odds 2.0
+2500 = 25% = decimal odds 4.0
+9000 = 90% = decimal odds 1.11
+
+The quantity is separate from the odds calculation. It tells you the size of the order, in units of 1/10,000 of one unit of your currency, and represents the total pot (both sides combined) once the order is matched, so quantity 500 = £0.05 and quantity 100,000 = £10.00. If you want the back stake behind a quote, multiply the quantity by the price and divide by 100,000,000: 100,000 x 5000 / 100,000,000 = £5.00.
+
+Both conversions are described in the price and quantity field documentation for the quotes endpoint.
+
+Kind regards,
+[name]
+Smarkets Support

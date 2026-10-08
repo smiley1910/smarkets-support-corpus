@@ -1,0 +1,26 @@
+{
+  "start_utc": "2026-10-01T16:39:47.192431+00:00",
+  "control": {
+    "first_401": "19:58",
+    "last_200": "19:38",
+    "count_200": 58,
+    "count_401": 47,
+    "cookie_updates": []
+  },
+  "treatment": {
+    "first_401": null,
+    "last_200": "35:47",
+    "count_200": 105,
+    "count_401": 0,
+    "cookie_updates": [
+      {
+        "t": "20:19",
+        "from": "3201aab8b7",
+        "to": "62b8d45375"
+      }
+    ]
+  },
+  "end_utc": "2026-10-01T17:15:54.701231+00:00",
+  "verdict_control": "control: first 401 at t+19:58 (58x 200 before), last 200 at t+19:38",
+  "verdict_treatment": "treatment: SURVIVED full 36 min, 105x 200, no 401"
+}

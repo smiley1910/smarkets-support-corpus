@@ -1,0 +1,96 @@
+<!-- 
+id: 212079549
+title: Why haven’t I been paid the correct return?
+product: Smarkets
+region: en-gb
+category: Betting on Smarkets
+section: Betting-FAQs
+url: https://help.smarkets.com/hc/en-gb/articles/212079549-Why-haven-t-I-been-paid-the-correct-return
+scraped: 2026-06-29
+-->
+Title: Why haven’t I been paid the correct return?
+
+URL Source: https://help.smarkets.com/hc/en-gb/articles/212079549-Why-haven-t-I-been-paid-the-correct-return
+
+Markdown Content:
+In some instances, you may find that the settlement of your bet initially appears to be incorrect. The most common reasons for this are listed on this page.
+
+### **Net market settlement**
+
+Multiple bets on the same market are combined to show a single net result on your account page, rather than individual bets. This is because we only charge commission based on net winnings and not each winning bet.
+
+Find out more about net market settlement[here](https://help.smarkets.com/hc/en-gb/articles/212729165).
+
+### **Dead heat rules**
+
+In the occurrence of a dead heat, where there are more winners than expected, the winnings and losses incurred by users are split according to the number of entrants sharing the winning place.
+
+Our [dead heat rules](https://help.smarkets.com/hc/en-gb/articles/212183509-1-9-General-Smarkets-betting-rules) detail how payouts are calculated in the event of such occurrence. We also have [a dead heat calculator](https://help.smarkets.com/hc/en-gb/articles/360002522132-Dead-heat-calculator) on the help centre that works out your return in instances where your bet has been subjected to our dead heat rules.
+
+### **Reduction factor**
+
+If a horse is withdrawn before the start of a race, odds for all matched bets on remaining horses are adjusted to account for the non-runner(s).
+
+Once calculated, the reduction factor is applied by reducing the odds of any matched bets by the percentage of the reduction factor.
+
+If you have placed a winning ‘back’ bet, your returns will be reduced in line with the reduction of the odds.
+
+### **Part settlement**
+
+On a best-effort basis, we part settle markets once certain contracts no longer have the possibility of being declared the winner. Most commonly, we do this when golfers are knocked out half way through a tournament if they fail to make the cut. If your settlement doesn't seem right once the tournament has finished, please check back on your statement to see if some of your bets may have already been settled.
+
+### **Rounding**
+
+Our underlying system matches bets between customers in percentage prices. If a user is displaying the odds in decimal form, we round the percentage prices to two decimal places, as displayed on the Exchange. So although you’re backing at 1.65, the percentage price would in fact be 60.61% - the full odds mapping can be seen below.
+
+Similarly, due to the nature of Smarkets being a multi-currency exchange, our system calculates bet settlement in a unit quantity and then converts that quantity to the user's account currency.
+
+This calculates your winnings to a very high degree of accuracy beyond the two decimal places that are displayed.
+
+When profit or loss is displayed on the Smarkets webpage this figure is rounded up or down on the display.
+
+This can cause your settlement to be £/$/€0.01 less than expected. Your account balance will still retain full accuracy within our system.
+
+**Odds****%****Odds****%****Odds****%****Odds****%****Odds****%****Odds****%****Odds****%**
+1.01 99.01%1.41 70.92%1.81 55.25%2.42 41.32%3.55 28.17%8.2 12.20%32 3.12%
+1.02 98.04%1.42 70.42%1.82 54.95%2.44 40.98%3.6 27.78%8.4 11.90%34 2.94%
+1.03 97.09%1.43 69.93%1.83 54.64%2.46 40.65%3.65 27.40%8.6 11.63%36 2.78%
+1.04 96.15%1.44 69.44%1.84 54.35%2.48 40.32%3.7 27.03%8.8 11.36%38 2.63%
+1.05 95.24%1.45 68.97%1.85 54.05%2.5 40.00%3.75 26.67%9 11.11%40 2.50%
+1.06 94.34%1.46 68.49%1.86 53.76%2.52 39.68%3.8 26.32%9.2 10.87%42 2.38%
+1.07 93.46%1.47 68.03%1.87 53.48%2.54 39.37%3.85 25.97%9.4 10.64%44 2.27%
+1.08 92.59%1.48 67.57%1.88 53.19%2.56 39.06%3.9 25.64%9.6 10.42%46 2.17%
+1.09 91.74%1.49 67.11%1.89 52.91%2.58 38.76%3.95 25.32%9.8 10.20%48 2.08%
+1.1 90.91%1.5 66.67%1.9 52.63%2.6 38.46%4 25.00%10 10.00%50 2.00%
+1.11 90.09%1.51 66.23%1.91 52.36%2.62 38.17%4.1 24.39%10.5 9.52%55 1.82%
+1.12 89.29%1.52 65.79%1.92 52.08%2.64 37.88%4.2 23.81%11 9.09%60 1.67%
+1.13 88.50%1.53 65.36%1.93 51.81%2.66 37.59%4.3 23.26%11.5 8.70%65 1.54%
+1.14 87.72%1.54 64.94%1.94 51.55%2.68 37.31%4.4 22.73%12 8.33%70 1.43%
+1.15 86.96%1.55 64.52%1.95 51.28%2.7 37.04%4.5 22.22%12.5 8.00%75 1.33%
+1.16 86.21%1.56 64.10%1.96 51.02%2.72 36.76%4.6 21.74%13 7.69%80 1.25%
+1.17 85.47%1.57 63.69%1.97 50.76%2.74 36.50%4.7 21.28%13.5 7.41%85 1.18%
+1.18 84.75%1.58 63.29%1.98 50.51%2.76 36.23%4.8 20.83%14 7.14%90 1.11%
+1.19 84.03%1.59 62.89%1.99 50.25%2.78 35.97%4.9 20.41%14.5 6.90%95 1.05%
+1.2 83.33%1.6 62.50%2 50.00%2.8 35.71%5 20.00%15 6.67%100 1.00%
+1.21 82.64%1.61 62.11%2.02 49.50%2.82 35.46%5.1 19.61%15.5 6.45%110 0.91%
+1.22 81.97%1.62 61.73%2.04 49.02%2.84 35.21%5.2 19.23%16 6.25%120 0.83%
+1.23 81.30%1.63 61.35%2.06 48.54%2.86 34.97%5.3 18.87%16.5 6.06%130 0.77%
+1.24 80.65%1.64 60.98%2.08 48.08%2.88 34.72%5.4 18.52%17 5.88%140 0.71%
+1.25 80.00%1.65 60.61%2.1 47.62%2.9 34.48%5.5 18.18%17.5 5.71%150 0.67%
+1.26 79.37%1.66 60.24%2.12 47.17%2.92 34.25%5.6 17.86%18 5.56%160 0.62%
+1.27 78.74%1.67 59.88%2.14 46.73%2.94 34.01%5.7 17.54%18.5 5.41%170 0.59%
+1.28 78.12%1.68 59.52%2.16 46.30%2.96 33.78%5.8 17.24%19 5.26%180 0.56%
+1.29 77.52%1.69 59.17%2.18 45.87%2.98 33.56%5.9 16.95%19.5 5.13%190 0.53%
+1.3 76.92%1.7 58.82%2.2 45.45%3 33.33%6 16.67%20 5.00%200 0.50%
+1.31 76.34%1.71 58.48%2.22 45.05%3.05 32.79%6.2 16.13%21 4.76%210 0.48%
+1.32 75.76%1.72 58.14%2.24 44.64%3.1 32.26%6.4 15.62%22 4.55%220 0.45%
+1.33 75.19%1.73 57.80%2.26 44.25%3.15 31.75%6.6 15.15%23 4.35%230 0.43%
+1.34 74.63%1.74 57.47%2.28 43.86%3.2 31.25%6.8 14.71%24 4.17%240 0.42%
+1.35 74.07%1.75 57.14%2.3 43.48%3.25 30.77%7 14.29%25 4.00%250 0.40%
+1.36 73.53%1.76 56.82%2.32 43.10%3.3 30.30%7.2 13.89%26 3.85%260 0.38%
+1.37 72.99%1.77 56.50%2.34 42.74%3.35 29.85%7.4 13.51%27 3.70%270 0.37%
+1.38 72.46%1.78 56.18%2.36 42.37%3.4 29.41%7.6 13.16%28 3.57%280 0.36%
+1.39 71.94%1.79 55.87%2.38 42.02%3.45 28.99%7.8 12.82%29 3.45%290 0.34%
+1.4 71.43%1.8 55.56%2.4 41.67%3.5 28.57%8 12.50%30 3.33%300 0.33%
+500 0.20%
+1000 0.10%

@@ -1,0 +1,41 @@
+<!-- 
+sport: Greyhound
+product: sbk
+article_num: 33
+url: https://help.getsbk.com/hc/en-gb/articles/360006979577-33-Greyhound-rules
+scraped: 2026-06-29
+-->
+Title: 33. Greyhound rules
+
+URL Source: https://help.getsbk.com/hc/en-gb/articles/360006979577-33-Greyhound-rules
+
+Markdown Content:
+![Image 1](https://help.smarkets.com/system/photos/114152635491/Twitter-avatar.jpg)
+
+Smarkets
+
+[Follow](https://help.getsbk.com/hc/en-gb/articles/360006979577-33-Greyhound-rules/subscription.html "Opens a sign-in dialogue")
+
+## **[General betting rules 1-11](https://help.getsbk.com/hc/en-gb/articles/360002159057) will apply unless superseded by the [Terms and Conditions](https://help.getsbk.com/hc/en-gb/articles/360030574872)or sports specific betting rules.**
+
+## **33.1 General**
+
+33.1 When trap numbers are provided all bets are placed on the trap number and greyhound names are displayed for information purposes only. Except in the case of a non-runner or reserve runner as described in rule 33.3 below, if a greyhound name is listed incorrectly bets will be settled based on trap numbers. If trap numbers are not provided bets may be voided in case of an error with the names of greyhounds in the race.
+
+33.2 The official result at the time the track gives the result green light status, either in the form of an announcement or by display will be deemed to be final for market settlement. Subsequent disqualifications, appeals or amendments to the result will be disregarded.
+
+33.3 If a non-runner or reserve runner is declared then all matched bets prior to the update of the market on Smarkets will be void and unmatched bets, including those to be kept in play, will be cancelled.
+
+33.4 All bets will be void if there are no finishers in any race or any race is declared void before the official result.
+
+33.5 If the number of places offered is equal to or greater than the number of runners, all bets in this market will be voided.
+
+Last modified: April 27, 2021
+
+### Related articles
+
+*   [12. Football rules](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCE0DzdFTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCPmPFtJTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI2L2hjL2VuLWdiL2FydGljbGVzLzM2MDAwMjE1OTQzNy0xMi1Gb290YmFsbC1ydWxlcwY7CFQ6CXJhbmtpBg%3D%3D--10f2e2e98997a4bdcc06e3e505acbe7fe84e9c1a)
+*   [Contacting SBK](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCIvFg9NTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCPmPFtJTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSIzL2hjL2VuLWdiL2FydGljbGVzLzM2MDAzMDkxMzkzMS1Db250YWN0aW5nLVNCSwY7CFQ6CXJhbmtpBw%3D%3D--9f7d28af2055b811b177318552b649035702eb2c)
+*   [Multiples on SBK](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJGfOHYDBDoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCPmPFtJTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI2L2hjL2VuLWdiL2FydGljbGVzLzQ0MTI5MTQ4MzUzNDUtTXVsdGlwbGVzLW9uLVNCSwY7CFQ6CXJhbmtpCA%3D%3D--753b9d53bb0399d9585f2cf4de8c164991b623e8)
+*   [Fresh Legs on SBK](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCB3YZdkHEzoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCPmPFtJTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI4L2hjL2VuLWdiL2FydGljbGVzLzIwOTI0NDMzMDI5MTQ5LUZyZXNoLUxlZ3Mtb24tU0JLBjsIVDoJcmFua2kJ--687bce3e2c17b4d6f2a7914e7a7a27619315551c)
+*   [Payment method comparison](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCAu%2Bg9NTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCPmPFtJTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI%2BL2hjL2VuLWdiL2FydGljbGVzLzM2MDAzMDkxMjAxMS1QYXltZW50LW1ldGhvZC1jb21wYXJpc29uBjsIVDoJcmFua2kK--535aad2f472e1ef4936ca5a8227e3db7eaca8b91)

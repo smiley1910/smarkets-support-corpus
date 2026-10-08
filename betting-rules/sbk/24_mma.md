@@ -1,0 +1,54 @@
+<!-- 
+sport: MMA
+product: sbk
+article_num: 24
+url: https://help.getsbk.com/hc/en-gb/articles/360002159777-24-MMA-rules
+scraped: 2026-06-29
+-->
+Title: 24. MMA rules
+
+URL Source: https://help.getsbk.com/hc/en-gb/articles/360002159777-24-MMA-rules
+
+Markdown Content:
+*   [35. Gaelic Games rules](https://help.getsbk.com/hc/en-gb/articles/20293217457181-35-Gaelic-Games-rules)
+*   [12. Football rules](https://help.getsbk.com/hc/en-gb/articles/360002159437-12-Football-rules)
+*   [13. Horse Racing rules](https://help.getsbk.com/hc/en-gb/articles/360002159497-13-Horse-Racing-rules)
+*   [14. Golf rules](https://help.getsbk.com/hc/en-gb/articles/360002166058-14-Golf-rules)
+*   [15. Cricket rules](https://help.getsbk.com/hc/en-gb/articles/360002166078-15-Cricket-rules)
+*   [16. Tennis rules](https://help.getsbk.com/hc/en-gb/articles/360002159617-16-Tennis-rules)
+*   [17. Basketball rules](https://help.getsbk.com/hc/en-gb/articles/360002159637-17-Basketball-rules)
+*   [18. Rugby Union and Rugby League rules](https://help.getsbk.com/hc/en-gb/articles/360002166118-18-Rugby-Union-and-Rugby-League-rules)
+*   [19. Baseball rules](https://help.getsbk.com/hc/en-gb/articles/360002159677-19-Baseball-rules)
+*   [20. American Football rules](https://help.getsbk.com/hc/en-gb/articles/360002166158-20-American-Football-rules)
+
+[See more](https://help.getsbk.com/hc/en-gb/sections/360005958351-Sport-specific-rules)
+
+![Image 1](https://help.smarkets.com/system/photos/114152635491/Twitter-avatar.jpg)
+
+Smarkets
+
+[Follow](https://help.getsbk.com/hc/en-gb/articles/360002159777-24-MMA-rules/subscription.html "Opens a sign-in dialogue")
+
+**[General betting rules 1-11](https://help.getsbk.com/hc/en-gb/articles/360002159057) will apply unless superseded by the [Terms and Conditions](https://help.getsbk.com/hc/en-gb/articles/360030574872)or sports specific betting rules.**
+
+## **24.1 General**
+
+24.1  All individual markets will be settled according to the official result of the relevant governing body immediately after the end of the fight, regardless of any subsequent disqualification or amendment to the result.
+
+24.2  If a fight is abandoned, cancelled or postponed and not completed within 36 hours of the scheduled start date, all bets will be voided.
+
+24.3  If a fight is declared a draw, technical draw or no contest, all bets will be voided except for markets where these outcomes are specifically listed or there is an 'any other outcome' selection in the market.
+
+24.4  A contestant will be deemed the loser in the event of a disqualification.
+
+24.5  Where the country of a fight has been changed normal change of venue rules apply, however where there is a change of venue but the fight remains within the same country all bets will stand.
+
+Last modified: January 16, 2017
+
+### Related articles
+
+*   [Contacting SBK](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCIvFg9NTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCKEEzdFTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSIzL2hjL2VuLWdiL2FydGljbGVzLzM2MDAzMDkxMzkzMS1Db250YWN0aW5nLVNCSwY7CFQ6CXJhbmtpBg%3D%3D--957d5e94c5b514fe8b6b4c6746b0c402e89fece3)
+*   [25. Cycling rules](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCLYdzdFTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCKEEzdFTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI1L2hjL2VuLWdiL2FydGljbGVzLzM2MDAwMjE2NjE5OC0yNS1DeWNsaW5nLXJ1bGVzBjsIVDoJcmFua2kH--188fd938c54660c45ce52fe683e951a07e6e7642)
+*   [12. Football rules](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCE0DzdFTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCKEEzdFTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSI2L2hjL2VuLWdiL2FydGljbGVzLzM2MDAwMjE1OTQzNy0xMi1Gb290YmFsbC1ydWxlcwY7CFQ6CXJhbmtpCA%3D%3D--4e4485f8f37932912ac9e09849a2a7c2891cfb5e)
+*   [UK Welcome bonus - Bet £20, get £50 in Free Bets](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJ2Dae2CFToYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCKEEzdFTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJSL2hjL2VuLWdiL2FydGljbGVzLzIzNjUyMDczMDQ2OTQxLVVLLVdlbGNvbWUtYm9udXMtQmV0LTIwLWdldC01MC1pbi1GcmVlLUJldHMGOwhUOglyYW5raQk%3D--43be3ab3c8b5319d454c8d7308fc8d1673b39ad1)
+*   [Clearly Erroneous Bets Policy](https://help.getsbk.com/hc/en-gb/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCIO0g9NTADoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCKEEzdFTADoLbG9jYWxlSSIKZW4tZ2IGOgZFVDoIdXJsSSJCL2hjL2VuLWdiL2FydGljbGVzLzM2MDAzMDkwOTU3MS1DbGVhcmx5LUVycm9uZW91cy1CZXRzLVBvbGljeQY7CFQ6CXJhbmtpCg%3D%3D--9996905dd35e9373f3a25486eb4b0c602684fd8e)

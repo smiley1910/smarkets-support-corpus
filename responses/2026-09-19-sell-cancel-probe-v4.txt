@@ -1,0 +1,11 @@
+Hi [name],
+
+I can see sell orders on your account being placed through the API but then cancelled, with the cancel requests coming from your side.
+
+Can you check your logs and tell me whether you're seeing the same cancellations, and whether anything on your side cancels orders?
+
+If you can send the API logs from last night's session, with the request and response for your order calls and their timestamps, I can compare them against what I'm seeing. Anything touching the cancel endpoints is especially useful, and if your logs show no cancels at all, that's useful to know too.
+
+Kind regards,
+[name]
+Smarkets Support

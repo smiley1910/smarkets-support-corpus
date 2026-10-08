@@ -1,0 +1,75 @@
+Hello,
+
+Thanks for the detailed overview of your planned system and the controls you've built in. It's helpful to have everything laid out so clearly. I'll go through each question in turn.
+
+**1. Approved event types, sports and market types**
+
+Per the API Terms and Conditions (Section 5), "usage is restricted to pre-approved events and markets only." The pre-approved scope is configured per-account during the application review, so your specific list was set when your application was approved. This list isn't published externally. If you'd like confirmation of exactly which events and markets are included, drop us a note at api@smarkets.com and we'll confirm. If you need to adjust your scope post-approval, that can be discussed there too.
+
+**2. In-play market data and order placement**
+
+The API supports both pre-match and in-play trading. Order types like ``keep_in_play`` and ``good_til_halted`` are designed for in-play scenarios where markets suspend and reopen. Whether your account is specifically approved for in-play markets is part of your pre-approved scope, so I'd recommend confirming this with api@smarkets.com if it wasn't explicitly covered in your approval.
+
+**3. Automatic in-play hedging for risk management**
+
+Yes, this is permitted. The API T&Cs (Section 1) explicitly authorise automated trading, and hedging an existing position for risk management is a legitimate trading activity. Section 7 prohibits "unfair trading" including latency arbitrage and court-siding "where delays are exploited to disadvantage other customers." Since your hedging is for risk management rather than exploiting delays, it falls within permitted use.
+
+**4. Order behaviour during suspensions and status changes**
+
+The API handles market suspensions through order types. Each type behaves differently when a market is halted:
+
+* ``good_til_cancelled``: cancelled on halt
+* ``good_til_halted`` (the default type): cancelled on halt
+* ``keep_in_play``: survives halt, remains active when the market reopens
+* ``immediate_or_cancel``: not applicable, executes at placement only
+
+All order types are cancelled when a reduction factor is applied (for example, a non-runner in horse racing).
+
+When a market is suspended, any orders cancelled by the system return ``ORDER_CANCELLED_TRADING_SUSPENDED`` or ``ORDER_CANCELLED_MARKET_HALTED`` in the response. There are no additional API-specific requirements for automated cancellation or hedging during suspensions, beyond choosing the right order type for your strategy.
+
+In-play betting delays also apply: 4 seconds for horse racing and darts, 8 seconds for all other events (General Betting Rules, Rule 8.2.1). These delays affect order placement, not just data retrieval.
+
+**5. API request, streaming, order-placement and cancellation limits**
+
+The documented per-endpoint limits from the API specification:
+
+* Quotes (``GET /v3/markets/{ids}/quotes/``): 50 requests per 60 seconds
+* Login (``POST /v3/sessions/``): 5 requests per 300 seconds
+* Cancel single order (``DELETE /v3/orders/{id}/``): 10 requests per second
+* Cancel all orders (``DELETE /v3/orders/``): 1 request per 60 seconds
+* Logout (``DELETE /v3/sessions/``): 30 requests per 60 seconds
+* Order placement (``POST /v3/orders/``): throttled on a per-account basis, no specific published number
+
+General API call limits are pre-approved per account (T&Cs Section 5: "Smarkets will preapprove call limits per period"). If you exceed a limit, you'll receive a ``429 RATE_LIMIT_EXCEEDED`` response. The ``expiry`` field in the response tells you exactly when the window resets. If your use case needs higher throughput, contact api@smarkets.com to discuss whether your limits can be adjusted.
+
+Regarding streaming: the current API is REST-based with no documented streaming endpoint in the public specification. The old streaming endpoint (``stream.smarkets.com:3801``, protobuf-over-TCP) was part of a deprecated Python SDK (``smk_python_sdk`` on GitHub, copyright 2011, archived since January 2019) and no longer resolves. If you need real-time data, we'd recommend polling the REST endpoints (e.g. quotes at 50 requests per 60 seconds) within your rate limits. If your use case genuinely requires a streaming connection, contact api@smarkets.com to discuss available options.
+
+**6. Retaining local data snapshots**
+
+Yes, you may retain price, order-book, order and execution snapshots locally for reconciliation, compliance records and performance analysis. Two conditions apply from the T&Cs:
+
+* You must not share, sell or distribute platform data to third parties without written approval from Smarkets (Section 5).
+* Data extraction without commensurate trading volumes is prohibited (Section 6.1 and Section 7, "Data Harvesting"). As long as you're actively trading through the API, storing data for your own reconciliation is fine.
+
+**7. Public documentation as technical specification**
+
+Yes, the API documentation at `docs.smarkets.com <https://docs.smarkets.com/>`_ and the API-related Help Centre pages serve as the current technical specification. Your account-specific restrictions (pre-approved markets, rate limits) apply on top of the published documentation. If there's ever a discrepancy, the account-specific restrictions we provide take precedence.
+
+**8. Cross-exchange pre-match arbitrage**
+
+This needs a careful answer. The API T&Cs (Section 5) state that "usage of the API or its data to benchmark markets, prices, liquidity or systems is not permitted." Cross-exchange arbitrage inherently involves comparing Smarkets prices against another exchange's prices, which could overlap with the benchmarking clause.
+
+It isn't explicitly prohibited, but the overlap with the benchmarking restriction means I'd rather not give you a definitive yes or no without proper review. I'd recommend raising this directly with api@smarkets.com so we can give you a clear answer based on your specific setup.
+
+**A couple of additional points**
+
+The API doesn't have a dedicated test or sandbox environment, so when you're ready to test order placement, you'll be using live funds. For read-only development work, the public endpoints (events, markets, contracts) are available without authentication.
+
+All new API accounts are subject to a compliance review within the first 60 days (T&Cs Section 2). This is standard and nothing to worry about, just worth being aware of.
+
+Per Section 4 of the T&Cs, if your technical setup or intended use changes over time, you're required to keep us updated.
+
+Your approach of keeping live trading disabled until scope is confirmed is exactly right. If you need any further technical detail or have follow-up questions, just reply here or contact api@smarkets.com.
+
+Best regards,
+Michael

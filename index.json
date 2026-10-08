@@ -1,0 +1,2904 @@
+{
+  "generated": "2026-06-29 15:10",
+  "products": {
+    "smarkets": {
+      "locales": [
+        "en-gb",
+        "en-se",
+        "sv"
+      ],
+      "article_count": 220,
+      "articles": [
+        {
+          "id": "10137390245789",
+          "title": "Trustly",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "10137390245789_Trustly.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/10137390245789-Trustly"
+        },
+        {
+          "id": "115000083169",
+          "title": "What is place betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "115000083169_What_is_place_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000083169-What-is-place-betting"
+        },
+        {
+          "id": "115000350131",
+          "title": "How to calculate matched betting bets",
+          "category": "Education",
+          "section": "Matched-betting-and-arbitrage-strategy",
+          "filename": "115000350131_How_to_calculate_matched_betting_bets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000350131-How-to-calculate-matched-betting-bets"
+        },
+        {
+          "id": "115000402651",
+          "title": "The effect of draw bias on horse racing betting",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "115000402651_The_effect_of_draw_bias_on_horse_racing_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000402651-The-effect-of-draw-bias-on-horse-racing-betting"
+        },
+        {
+          "id": "115000460472",
+          "title": "Why Smarkets has the best tennis odds",
+          "category": "Education",
+          "section": "Tennis-betting-strategy",
+          "filename": "115000460472_Why_Smarkets_has_the_best_tennis_odds.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000460472-Why-Smarkets-has-the-best-tennis-odds"
+        },
+        {
+          "id": "115000484972",
+          "title": "Wimbledon tennis trading strategy",
+          "category": "Education",
+          "section": "Tennis-betting-strategy",
+          "filename": "115000484972_Wimbledon_tennis_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000484972-Wimbledon-tennis-trading-strategy"
+        },
+        {
+          "id": "115000626289",
+          "title": "28.   Snooker and Pool rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "115000626289_28_Snooker_and_Pool_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000626289-28-Snooker-and-Pool-rules"
+        },
+        {
+          "id": "115000626649",
+          "title": "30.   Politics rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "115000626649_30_Politics_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000626649-30-Politics-rules"
+        },
+        {
+          "id": "115000638205",
+          "title": "29.   Darts rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "115000638205_29_Darts_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000638205-29-Darts-rules"
+        },
+        {
+          "id": "115000647291",
+          "title": "Why you should consider home advantage for football trading",
+          "category": "Education",
+          "section": "Football-betting-strategy",
+          "filename": "115000647291_Why_you_should_consider_home_advantage_for_football_trading.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000647291-Why-you-should-consider-home-advantage-for-football-trading"
+        },
+        {
+          "id": "115000719172",
+          "title": "The Open Championship golf trading strategy",
+          "category": "Education",
+          "section": "Golf-betting-strategy",
+          "filename": "115000719172_The_Open_Championship_golf_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000719172-The-Open-Championship-golf-trading-strategy"
+        },
+        {
+          "id": "115000814452",
+          "title": "Trading after the first goal in football",
+          "category": "Education",
+          "section": "Football-betting-strategy",
+          "filename": "115000814452_Trading_after_the_first_goal_in_football.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000814452-Trading-after-the-first-goal-in-football"
+        },
+        {
+          "id": "115000821689",
+          "title": "Tennis Grand Slam trading strategy",
+          "category": "Education",
+          "section": "Tennis-betting-strategy",
+          "filename": "115000821689_Tennis_Grand_Slam_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000821689-Tennis-Grand-Slam-trading-strategy"
+        },
+        {
+          "id": "115000822171",
+          "title": "Using two-factor authentication",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "115000822171_Using_two_factor_authentication.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000822171-Using-two-factor-authentication"
+        },
+        {
+          "id": "115000845952",
+          "title": "How to trade football outright betting markets",
+          "category": "Education",
+          "section": "Football-betting-strategy",
+          "filename": "115000845952_How_to_trade_football_outright_betting_markets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115000845952-How-to-trade-football-outright-betting-markets"
+        },
+        {
+          "id": "115001005645",
+          "title": "Super Bowl coin toss betting: A lesson in value and probability",
+          "category": "Education",
+          "section": "American-football-betting-strategy",
+          "filename": "115001005645_Super_Bowl_coin_toss_betting_A_lesson_in_value_and_probability.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001005645-Super-Bowl-coin-toss-betting-A-lesson-in-value-and-probability"
+        },
+        {
+          "id": "115001045092",
+          "title": "US PGA Championship golf trading strategy",
+          "category": "Education",
+          "section": "Golf-betting-strategy",
+          "filename": "115001045092_US_PGA_Championship_golf_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001045092-US-PGA-Championship-golf-trading-strategy"
+        },
+        {
+          "id": "115001145392",
+          "title": "What is arbitrage betting?",
+          "category": "Education",
+          "section": "Matched-betting-and-arbitrage-strategy",
+          "filename": "115001145392_What_is_arbitrage_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001145392-What-is-arbitrage-betting"
+        },
+        {
+          "id": "115001175531",
+          "title": "How to calculate arbitrage betting",
+          "category": "Education",
+          "section": "Matched-betting-and-arbitrage-strategy",
+          "filename": "115001175531_How_to_calculate_arbitrage_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001175531-How-to-calculate-arbitrage-betting"
+        },
+        {
+          "id": "115001199231",
+          "title": "Just a moment...",
+          "category": "Education",
+          "section": "Matched-betting-and-arbitrage-strategy",
+          "filename": "115001199231_Back_to_lay_arbitrage_betting_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001199231-Back-to-lay-arbitrage-betting-strategy"
+        },
+        {
+          "id": "115001208925",
+          "title": "iOS and Android mobile application",
+          "category": "Betting on Smarkets",
+          "section": "Technical",
+          "filename": "115001208925_iOS_and_Android_mobile_application.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001208925-iOS-and-Android-mobile-application"
+        },
+        {
+          "id": "115001246792",
+          "title": "What is handicap betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "115001246792_What_is_handicap_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001246792-What-is-handicap-betting"
+        },
+        {
+          "id": "115001263391",
+          "title": "What is Draw No Bet betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "115001263391_What_is_Draw_No_Bet_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001263391-What-is-Draw-No-Bet-betting"
+        },
+        {
+          "id": "115001288852",
+          "title": "What is in-play betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "115001288852_What_is_in_play_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001288852-What-is-in-play-betting"
+        },
+        {
+          "id": "115001324169",
+          "title": "Just a moment...",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "115001324169_What_is_Asian_Handicap_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001324169-What-is-Asian-Handicap-betting"
+        },
+        {
+          "id": "115001396171",
+          "title": "How to hedge your bets",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115001396171_How_to_hedge_your_bets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001396171-How-to-hedge-your-bets"
+        },
+        {
+          "id": "115001431011",
+          "title": "How to calculate a hedge bet",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115001431011_How_to_calculate_a_hedge_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001431011-How-to-calculate-a-hedge-bet"
+        },
+        {
+          "id": "115001457989",
+          "title": "How to calculate Poisson distribution for football betting",
+          "category": "Education",
+          "section": "Football-betting-strategy",
+          "filename": "115001457989_How_to_calculate_Poisson_distribution_for_football_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001457989-How-to-calculate-Poisson-distribution-for-football-betting"
+        },
+        {
+          "id": "115001485592",
+          "title": "What is value betting?",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "115001485592_What_is_value_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001485592-What-is-value-betting"
+        },
+        {
+          "id": "115001555052",
+          "title": "How to bet on a betting exchange",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115001555052_How_to_bet_on_a_betting_exchange.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001555052-How-to-bet-on-a-betting-exchange"
+        },
+        {
+          "id": "115001778389",
+          "title": "Cheltenham Festival betting trends",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "115001778389_Cheltenham_Festival_betting_trends.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001778389-Cheltenham-Festival-betting-trends"
+        },
+        {
+          "id": "115001814411",
+          "title": "Odds Converter Calculator - Smarkets Betting Exchange",
+          "category": "Calculators",
+          "section": "Calculators",
+          "filename": "115001814411_Odds_converter.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001814411-Odds-converter"
+        },
+        {
+          "id": "115001820389",
+          "title": "What is a betting exchange?",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115001820389_What_is_a_betting_exchange.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001820389-What-is-a-betting-exchange"
+        },
+        {
+          "id": "115001854272",
+          "title": "Bet Calculator - Smarkets Betting Exchange",
+          "category": "Calculators",
+          "section": "Calculators",
+          "filename": "115001854272_Bet_calculator.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115001854272-Bet-calculator"
+        },
+        {
+          "id": "115002096751",
+          "title": "Arbitage Calculator - Smarkets Betting Exchange",
+          "category": "Calculators",
+          "section": "Calculators",
+          "filename": "115002096751_Arbitrage_calculator.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115002096751-Arbitrage-calculator"
+        },
+        {
+          "id": "115002115965",
+          "title": "What is Smarkets?",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115002115965_What_is_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115002115965-What-is-Smarkets"
+        },
+        {
+          "id": "115002171411",
+          "title": "Hedging calculator",
+          "category": "Calculators",
+          "section": "Calculators",
+          "filename": "115002171411_Hedging_calculator.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115002171411-Hedging-calculator"
+        },
+        {
+          "id": "115002239612",
+          "title": "Matched Betting Calculator - Smarkets Betting Exchange",
+          "category": "Calculators",
+          "section": "Calculators",
+          "filename": "115002239612_Matched_betting_calculator.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115002239612-Matched-betting-calculator"
+        },
+        {
+          "id": "115002331265",
+          "title": "Grand National betting trends",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "115002331265_Grand_National_betting_trends.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115002331265-Grand-National-betting-trends"
+        },
+        {
+          "id": "115002445369",
+          "title": "Betting exchange vs. Bookmaker: What’s the difference",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115002445369_Betting_exchange_vs_Bookmaker_What_s_the_difference.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115002445369-Betting-exchange-vs-Bookmaker-What-s-the-difference"
+        },
+        {
+          "id": "115003210649",
+          "title": "Why can't I bet at specific odds?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "115003210649_Why_can_t_I_bet_at_specific_odds.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003210649-Why-can-t-I-bet-at-specific-odds"
+        },
+        {
+          "id": "115003370169",
+          "title": "How to calculate commission on a betting exchange",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115003370169_How_to_calculate_commission_on_a_betting_exchange.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003370169-How-to-calculate-commission-on-a-betting-exchange"
+        },
+        {
+          "id": "115003374849",
+          "title": "What is lay betting on an exchange?",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115003374849_What_is_lay_betting_on_an_exchange.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003374849-What-is-lay-betting-on-an-exchange"
+        },
+        {
+          "id": "115003381865",
+          "title": "How to calculate the liability of a lay bet",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115003381865_How_to_calculate_the_liability_of_a_lay_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003381865-How-to-calculate-the-liability-of-a-lay-bet"
+        },
+        {
+          "id": "115003425649",
+          "title": "French Open tennis trading strategy",
+          "category": "Education",
+          "section": "Tennis-betting-strategy",
+          "filename": "115003425649_French_Open_tennis_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003425649-French-Open-tennis-trading-strategy"
+        },
+        {
+          "id": "115003543125",
+          "title": "How to calculate betting exchange commission into odds",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "115003543125_How_to_calculate_betting_exchange_commission_into_odds.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003543125-How-to-calculate-betting-exchange-commission-into-odds"
+        },
+        {
+          "id": "115003637109",
+          "title": "How the nature of politics creates trading opportunities",
+          "category": "Education",
+          "section": "Politics-betting-strategy",
+          "filename": "115003637109_How_the_nature_of_politics_creates_trading_opportunities.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003637109-How-the-nature-of-politics-creates-trading-opportunities"
+        },
+        {
+          "id": "115003678149",
+          "title": "What is matched betting?",
+          "category": "Education",
+          "section": "Matched-betting-and-arbitrage-strategy",
+          "filename": "115003678149_What_is_matched_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003678149-What-is-matched-betting"
+        },
+        {
+          "id": "115003722585",
+          "title": "Golf trading strategy",
+          "category": "Education",
+          "section": "Golf-betting-strategy",
+          "filename": "115003722585_Golf_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003722585-Golf-trading-strategy"
+        },
+        {
+          "id": "115003945631",
+          "title": "Fill or Kill",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "115003945631_Fill_or_Kill.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003945631-Fill-or-Kill"
+        },
+        {
+          "id": "115003946591",
+          "title": "Time In Force",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "115003946591_Time_In_Force.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/115003946591-Time-In-Force"
+        },
+        {
+          "id": "12563914421917",
+          "title": "0% Commission - Oddsmonkey / Outplayed / Matched Betting Blog Exclusive Promotion",
+          "category": "Bonus & Promotions",
+          "section": "Other-Promotions",
+          "filename": "12563914421917_0_Commission_Oddsmonkey_Outplayed_Matched_Betting_Blog_Exclusive_Promotion.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/12563914421917-0-Commission-Oddsmonkey-Outplayed-Matched-Betting-Blog-Exclusive-Promotion"
+        },
+        {
+          "id": "12807188772893",
+          "title": "35. Fantasy football rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "12807188772893_35_Fantasy_football_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/12807188772893-35-Fantasy-football-rules"
+        },
+        {
+          "id": "13242929620893",
+          "title": "Trade with 0% at Smarkets for 60 days",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "13242929620893_Trade_with_0_at_Smarkets_for_60_days.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/13242929620893-Trade-with-0-at-Smarkets-for-60-days"
+        },
+        {
+          "id": "13243068221341",
+          "title": "Welcome bonus explained",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "13243068221341_Welcome_bonus_explained.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/13243068221341-Welcome-bonus-explained"
+        },
+        {
+          "id": "16426398858781",
+          "title": "Explaining source of funds and wealth checks",
+          "category": "Source of Funds & Wealth",
+          "section": "Source-of-Funds-Wealth-Checks",
+          "filename": "16426398858781_Explaining_source_of_funds_and_wealth_checks.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16426398858781-Explaining-source-of-funds-and-wealth-checks"
+        },
+        {
+          "id": "16426627719581",
+          "title": "Asking about how you fund your account",
+          "category": "Source of Funds & Wealth",
+          "section": "Source-of-Funds-Wealth-Checks",
+          "filename": "16426627719581_Asking_about_how_you_fund_your_account.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16426627719581-Asking-about-how-you-fund-your-account"
+        },
+        {
+          "id": "16426715926301",
+          "title": "The difference between Source of Funds and Affordability checks",
+          "category": "Source of Funds & Wealth",
+          "section": "Source-of-Funds-Wealth-Checks",
+          "filename": "16426715926301_The_difference_between_Source_of_Funds_and_Affordability_checks.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16426715926301-The-difference-between-Source-of-Funds-and-Affordability-checks"
+        },
+        {
+          "id": "16426785373085",
+          "title": "Document guidelines",
+          "category": "Source of Funds & Wealth",
+          "section": "Source-of-Funds-Wealth-Checks",
+          "filename": "16426785373085_Document_guidelines.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16426785373085-Document-guidelines"
+        },
+        {
+          "id": "16426930682141",
+          "title": "GDPR, document privacy and security",
+          "category": "Source of Funds & Wealth",
+          "section": "Source-of-Funds-Wealth-Checks",
+          "filename": "16426930682141_GDPR_document_privacy_and_security.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16426930682141-GDPR-document-privacy-and-security"
+        },
+        {
+          "id": "16427904326685",
+          "title": "Account restrictions",
+          "category": "Source of Funds & Wealth",
+          "section": "Source-of-Funds-Wealth-Checks",
+          "filename": "16427904326685_Account_restrictions.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16427904326685-Account-restrictions"
+        },
+        {
+          "id": "16448978760989",
+          "title": "How to spot problem gambling",
+          "category": "Safer Gambling",
+          "section": "Recognising-a-problem",
+          "filename": "16448978760989_How_to_spot_problem_gambling.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16448978760989-How-to-spot-problem-gambling"
+        },
+        {
+          "id": "16453422623261",
+          "title": "Take a timeout",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "16453422623261_Take_a_timeout.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16453422623261-Take-a-timeout"
+        },
+        {
+          "id": "16453425311773",
+          "title": "Just a moment...",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "16453425311773_Setting_deposit_loss_and_stake_limits.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16453425311773-Setting-deposit-loss-and-stake-limits"
+        },
+        {
+          "id": "16453539681565",
+          "title": "Top tips to bet safely",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "16453539681565_Top_tips_to_bet_safely.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16453539681565-Top-tips-to-bet-safely"
+        },
+        {
+          "id": "16453545469725",
+          "title": "How to self-exclude",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "16453545469725_How_to_self_exclude.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16453545469725-How-to-self-exclude"
+        },
+        {
+          "id": "16453608842525",
+          "title": "Matched betting safely",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "16453608842525_Matched_betting_safely.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16453608842525-Matched-betting-safely"
+        },
+        {
+          "id": "16453730974365",
+          "title": "Gambling blocks",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "16453730974365_Gambling_blocks.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/16453730974365-Gambling-blocks"
+        },
+        {
+          "id": "20292956069277",
+          "title": "36. Gaelic Games rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "20292956069277_36_Gaelic_Games_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/20292956069277-36-Gaelic-Games-rules"
+        },
+        {
+          "id": "209277269",
+          "title": "13. Horse Racing rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277269_13_Horse_Racing_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277269-13-Horse-Racing-rules"
+        },
+        {
+          "id": "209277289",
+          "title": "14. Golf rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277289_14_Golf_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277289-14-Golf-rules"
+        },
+        {
+          "id": "209277309",
+          "title": "15. Cricket rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277309_15_Cricket_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277309-15-Cricket-rules"
+        },
+        {
+          "id": "209277329",
+          "title": "16. Tennis rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277329_16_Tennis_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277329-16-Tennis-rules"
+        },
+        {
+          "id": "209277349",
+          "title": "17. Basketball rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277349_17_Basketball_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277349-17-Basketball-rules"
+        },
+        {
+          "id": "209277369",
+          "title": "18. Rugby Union and Rugby League rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277369_18_Rugby_Union_and_Rugby_League_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277369-18-Rugby-Union-and-Rugby-League-rules"
+        },
+        {
+          "id": "209277429",
+          "title": "24. MMA rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277429_24_MMA_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277429-24-MMA-rules"
+        },
+        {
+          "id": "209277449",
+          "title": "25. Cycling rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277449_25_Cycling_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277449-25-Cycling-rules"
+        },
+        {
+          "id": "209277469",
+          "title": "26. Athletics rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277469_26_Athletics_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277469-26-Athletics-rules"
+        },
+        {
+          "id": "209277509",
+          "title": "27. Swimming rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "209277509_27_Swimming_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209277509-27-Swimming-rules"
+        },
+        {
+          "id": "209297609",
+          "title": "Bonus removed",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "209297609_Bonus_removed.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209297609-Bonus-removed"
+        },
+        {
+          "id": "209301129",
+          "title": "What is a reduction factor?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "209301129_What_is_a_reduction_factor.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209301129-What-is-a-reduction-factor"
+        },
+        {
+          "id": "209304489",
+          "title": "Why can't I make a withdrawal?",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "209304489_Why_can_t_I_make_a_withdrawal.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209304489-Why-can-t-I-make-a-withdrawal"
+        },
+        {
+          "id": "209306229",
+          "title": "Removing a card from your account",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "209306229_Removing_a_card_from_your_account.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/209306229-Removing-a-card-from-your-account"
+        },
+        {
+          "id": "210004965",
+          "title": "19. Baseball rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "210004965_19_Baseball_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210004965-19-Baseball-rules"
+        },
+        {
+          "id": "210005425",
+          "title": "12. Football rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "210005425_12_Football_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210005425-12-Football-rules"
+        },
+        {
+          "id": "210005565",
+          "title": "20. American Football rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "210005565_20_American_Football_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210005565-20-American-Football-rules"
+        },
+        {
+          "id": "210005585",
+          "title": "21. Motorsports rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "210005585_21_Motorsports_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210005585-21-Motorsports-rules"
+        },
+        {
+          "id": "210005645",
+          "title": "22. Ice Hockey rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "210005645_22_Ice_Hockey_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210005645-22-Ice-Hockey-rules"
+        },
+        {
+          "id": "210005665",
+          "title": "23. Boxing rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "210005665_23_Boxing_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210005665-23-Boxing-rules"
+        },
+        {
+          "id": "210006285",
+          "title": "Payment method comparison",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "210006285_Payment_method_comparison.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210006285-Payment-method-comparison"
+        },
+        {
+          "id": "210012205",
+          "title": "Bonus not received",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "210012205_Bonus_not_received.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210012205-Bonus-not-received"
+        },
+        {
+          "id": "210025725",
+          "title": "Electronic verification",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "210025725_Electronic_verification.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210025725-Electronic-verification"
+        },
+        {
+          "id": "210638729",
+          "title": "Contacting Smarkets",
+          "category": "Contact Us",
+          "section": "Contact-methods",
+          "filename": "210638729_Contacting_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210638729-Contacting-Smarkets"
+        },
+        {
+          "id": "210656029",
+          "title": "Our Safer Gambling Policy",
+          "category": "Safer Gambling",
+          "section": "Help-and-support",
+          "filename": "210656029_Our_Safer_Gambling_Policy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/210656029-Our-Safer-Gambling-Policy"
+        },
+        {
+          "id": "211685305",
+          "title": "Log in or connection issues with Smarkets",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "211685305_Log_in_or_connection_issues_with_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/211685305-Log-in-or-connection-issues-with-Smarkets"
+        },
+        {
+          "id": "212008509",
+          "title": "Skrill",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "212008509_Skrill.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212008509-Skrill"
+        },
+        {
+          "id": "212008689",
+          "title": "Neteller",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "212008689_Neteller.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212008689-Neteller"
+        },
+        {
+          "id": "212009689",
+          "title": "Bank Transfer",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "212009689_Bank_Transfer.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212009689-Bank-Transfer"
+        },
+        {
+          "id": "212009749",
+          "title": "Visa Debit",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "212009749_Visa_Debit.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212009749-Visa-Debit"
+        },
+        {
+          "id": "212020209",
+          "title": "Minimum and maximum deposits",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "212020209_Minimum_and_maximum_deposits.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212020209-Minimum-and-maximum-deposits"
+        },
+        {
+          "id": "212020709",
+          "title": "Setting a deposit limit",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "212020709_Setting_a_deposit_limit.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212020709-Setting-a-deposit-limit"
+        },
+        {
+          "id": "212022709",
+          "title": "Why has my deposit not been processed?",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "212022709_Why_has_my_deposit_not_been_processed.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212022709-Why-has-my-deposit-not-been-processed"
+        },
+        {
+          "id": "212022829",
+          "title": "How to make a withdrawal",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "212022829_How_to_make_a_withdrawal.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212022829-How-to-make-a-withdrawal"
+        },
+        {
+          "id": "212023549",
+          "title": "Withdrawal fees",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "212023549_Withdrawal_fees.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212023549-Withdrawal-fees"
+        },
+        {
+          "id": "212029669",
+          "title": "Currencies accepted",
+          "category": "Payments",
+          "section": "Currency",
+          "filename": "212029669_Currencies_accepted.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212029669-Currencies-accepted"
+        },
+        {
+          "id": "212030069",
+          "title": "Adding a new card to your account",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "212030069_Adding_a_new_card_to_your_account.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212030069-Adding-a-new-card-to-your-account"
+        },
+        {
+          "id": "212032069",
+          "title": "Making a complaint",
+          "category": "Contact Us",
+          "section": "Complaints",
+          "filename": "212032069_Making_a_complaint.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212032069-Making-a-complaint"
+        },
+        {
+          "id": "212060309",
+          "title": "Verifying your email address",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "212060309_Verifying_your_email_address.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212060309-Verifying-your-email-address"
+        },
+        {
+          "id": "212061789",
+          "title": "How to use the document uploader",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "212061789_How_to_use_the_document_uploader.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212061789-How-to-use-the-document-uploader"
+        },
+        {
+          "id": "212062349",
+          "title": "Verification process time",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "212062349_Verification_process_time.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212062349-Verification-process-time"
+        },
+        {
+          "id": "212062409",
+          "title": "Money Laundering Policy",
+          "category": "Account Verification",
+          "section": "Account-security",
+          "filename": "212062409_Money_Laundering_Policy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212062409-Money-Laundering-Policy"
+        },
+        {
+          "id": "212074409",
+          "title": "Gambling self-assessment test",
+          "category": "Safer Gambling",
+          "section": "Recognising-a-problem",
+          "filename": "212074409_Gambling_self_assessment_test.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212074409-Gambling-self-assessment-test"
+        },
+        {
+          "id": "212079549",
+          "title": "Why haven’t I been paid the correct return?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "212079549_Why_haven_t_I_been_paid_the_correct_return.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212079549-Why-haven-t-I-been-paid-the-correct-return"
+        },
+        {
+          "id": "212079649",
+          "title": "Site unavailability",
+          "category": "Betting on Smarkets",
+          "section": "Technical",
+          "filename": "212079649_Site_unavailability.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212079649-Site-unavailability"
+        },
+        {
+          "id": "212104089",
+          "title": "How to place a bet",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "212104089_How_to_place_a_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104089-How-to-place-a-bet"
+        },
+        {
+          "id": "212104349",
+          "title": "Cookie Policy",
+          "category": "Your Account",
+          "section": "Data-protection",
+          "filename": "212104349_Cookie_Policy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104349-Cookie-Policy"
+        },
+        {
+          "id": "212104369",
+          "title": "Updating your personal details",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212104369_Updating_your_personal_details.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104369-Updating-your-personal-details"
+        },
+        {
+          "id": "212104389",
+          "title": "Bet result email updates",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212104389_Bet_result_email_updates.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104389-Bet-result-email-updates"
+        },
+        {
+          "id": "212104449",
+          "title": "Forgotten password procedure",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212104449_Forgotten_password_procedure.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104449-Forgotten-password-procedure"
+        },
+        {
+          "id": "212104509",
+          "title": "Change the odds format",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212104509_Change_the_odds_format.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104509-Change-the-odds-format"
+        },
+        {
+          "id": "212104589",
+          "title": "Backer’s stake explained",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212104589_Backer_s_stake_explained.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104589-Backer-s-stake-explained"
+        },
+        {
+          "id": "212104749",
+          "title": "How to use the 'Your Bets' section",
+          "category": "Your Account",
+          "section": "Your-bets",
+          "filename": "212104749_How_to_use_the_Your_Bets_section.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104749-How-to-use-the-Your-Bets-section"
+        },
+        {
+          "id": "212104789",
+          "title": "Cancel a bet",
+          "category": "Your Account",
+          "section": "Your-bets",
+          "filename": "212104789_Cancel_a_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212104789-Cancel-a-bet"
+        },
+        {
+          "id": "212105709",
+          "title": "View bet status",
+          "category": "Your Account",
+          "section": "Your-bets",
+          "filename": "212105709_View_bet_status.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212105709-View-bet-status"
+        },
+        {
+          "id": "212105989",
+          "title": "Bet liability",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212105989_Bet_liability.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212105989-Bet-liability"
+        },
+        {
+          "id": "212106009",
+          "title": "Commission breakdown",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212106009_Commission_breakdown.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212106009-Commission-breakdown"
+        },
+        {
+          "id": "212106069",
+          "title": "Pending bets",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212106069_Pending_bets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212106069-Pending-bets"
+        },
+        {
+          "id": "212106249",
+          "title": "Instant Match",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "212106249_Instant_Match.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212106249-Instant-Match"
+        },
+        {
+          "id": "212183509",
+          "title": "1 - 11. General Smarkets betting rules",
+          "category": "Betting Rules",
+          "section": "General-rules",
+          "filename": "212183509_1_11_General_Smarkets_betting_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212183509-1-11-General-Smarkets-betting-rules"
+        },
+        {
+          "id": "212607305",
+          "title": "Maestro",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "212607305_Maestro.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212607305-Maestro"
+        },
+        {
+          "id": "212607345",
+          "title": "Visa Credit Card",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "212607345_Visa_Credit_Card.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212607345-Visa-Credit-Card"
+        },
+        {
+          "id": "212608105",
+          "title": "Mastercard/Eurocard",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "212608105_Mastercard_Eurocard.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212608105-Mastercard-Eurocard"
+        },
+        {
+          "id": "212616245",
+          "title": "How to make a deposit",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "212616245_How_to_make_a_deposit.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212616245-How-to-make-a-deposit"
+        },
+        {
+          "id": "212618805",
+          "title": "Deposit process time",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "212618805_Deposit_process_time.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212618805-Deposit-process-time"
+        },
+        {
+          "id": "212618865",
+          "title": "Deposit fees",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "212618865_Deposit_fees.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212618865-Deposit-fees"
+        },
+        {
+          "id": "212619525",
+          "title": "Withdrawal process time",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "212619525_Withdrawal_process_time.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212619525-Withdrawal-process-time"
+        },
+        {
+          "id": "212620285",
+          "title": "Minimum and maximum withdrawals",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "212620285_Minimum_and_maximum_withdrawals.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212620285-Minimum-and-maximum-withdrawals"
+        },
+        {
+          "id": "212620505",
+          "title": "Cancel a pending withdrawal",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "212620505_Cancel_a_pending_withdrawal.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212620505-Cancel-a-pending-withdrawal"
+        },
+        {
+          "id": "212626125",
+          "title": "Change your currency",
+          "category": "Payments",
+          "section": "Currency",
+          "filename": "212626125_Change_your_currency.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212626125-Change-your-currency"
+        },
+        {
+          "id": "212626745",
+          "title": "How are my funds protected?",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "212626745_How_are_my_funds_protected.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212626745-How-are-my-funds-protected"
+        },
+        {
+          "id": "212634805",
+          "title": "How to verify your account",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "212634805_How_to_verify_your_account.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212634805-How-to-verify-your-account"
+        },
+        {
+          "id": "212634845",
+          "title": "Documents required to verify your account",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "212634845_Documents_required_to_verify_your_account.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212634845-Documents-required-to-verify-your-account"
+        },
+        {
+          "id": "212637325",
+          "title": "Change your verified email address",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "212637325_Change_your_verified_email_address.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212637325-Change-your-verified-email-address"
+        },
+        {
+          "id": "212637485",
+          "title": "Verification documents security",
+          "category": "Account Verification",
+          "section": "Account-security",
+          "filename": "212637485_Verification_documents_security.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212637485-Verification-documents-security"
+        },
+        {
+          "id": "212653665",
+          "title": "Support organisations",
+          "category": "Safer Gambling",
+          "section": "Help-and-support",
+          "filename": "212653665_Support_organisations.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212653665-Support-organisations"
+        },
+        {
+          "id": "212654665",
+          "title": "Smarkets commission FAQ",
+          "category": "Betting on Smarkets",
+          "section": "Commission",
+          "filename": "212654665_Smarkets_commission_FAQ.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212654665-Smarkets-commission-FAQ"
+        },
+        {
+          "id": "212654725",
+          "title": "Just a moment...",
+          "category": "Betting on Smarkets",
+          "section": "Commission",
+          "filename": "212654725_Why_do_Smarkets_charge_commission.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212654725-Why-do-Smarkets-charge-commission"
+        },
+        {
+          "id": "212655265",
+          "title": "How is commission calculated?",
+          "category": "Betting on Smarkets",
+          "section": "Commission",
+          "filename": "212655265_How_is_commission_calculated.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212655265-How-is-commission-calculated"
+        },
+        {
+          "id": "212655345",
+          "title": "Can I change my time zone setting?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "212655345_Can_I_change_my_time_zone_setting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212655345-Can-I-change-my-time-zone-setting"
+        },
+        {
+          "id": "212655465",
+          "title": "What do 'Bid’ and 'Ask' mean?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "212655465_What_do_Bid_and_Ask_mean.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212655465-What-do-Bid-and-Ask-mean"
+        },
+        {
+          "id": "212655565",
+          "title": "What is net liability?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "212655565_What_is_net_liability.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212655565-What-is-net-liability"
+        },
+        {
+          "id": "212656045",
+          "title": "Browser requirements",
+          "category": "Betting on Smarkets",
+          "section": "Technical",
+          "filename": "212656045_Browser_requirements.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212656045-Browser-requirements"
+        },
+        {
+          "id": "212656625",
+          "title": "Connectivity issues",
+          "category": "Betting on Smarkets",
+          "section": "Technical",
+          "filename": "212656625_Connectivity_issues.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212656625-Connectivity-issues"
+        },
+        {
+          "id": "212656685",
+          "title": "Login Issues",
+          "category": "Betting on Smarkets",
+          "section": "Technical",
+          "filename": "212656685_Login_Issues.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212656685-Login-Issues"
+        },
+        {
+          "id": "212726965",
+          "title": "How to open an account on Smarkets",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "212726965_How_to_open_an_account_on_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212726965-How-to-open-an-account-on-Smarkets"
+        },
+        {
+          "id": "212727085",
+          "title": "How to set your own odds",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "212727085_How_to_set_your_own_odds.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212727085-How-to-set-your-own-odds"
+        },
+        {
+          "id": "212727285",
+          "title": "Minimum and maximum stakes",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "212727285_Minimum_and_maximum_stakes.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212727285-Minimum-and-maximum-stakes"
+        },
+        {
+          "id": "212727325",
+          "title": "Betting data security",
+          "category": "Your Account",
+          "section": "Data-protection",
+          "filename": "212727325_Betting_data_security.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212727325-Betting-data-security"
+        },
+        {
+          "id": "212727525",
+          "title": "Mailing list",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212727525_Mailing_list.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212727525-Mailing-list"
+        },
+        {
+          "id": "212727645",
+          "title": "Close your account",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212727645_Close_your_account.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212727645-Close-your-account"
+        },
+        {
+          "id": "212727705",
+          "title": "Change your account password",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "212727705_Change_your_account_password.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212727705-Change-your-account-password"
+        },
+        {
+          "id": "212729085",
+          "title": "How to use your account statement",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212729085_How_to_use_your_account_statement.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212729085-How-to-use-your-account-statement"
+        },
+        {
+          "id": "212729145",
+          "title": "Best price execution",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "212729145_Best_price_execution.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212729145-Best-price-execution"
+        },
+        {
+          "id": "212729165",
+          "title": "Net settlement",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212729165_Net_settlement.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212729165-Net-settlement"
+        },
+        {
+          "id": "212729185",
+          "title": "Accessing your account history",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212729185_Accessing_your_account_history.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212729185-Accessing-your-account-history"
+        },
+        {
+          "id": "212729225",
+          "title": "Matched/partially matched bets",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212729225_Matched_partially_matched_bets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212729225-Matched-partially-matched-bets"
+        },
+        {
+          "id": "212729265",
+          "title": "Voided/cancelled bets",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "212729265_Voided_cancelled_bets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212729265-Voided-cancelled-bets"
+        },
+        {
+          "id": "212753645",
+          "title": "How to trade out of a bet",
+          "category": "Education",
+          "section": "Betting-on-an-exchange",
+          "filename": "212753645_How_to_trade_out_of_a_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212753645-How-to-trade-out-of-a-bet"
+        },
+        {
+          "id": "212816949",
+          "title": "Privacy Policy",
+          "category": "Your Account",
+          "section": "Data-protection",
+          "filename": "212816949_Privacy_Policy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212816949-Privacy-Policy"
+        },
+        {
+          "id": "212819049",
+          "title": "Clearly Erroneous Bets Policy",
+          "category": "Betting Rules",
+          "section": "Erroneous-Bets",
+          "filename": "212819049_Clearly_Erroneous_Bets_Policy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/212819049-Clearly-Erroneous-Bets-Policy"
+        },
+        {
+          "id": "213469085",
+          "title": "Smarkets Terms and Conditions",
+          "category": "Terms & Conditions",
+          "section": "Version-4-13-Last-modified-7-December-2022",
+          "filename": "213469085_Smarkets_Terms_and_Conditions.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/213469085-Smarkets-Terms-and-Conditions"
+        },
+        {
+          "id": "214058369",
+          "title": "How to calculate implied probability in betting",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214058369_How_to_calculate_implied_probability_in_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214058369-How-to-calculate-implied-probability-in-betting"
+        },
+        {
+          "id": "214062929",
+          "title": "How to convert betting odds",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214062929_How_to_convert_betting_odds.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214062929-How-to-convert-betting-odds"
+        },
+        {
+          "id": "214070229",
+          "title": "What are betting odds?",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214070229_What_are_betting_odds.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214070229-What-are-betting-odds"
+        },
+        {
+          "id": "214071849",
+          "title": "What are the different betting odds formats?",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214071849_What_are_the_different_betting_odds_formats.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214071849-What-are-the-different-betting-odds-formats"
+        },
+        {
+          "id": "214097149",
+          "title": "What is over under betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "214097149_What_is_over_under_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214097149-What-is-over-under-betting"
+        },
+        {
+          "id": "214108649",
+          "title": "What is 1X2 betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "214108649_What_is_1X2_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214108649-What-is-1X2-betting"
+        },
+        {
+          "id": "214180145",
+          "title": "How to calculate betting margins",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214180145_How_to_calculate_betting_margins.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214180145-How-to-calculate-betting-margins"
+        },
+        {
+          "id": "214180825",
+          "title": "How do bookmakers make money",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214180825_How_do_bookmakers_make_money.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214180825-How-do-bookmakers-make-money"
+        },
+        {
+          "id": "214274825",
+          "title": "Trade out button on Smarkets",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "214274825_Trade_out_button_on_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214274825-Trade-out-button-on-Smarkets"
+        },
+        {
+          "id": "214511865",
+          "title": "Keep bets in-play",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "214511865_Keep_bets_in_play.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214511865-Keep-bets-in-play"
+        },
+        {
+          "id": "214554985",
+          "title": "Just a moment...",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214554985_How_to_calculate_expected_value_in_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214554985-How-to-calculate-expected-value-in-betting"
+        },
+        {
+          "id": "214559905",
+          "title": "Why do betting odds change?",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "214559905_Why_do_betting_odds_change.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214559905-Why-do-betting-odds-change"
+        },
+        {
+          "id": "214562585",
+          "title": "What is ante-post betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "214562585_What_is_ante_post_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214562585-What-is-ante-post-betting"
+        },
+        {
+          "id": "214584625",
+          "title": "What is head-to-head betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "214584625_What_is_head_to_head_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/214584625-What-is-head-to-head-betting"
+        },
+        {
+          "id": "22786223962013",
+          "title": "Matched Betting Hub",
+          "category": "Education",
+          "section": "Matched-betting-and-arbitrage-strategy",
+          "filename": "22786223962013_Matched_Betting_Hub.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/22786223962013-Matched-Betting-Hub"
+        },
+        {
+          "id": "31879019228701",
+          "title": "Understanding the Closed Loop System at Smarkets",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "31879019228701_Understanding_the_Closed_Loop_System_at_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/31879019228701-Understanding-the-Closed-Loop-System-at-Smarkets"
+        },
+        {
+          "id": "34697834941085",
+          "title": "Just a moment...",
+          "category": "Betting on Smarkets",
+          "section": "Smarkets-API",
+          "filename": "34697834941085_Smarkets_API_Access_Integration_T_Cs.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/34697834941085-Smarkets-API-Access-Integration-T-Cs"
+        },
+        {
+          "id": "34720906181021",
+          "title": "Smarkets API Documentation & Resources",
+          "category": "Betting on Smarkets",
+          "section": "Smarkets-API",
+          "filename": "34720906181021_Smarkets_API_Documentation_Resources.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/34720906181021-Smarkets-API-Documentation-Resources"
+        },
+        {
+          "id": "35539664103965",
+          "title": "0% Commission - SailGP Exclusive Promotion",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "35539664103965_0_Commission_SailGP_Exclusive_Promotion.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/35539664103965-0-Commission-SailGP-Exclusive-Promotion"
+        },
+        {
+          "id": "360002350732",
+          "title": "US Masters golf trading strategy",
+          "category": "Education",
+          "section": "Golf-betting-strategy",
+          "filename": "360002350732_US_Masters_golf_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360002350732-US-Masters-golf-trading-strategy"
+        },
+        {
+          "id": "360002522132",
+          "title": "Dead heat calculator",
+          "category": "Calculators",
+          "section": "Calculators",
+          "filename": "360002522132_Dead_heat_calculator.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360002522132-Dead-heat-calculator"
+        },
+        {
+          "id": "360006230237",
+          "title": "Instant Bank Transfer",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "360006230237_Instant_Bank_Transfer.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360006230237-Instant-Bank-Transfer"
+        },
+        {
+          "id": "360006799777",
+          "title": "31. Australian Football rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "360006799777_31_Australian_Football_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360006799777-31-Australian-Football-rules"
+        },
+        {
+          "id": "360006824657",
+          "title": "32. Esports rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "360006824657_32_Esports_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360006824657-32-Esports-rules"
+        },
+        {
+          "id": "360007022497",
+          "title": "34. Table Tennis rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "360007022497_34_Table_Tennis_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360007022497-34-Table-Tennis-rules"
+        },
+        {
+          "id": "360007024158",
+          "title": "33. Greyhound rules",
+          "category": "Betting Rules",
+          "section": "Sports-specific-rules",
+          "filename": "360007024158_33_Greyhound_rules.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360007024158-33-Greyhound-rules"
+        },
+        {
+          "id": "360007284157",
+          "title": "What is CS:GO?",
+          "category": "Education",
+          "section": "Esports",
+          "filename": "360007284157_What_is_CS_GO.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360007284157-What-is-CS-GO"
+        },
+        {
+          "id": "360007284297",
+          "title": "Five benefits of betting on esports",
+          "category": "Education",
+          "section": "Esports",
+          "filename": "360007284297_Five_benefits_of_betting_on_esports.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360007284297-Five-benefits-of-betting-on-esports"
+        },
+        {
+          "id": "360007349398",
+          "title": "What is League of Legends?",
+          "category": "Education",
+          "section": "Esports",
+          "filename": "360007349398_What_is_League_of_Legends.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360007349398-What-is-League-of-Legends"
+        },
+        {
+          "id": "360010393058",
+          "title": "What does 'SP' mean in betting?",
+          "category": "Education",
+          "section": "Trading-and-Betting-Basics",
+          "filename": "360010393058_What_does_SP_mean_in_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360010393058-What-does-SP-mean-in-betting"
+        },
+        {
+          "id": "360010630357",
+          "title": "How to bet on the Grand National",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "360010630357_How_to_bet_on_the_Grand_National.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360010630357-How-to-bet-on-the-Grand-National"
+        },
+        {
+          "id": "360010866497",
+          "title": "What is each-way betting?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "360010866497_What_is_each_way_betting.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360010866497-What-is-each-way-betting"
+        },
+        {
+          "id": "360011216478",
+          "title": "Multiples on Smarkets",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "360011216478_Multiples_on_Smarkets.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360011216478-Multiples-on-Smarkets"
+        },
+        {
+          "id": "360012301952",
+          "title": "Not available in play",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "360012301952_Not_available_in_play.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360012301952-Not-available-in-play"
+        },
+        {
+          "id": "360013279877",
+          "title": "Corporate Accounts",
+          "category": "Betting on Smarkets",
+          "section": "Exchange-betting",
+          "filename": "360013279877_Corporate_Accounts.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360013279877-Corporate-Accounts"
+        },
+        {
+          "id": "360014414992",
+          "title": "US Open tennis trading strategy",
+          "category": "Education",
+          "section": "Tennis-betting-strategy",
+          "filename": "360014414992_US_Open_tennis_trading_strategy.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360014414992-US-Open-tennis-trading-strategy"
+        },
+        {
+          "id": "360015273571",
+          "title": "What are the charts at the top of each market?",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "360015273571_What_are_the_charts_at_the_top_of_each_market.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360015273571-What-are-the-charts-at-the-top-of-each-market"
+        },
+        {
+          "id": "360017609958",
+          "title": "How to bet on horse racing",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "360017609958_How_to_bet_on_horse_racing.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360017609958-How-to-bet-on-horse-racing"
+        },
+        {
+          "id": "360017712998",
+          "title": "What is a Heinz bet?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "360017712998_What_is_a_Heinz_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360017712998-What-is-a-Heinz-bet"
+        },
+        {
+          "id": "360018344791",
+          "title": "Which racing trainers excel at Carlisle?",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "360018344791_Which_racing_trainers_excel_at_Carlisle.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360018344791-Which-racing-trainers-excel-at-Carlisle"
+        },
+        {
+          "id": "360018431911",
+          "title": "How to use the Watchlist",
+          "category": "Betting on Smarkets",
+          "section": "Betting-FAQs",
+          "filename": "360018431911_How_to_use_the_Watchlist.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360018431911-How-to-use-the-Watchlist"
+        },
+        {
+          "id": "360019112698",
+          "title": "What is the Grand National and why is it popular?",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "360019112698_What_is_the_Grand_National_and_why_is_it_popular.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360019112698-What-is-the-Grand-National-and-why-is-it-popular"
+        },
+        {
+          "id": "360019121771",
+          "title": "PayPal",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "360019121771_PayPal.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360019121771-PayPal"
+        },
+        {
+          "id": "360019948437",
+          "title": "What is a trixie bet?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "360019948437_What_is_a_trixie_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360019948437-What-is-a-trixie-bet"
+        },
+        {
+          "id": "360019950398",
+          "title": "What is a Yankee bet?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "360019950398_What_is_a_Yankee_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360019950398-What-is-a-Yankee-bet"
+        },
+        {
+          "id": "360030001951",
+          "title": "Trust Deed",
+          "category": "Terms & Conditions",
+          "section": "Version-4-13-Last-modified-7-December-2022",
+          "filename": "360030001951_Trust_Deed.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/360030001951-Trust-Deed"
+        },
+        {
+          "id": "4402143483153",
+          "title": "What is a Patent bet?",
+          "category": "Education",
+          "section": "Horse-racing-betting-strategy",
+          "filename": "4402143483153_What_is_a_Patent_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/4402143483153-What-is-a-Patent-bet"
+        },
+        {
+          "id": "4405845528977",
+          "title": "What is a Lucky 15 bet?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "4405845528977_What_is_a_Lucky_15_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/4405845528977-What-is-a-Lucky-15-bet"
+        },
+        {
+          "id": "4406154672401",
+          "title": "What is an accumulator bet?",
+          "category": "Education",
+          "section": "Bet-types",
+          "filename": "4406154672401_What_is_an_accumulator_bet.md",
+          "url": "https://help.smarkets.com/hc/en-gb/articles/4406154672401-What-is-an-accumulator-bet"
+        }
+      ]
+    },
+    "sbk": {
+      "locales": [
+        "en-gb",
+        "en-id",
+        "en-in",
+        "en-us",
+        "sv-se"
+      ],
+      "article_count": 132,
+      "articles": [
+        {
+          "id": "10203477963421",
+          "title": "Trustly",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "10203477963421_Trustly.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/10203477963421-Trustly"
+        },
+        {
+          "id": "14436160505245",
+          "title": "Full Cover Bet Types",
+          "category": "Using SBK",
+          "section": "SBK-betting",
+          "filename": "14436160505245_Full_Cover_Bet_Types.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/14436160505245-Full-Cover-Bet-Types"
+        },
+        {
+          "id": "14438824580125",
+          "title": "Advanced Payout",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "14438824580125_Advanced_Payout.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/14438824580125-Advanced-Payout"
+        },
+        {
+          "id": "15988549801245",
+          "title": "Cash out on SBK",
+          "category": "Using SBK",
+          "section": "SBK-betting",
+          "filename": "15988549801245_Cash_out_on_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/15988549801245-Cash-out-on-SBK"
+        },
+        {
+          "id": "16456210627485",
+          "title": "How to spot problem gambling",
+          "category": "Safer Gambling",
+          "section": "Recognising-a-problem",
+          "filename": "16456210627485_How_to_spot_problem_gambling.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16456210627485-How-to-spot-problem-gambling"
+        },
+        {
+          "id": "16491338515613",
+          "title": "Explaining source of funds and wealth checks",
+          "category": "Account Verification",
+          "section": "Source-of-Funds-Wealth",
+          "filename": "16491338515613_Explaining_source_of_funds_and_wealth_checks.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16491338515613-Explaining-source-of-funds-and-wealth-checks"
+        },
+        {
+          "id": "16491347938333",
+          "title": "The difference between Source of Funds and Affordability checks",
+          "category": "Account Verification",
+          "section": "Source-of-Funds-Wealth",
+          "filename": "16491347938333_The_difference_between_Source_of_Funds_and_Affordability_checks.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16491347938333-The-difference-between-Source-of-Funds-and-Affordability-checks"
+        },
+        {
+          "id": "16491357148061",
+          "title": "Asking about how you fund your account",
+          "category": "Account Verification",
+          "section": "Source-of-Funds-Wealth",
+          "filename": "16491357148061_Asking_about_how_you_fund_your_account.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16491357148061-Asking-about-how-you-fund-your-account"
+        },
+        {
+          "id": "16491419116701",
+          "title": "Document guidelines",
+          "category": "Account Verification",
+          "section": "Source-of-Funds-Wealth",
+          "filename": "16491419116701_Document_guidelines.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16491419116701-Document-guidelines"
+        },
+        {
+          "id": "16491450442269",
+          "title": "Account restrictions",
+          "category": "Account Verification",
+          "section": "Source-of-Funds-Wealth",
+          "filename": "16491450442269_Account_restrictions.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16491450442269-Account-restrictions"
+        },
+        {
+          "id": "16491496658461",
+          "title": "GDPR, document privacy and security",
+          "category": "Account Verification",
+          "section": "Account-security",
+          "filename": "16491496658461_GDPR_document_privacy_and_security.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16491496658461-GDPR-document-privacy-and-security"
+        },
+        {
+          "id": "16953703017629",
+          "title": "Horse Racing Bundle",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "16953703017629_Horse_Racing_Bundle.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/16953703017629-Horse-Racing-Bundle"
+        },
+        {
+          "id": "19244441708829",
+          "title": "SBK Best Price",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "19244441708829_SBK_Best_Price.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/19244441708829-SBK-Best-Price"
+        },
+        {
+          "id": "20293217457181",
+          "title": "35. Gaelic Games rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "20293217457181_35_Gaelic_Games_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/20293217457181-35-Gaelic-Games-rules"
+        },
+        {
+          "id": "20924433029149",
+          "title": "Fresh Legs on SBK",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "20924433029149_Fresh_Legs_on_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/20924433029149-Fresh-Legs-on-SBK"
+        },
+        {
+          "id": "21029003701405",
+          "title": "Instant Bank Transfer",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "21029003701405_Instant_Bank_Transfer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/21029003701405-Instant-Bank-Transfer"
+        },
+        {
+          "id": "22144219441821",
+          "title": "Survey T&Cs - October, 2024",
+          "category": "Terms & Conditions",
+          "section": "Promotion-terms-conditions",
+          "filename": "22144219441821_Survey_T_Cs_October_2024.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/22144219441821-Survey-T-Cs-October-2024"
+        },
+        {
+          "id": "23420017184797",
+          "title": "Accessing your account history",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "23420017184797_Accessing_your_account_history.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/23420017184797-Accessing-your-account-history"
+        },
+        {
+          "id": "23652073046941",
+          "title": "UK Welcome bonus - Bet £20, get £50 in Free Bets",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "23652073046941_UK_Welcome_bonus_Bet_20_get_50_in_Free_Bets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/23652073046941-UK-Welcome-bonus-Bet-20-get-50-in-Free-Bets"
+        },
+        {
+          "id": "23652191726749",
+          "title": "Ireland and Malta welcome bonus, Bet €10 Get €50 in Free Bets",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "23652191726749_Ireland_and_Malta_welcome_bonus_Bet_10_Get_50_in_Free_Bets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/23652191726749-Ireland-and-Malta-welcome-bonus-Bet-10-Get-50-in-Free-Bets"
+        },
+        {
+          "id": "26369502920093",
+          "title": "Bet $100, Get $20 in Free Bets",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "26369502920093_Bet_100_Get_20_in_Free_Bets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/26369502920093-Bet-100-Get-20-in-Free-Bets"
+        },
+        {
+          "id": "27345232701597",
+          "title": "Live Activity",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "27345232701597_Live_Activity.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/27345232701597-Live-Activity"
+        },
+        {
+          "id": "27738528186397",
+          "title": "SB10K",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "27738528186397_SB10K.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/27738528186397-SB10K"
+        },
+        {
+          "id": "29245683903517",
+          "title": "Fresh Leg's Customer Choice",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "29245683903517_Fresh_Leg_s_Customer_Choice.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/29245683903517-Fresh-Leg-s-Customer-Choice"
+        },
+        {
+          "id": "29396235917725",
+          "title": "Introducing the SBK Bet Feed",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "29396235917725_Introducing_the_SBK_Bet_Feed.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/29396235917725-Introducing-the-SBK-Bet-Feed"
+        },
+        {
+          "id": "29438983334045",
+          "title": "Acca Boost",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "29438983334045_Acca_Boost.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/29438983334045-Acca-Boost"
+        },
+        {
+          "id": "29460824948637",
+          "title": "SBK X Hibernian | 150th Anniversary Free Bet Giveaway",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "29460824948637_SBK_X_Hibernian_150th_Anniversary_Free_Bet_Giveaway.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/29460824948637-SBK-X-Hibernian-150th-Anniversary-Free-Bet-Giveaway"
+        },
+        {
+          "id": "30059567958557",
+          "title": "Pay to Bank - card withdrawals",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "30059567958557_Pay_to_Bank_card_withdrawals.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/30059567958557-Pay-to-Bank-card-withdrawals"
+        },
+        {
+          "id": "30108740521885",
+          "title": "Weekly Offer - Bet £/€50, Get £/€10 in Free Bets",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "30108740521885_Weekly_Offer_Bet_50_Get_10_in_Free_Bets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/30108740521885-Weekly-Offer-Bet-50-Get-10-in-Free-Bets"
+        },
+        {
+          "id": "31764583975709",
+          "title": "Understanding the Closed Loop System at SBK",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "31764583975709_Understanding_the_Closed_Loop_System_at_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/31764583975709-Understanding-the-Closed-Loop-System-at-SBK"
+        },
+        {
+          "id": "32566049911069",
+          "title": "The Assist T&Cs",
+          "category": "Terms & Conditions",
+          "section": "Promotion-terms-conditions",
+          "filename": "32566049911069_The_Assist_T_Cs.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/32566049911069-The-Assist-T-Cs"
+        },
+        {
+          "id": "32566875900573",
+          "title": "SBK Customers Survey December 2025, T&Cs",
+          "category": "Terms & Conditions",
+          "section": "Promotion-terms-conditions",
+          "filename": "32566875900573_SBK_Customers_Survey_December_2025_T_Cs.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/32566875900573-SBK-Customers-Survey-December-2025-T-Cs"
+        },
+        {
+          "id": "34394442308125",
+          "title": "Hot Bets Referral Offer",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "34394442308125_Hot_Bets_Referral_Offer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/34394442308125-Hot-Bets-Referral-Offer"
+        },
+        {
+          "id": "34755604624541",
+          "title": "SBK X Hibernian Email | Match Ball Competition",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "34755604624541_SBK_X_Hibernian_Email_Match_Ball_Competition.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/34755604624541-SBK-X-Hibernian-Email-Match-Ball-Competition"
+        },
+        {
+          "id": "35892208875293",
+          "title": "SBK X Email | Bradford City vs Bolton Tickets",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "35892208875293_SBK_X_Email_Bradford_City_vs_Bolton_Tickets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/35892208875293-SBK-X-Email-Bradford-City-vs-Bolton-Tickets"
+        },
+        {
+          "id": "360002159057",
+          "title": "1 - 11. General SBK betting rules",
+          "category": "Betting Rules",
+          "section": "General-rules",
+          "filename": "360002159057_1_11_General_SBK_betting_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159057-1-11-General-SBK-betting-rules"
+        },
+        {
+          "id": "360002159437",
+          "title": "12. Football rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159437_12_Football_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159437-12-Football-rules"
+        },
+        {
+          "id": "360002159497",
+          "title": "13. Horse Racing rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159497_13_Horse_Racing_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159497-13-Horse-Racing-rules"
+        },
+        {
+          "id": "360002159617",
+          "title": "16. Tennis rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159617_16_Tennis_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159617-16-Tennis-rules"
+        },
+        {
+          "id": "360002159637",
+          "title": "17. Basketball rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159637_17_Basketball_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159637-17-Basketball-rules"
+        },
+        {
+          "id": "360002159677",
+          "title": "19. Baseball rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159677_19_Baseball_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159677-19-Baseball-rules"
+        },
+        {
+          "id": "360002159737",
+          "title": "21. Motorsports rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159737_21_Motorsports_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159737-21-Motorsports-rules"
+        },
+        {
+          "id": "360002159757",
+          "title": "23. Boxing rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159757_23_Boxing_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159757-23-Boxing-rules"
+        },
+        {
+          "id": "360002159777",
+          "title": "24. MMA rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159777_24_MMA_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159777-24-MMA-rules"
+        },
+        {
+          "id": "360002159877",
+          "title": "28. Snooker and Pool rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159877_28_Snooker_and_Pool_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159877-28-Snooker-and-Pool-rules"
+        },
+        {
+          "id": "360002159917",
+          "title": "29. Darts rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002159917_29_Darts_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002159917-29-Darts-rules"
+        },
+        {
+          "id": "360002166058",
+          "title": "14. Golf rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166058_14_Golf_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166058-14-Golf-rules"
+        },
+        {
+          "id": "360002166078",
+          "title": "15. Cricket rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166078_15_Cricket_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166078-15-Cricket-rules"
+        },
+        {
+          "id": "360002166118",
+          "title": "18. Rugby Union and Rugby League rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166118_18_Rugby_Union_and_Rugby_League_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166118-18-Rugby-Union-and-Rugby-League-rules"
+        },
+        {
+          "id": "360002166158",
+          "title": "20. American Football rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166158_20_American_Football_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166158-20-American-Football-rules"
+        },
+        {
+          "id": "360002166178",
+          "title": "22. Ice Hockey rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166178_22_Ice_Hockey_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166178-22-Ice-Hockey-rules"
+        },
+        {
+          "id": "360002166198",
+          "title": "25. Cycling rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166198_25_Cycling_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166198-25-Cycling-rules"
+        },
+        {
+          "id": "360002166258",
+          "title": "26. Athletics rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166258_26_Athletics_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166258-26-Athletics-rules"
+        },
+        {
+          "id": "360002166278",
+          "title": "30. Politics rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166278_30_Politics_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166278-30-Politics-rules"
+        },
+        {
+          "id": "360002166298",
+          "title": "27. Swimming rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360002166298_27_Swimming_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002166298-27-Swimming-rules"
+        },
+        {
+          "id": "360002180137",
+          "title": "Connectivity issues",
+          "category": "Using SBK",
+          "section": "Technical",
+          "filename": "360002180137_Connectivity_issues.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002180137-Connectivity-issues"
+        },
+        {
+          "id": "360002241297",
+          "title": "SBK social code of conduct",
+          "category": "Terms & Conditions",
+          "section": "Social-code-of-conduct",
+          "filename": "360002241297_SBK_social_code_of_conduct.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360002241297-SBK-social-code-of-conduct"
+        },
+        {
+          "id": "360004563257",
+          "title": "Welcome bonus explained",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "360004563257_Welcome_bonus_explained.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360004563257-Welcome-bonus-explained"
+        },
+        {
+          "id": "360004823178",
+          "title": "Cookie Policy",
+          "category": "Your Account",
+          "section": "Data-protection",
+          "filename": "360004823178_Cookie_Policy.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360004823178-Cookie-Policy"
+        },
+        {
+          "id": "360006331077",
+          "title": "How are my funds protected?",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "360006331077_How_are_my_funds_protected.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360006331077-How-are-my-funds-protected"
+        },
+        {
+          "id": "360006849198",
+          "title": "31. Australian Football rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360006849198_31_Australian_Football_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360006849198-31-Australian-Football-rules"
+        },
+        {
+          "id": "360006870078",
+          "title": "32. Esports rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360006870078_32_Esports_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360006870078-32-Esports-rules"
+        },
+        {
+          "id": "360006979577",
+          "title": "33. Greyhound rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360006979577_33_Greyhound_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360006979577-33-Greyhound-rules"
+        },
+        {
+          "id": "360007070978",
+          "title": "34. Table Tennis rules",
+          "category": "Betting Rules",
+          "section": "Sport-specific-rules",
+          "filename": "360007070978_34_Table_Tennis_rules.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360007070978-34-Table-Tennis-rules"
+        },
+        {
+          "id": "360007387017",
+          "title": "What is CS:GO?",
+          "category": "General",
+          "section": "Esports",
+          "filename": "360007387017_What_is_CS_GO.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360007387017-What-is-CS-GO"
+        },
+        {
+          "id": "360007547777",
+          "title": "What is Dota 2?",
+          "category": "General",
+          "section": "Esports",
+          "filename": "360007547777_What_is_Dota_2.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360007547777-What-is-Dota-2"
+        },
+        {
+          "id": "360007590398",
+          "title": "Five benefits of betting on esports",
+          "category": "General",
+          "section": "Esports",
+          "filename": "360007590398_Five_benefits_of_betting_on_esports.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360007590398-Five-benefits-of-betting-on-esports"
+        },
+        {
+          "id": "360007590418",
+          "title": "What is League of Legends?",
+          "category": "General",
+          "section": "Esports",
+          "filename": "360007590418_What_is_League_of_Legends.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360007590418-What-is-League-of-Legends"
+        },
+        {
+          "id": "360007854898",
+          "title": "Take a timeout",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "360007854898_Take_a_timeout.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360007854898-Take-a-timeout"
+        },
+        {
+          "id": "360030574872",
+          "title": "SBK Terms and Conditions",
+          "category": "Terms & Conditions",
+          "section": "Version-4-13-Last-modified-7-December-2022",
+          "filename": "360030574872_SBK_Terms_and_Conditions.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030574872-SBK-Terms-and-Conditions"
+        },
+        {
+          "id": "360030574972",
+          "title": "Our Safer Gambling Policy",
+          "category": "Safer Gambling",
+          "section": "Help-and-support",
+          "filename": "360030574972_Our_Safer_Gambling_Policy.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030574972-Our-Safer-Gambling-Policy"
+        },
+        {
+          "id": "360030575152",
+          "title": "Setting deposit and loss limits",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "360030575152_Setting_deposit_and_loss_limits.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030575152-Setting-deposit-and-loss-limits"
+        },
+        {
+          "id": "360030577732",
+          "title": "Change your account password",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030577732_Change_your_account_password.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030577732-Change-your-account-password"
+        },
+        {
+          "id": "360030577752",
+          "title": "Forgotten password procedure",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030577752_Forgotten_password_procedure.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030577752-Forgotten-password-procedure"
+        },
+        {
+          "id": "360030577772",
+          "title": "Using two-factor authentication",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030577772_Using_two_factor_authentication.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030577772-Using-two-factor-authentication"
+        },
+        {
+          "id": "360030578292",
+          "title": "View bet status",
+          "category": "Your Account",
+          "section": "Your-bets",
+          "filename": "360030578292_View_bet_status.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030578292-View-bet-status"
+        },
+        {
+          "id": "360030578392",
+          "title": "Money Laundering Policy",
+          "category": "Account Verification",
+          "section": "Account-security",
+          "filename": "360030578392_Money_Laundering_Policy.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030578392-Money-Laundering-Policy"
+        },
+        {
+          "id": "360030578492",
+          "title": "Electronic verification",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "360030578492_Electronic_verification.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030578492-Electronic-verification"
+        },
+        {
+          "id": "360030578552",
+          "title": "Verifying your email address",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "360030578552_Verifying_your_email_address.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030578552-Verifying-your-email-address"
+        },
+        {
+          "id": "360030578872",
+          "title": "Making a complaint",
+          "category": "Contact Us",
+          "section": "Complaints",
+          "filename": "360030578872_Making_a_complaint.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030578872-Making-a-complaint"
+        },
+        {
+          "id": "360030909571",
+          "title": "Clearly Erroneous Bets Policy",
+          "category": "Betting Rules",
+          "section": "Erroneous-Bets",
+          "filename": "360030909571_Clearly_Erroneous_Bets_Policy.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030909571-Clearly-Erroneous-Bets-Policy"
+        },
+        {
+          "id": "360030909691",
+          "title": "Trust Deed",
+          "category": "Terms & Conditions",
+          "section": "Version-4-13-Last-modified-7-December-2022",
+          "filename": "360030909691_Trust_Deed.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030909691-Trust-Deed"
+        },
+        {
+          "id": "360030909971",
+          "title": "Support organisations (UK)",
+          "category": "Safer Gambling",
+          "section": "Help-and-support",
+          "filename": "360030909971_Support_organisations_UK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030909971-Support-organisations-UK"
+        },
+        {
+          "id": "360030910411",
+          "title": "How to self-exclude",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "360030910411_How_to_self_exclude.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030910411-How-to-self-exclude"
+        },
+        {
+          "id": "360030910471",
+          "title": "Top tips to bet safely",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "360030910471_Top_tips_to_bet_safely.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030910471-Top-tips-to-bet-safely"
+        },
+        {
+          "id": "360030910511",
+          "title": "Gambling blocks",
+          "category": "Safer Gambling",
+          "section": "Safer-Gambling-Toolkit",
+          "filename": "360030910511_Gambling_blocks.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030910511-Gambling-blocks"
+        },
+        {
+          "id": "360030910771",
+          "title": "Currencies accepted",
+          "category": "Payments",
+          "section": "Currency",
+          "filename": "360030910771_Currencies_accepted.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030910771-Currencies-accepted"
+        },
+        {
+          "id": "360030910811",
+          "title": "Change your currency",
+          "category": "Payments",
+          "section": "Currency",
+          "filename": "360030910811_Change_your_currency.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030910811-Change-your-currency"
+        },
+        {
+          "id": "360030911631",
+          "title": "Minimum and maximum withdrawals",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "360030911631_Minimum_and_maximum_withdrawals.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030911631-Minimum-and-maximum-withdrawals"
+        },
+        {
+          "id": "360030912011",
+          "title": "Payment method comparison",
+          "category": "Payments",
+          "section": "Payment-methods",
+          "filename": "360030912011_Payment_method_comparison.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912011-Payment-method-comparison"
+        },
+        {
+          "id": "360030912451",
+          "title": "Privacy Policy",
+          "category": "Your Account",
+          "section": "Data-protection",
+          "filename": "360030912451_Privacy_Policy.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912451-Privacy-Policy"
+        },
+        {
+          "id": "360030912571",
+          "title": "Changing odds format",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030912571_Changing_odds_format.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912571-Changing-odds-format"
+        },
+        {
+          "id": "360030912651",
+          "title": "Bet result email updates",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030912651_Bet_result_email_updates.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912651-Bet-result-email-updates"
+        },
+        {
+          "id": "360030912711",
+          "title": "Mailing list",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030912711_Mailing_list.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912711-Mailing-list"
+        },
+        {
+          "id": "360030912771",
+          "title": "Updating your personal details",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030912771_Updating_your_personal_details.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912771-Updating-your-personal-details"
+        },
+        {
+          "id": "360030912791",
+          "title": "Close your account",
+          "category": "Your Account",
+          "section": "Settings",
+          "filename": "360030912791_Close_your_account.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912791-Close-your-account"
+        },
+        {
+          "id": "360030912911",
+          "title": "Net settlement",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "360030912911_Net_settlement.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912911-Net-settlement"
+        },
+        {
+          "id": "360030912931",
+          "title": "Voided/Cancelled bets",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "360030912931_Voided_Cancelled_bets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030912931-Voided-Cancelled-bets"
+        },
+        {
+          "id": "360030913271",
+          "title": "Documents required to verify your account",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "360030913271_Documents_required_to_verify_your_account.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030913271-Documents-required-to-verify-your-account"
+        },
+        {
+          "id": "360030913291",
+          "title": "Verification process time",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "360030913291_Verification_process_time.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030913291-Verification-process-time"
+        },
+        {
+          "id": "360030913411",
+          "title": "Change your verified email address",
+          "category": "Account Verification",
+          "section": "Verifying-your-account",
+          "filename": "360030913411_Change_your_verified_email_address.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030913411-Change-your-verified-email-address"
+        },
+        {
+          "id": "360030913931",
+          "title": "Contacting SBK",
+          "category": "Contact Us",
+          "section": "Contact-methods",
+          "filename": "360030913931_Contacting_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/360030913931-Contacting-SBK"
+        },
+        {
+          "id": "36588780082461",
+          "title": "talkSport Referral Offer",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "36588780082461_talkSport_Referral_Offer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/36588780082461-talkSport-Referral-Offer"
+        },
+        {
+          "id": "36588951093533",
+          "title": "The Big Kick Off Referral Offer",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "36588951093533_The_Big_Kick_Off_Referral_Offer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/36588951093533-The-Big-Kick-Off-Referral-Offer"
+        },
+        {
+          "id": "36589162798237",
+          "title": "The England Pod Referral Offer",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "36589162798237_The_England_Pod_Referral_Offer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/36589162798237-The-England-Pod-Referral-Offer"
+        },
+        {
+          "id": "36689329155869",
+          "title": "SB10K Leaderboard Promotion",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "36689329155869_SB10K_Leaderboard_Promotion.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/36689329155869-SB10K-Leaderboard-Promotion"
+        },
+        {
+          "id": "36711463531037",
+          "title": "World Cup - Save my Bet",
+          "category": "Using SBK",
+          "section": "Features",
+          "filename": "36711463531037_World_Cup_Save_my_Bet.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/36711463531037-World-Cup-Save-my-Bet"
+        },
+        {
+          "id": "36882644813341",
+          "title": "At The Races Referral Offer",
+          "category": "Bonus & Promotions",
+          "section": "Other-promos",
+          "filename": "36882644813341_At_The_Races_Referral_Offer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/36882644813341-At-The-Races-Referral-Offer"
+        },
+        {
+          "id": "4411363542033",
+          "title": "Adding a new card to your account",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "4411363542033_Adding_a_new_card_to_your_account.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411363542033-Adding-a-new-card-to-your-account"
+        },
+        {
+          "id": "4411363667089",
+          "title": "Cancel a pending withdrawal",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "4411363667089_Cancel_a_pending_withdrawal.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411363667089-Cancel-a-pending-withdrawal"
+        },
+        {
+          "id": "4411363778065",
+          "title": "Why can't I make a withdrawal?",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "4411363778065_Why_can_t_I_make_a_withdrawal.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411363778065-Why-can-t-I-make-a-withdrawal"
+        },
+        {
+          "id": "4411364623633",
+          "title": "Why has my deposit not been processed?",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "4411364623633_Why_has_my_deposit_not_been_processed.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411364623633-Why-has-my-deposit-not-been-processed"
+        },
+        {
+          "id": "4411370517521",
+          "title": "Removing a card from your account",
+          "category": "Payments",
+          "section": "Payment-FAQs",
+          "filename": "4411370517521_Removing_a_card_from_your_account.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411370517521-Removing-a-card-from-your-account"
+        },
+        {
+          "id": "4411371064081",
+          "title": "How to make a deposit",
+          "category": "Payments",
+          "section": "Deposits",
+          "filename": "4411371064081_How_to_make_a_deposit.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411371064081-How-to-make-a-deposit"
+        },
+        {
+          "id": "4411378797841",
+          "title": "Bonus removed",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "4411378797841_Bonus_removed.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411378797841-Bonus-removed"
+        },
+        {
+          "id": "4411379369105",
+          "title": "Bonus not received",
+          "category": "Bonus & Promotions",
+          "section": "Welcome-bonus",
+          "filename": "4411379369105_Bonus_not_received.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4411379369105-Bonus-not-received"
+        },
+        {
+          "id": "4412129352081",
+          "title": "Bet liability",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "4412129352081_Bet_liability.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412129352081-Bet-liability"
+        },
+        {
+          "id": "4412129540753",
+          "title": "Login Issues",
+          "category": "Using SBK",
+          "section": "Technical",
+          "filename": "4412129540753_Login_Issues.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412129540753-Login-Issues"
+        },
+        {
+          "id": "4412129570449",
+          "title": "App unavailability",
+          "category": "Using SBK",
+          "section": "Technical",
+          "filename": "4412129570449_App_unavailability.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412129570449-App-unavailability"
+        },
+        {
+          "id": "4412855129745",
+          "title": "Gambling self-assessment test",
+          "category": "Safer Gambling",
+          "section": "Recognising-a-problem",
+          "filename": "4412855129745_Gambling_self_assessment_test.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412855129745-Gambling-self-assessment-test"
+        },
+        {
+          "id": "4412907885713",
+          "title": "What is a reduction factor?",
+          "category": "Using SBK",
+          "section": "SBK-betting",
+          "filename": "4412907885713_What_is_a_reduction_factor.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412907885713-What-is-a-reduction-factor"
+        },
+        {
+          "id": "4412908289809",
+          "title": "Minimum and maximum stakes",
+          "category": "Using SBK",
+          "section": "SBK-betting",
+          "filename": "4412908289809_Minimum_and_maximum_stakes.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412908289809-Minimum-and-maximum-stakes"
+        },
+        {
+          "id": "4412908769809",
+          "title": "Log in or connection issues with SBK",
+          "category": "Using SBK",
+          "section": "SBK-betting",
+          "filename": "4412908769809_Log_in_or_connection_issues_with_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412908769809-Log-in-or-connection-issues-with-SBK"
+        },
+        {
+          "id": "4412914835345",
+          "title": "Multiples on SBK",
+          "category": "Using SBK",
+          "section": "SBK-betting",
+          "filename": "4412914835345_Multiples_on_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4412914835345-Multiples-on-SBK"
+        },
+        {
+          "id": "4413383422225",
+          "title": "Using SBK & Smarkets",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "4413383422225_Using_SBK_Smarkets.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4413383422225-Using-SBK-Smarkets"
+        },
+        {
+          "id": "4413517064977",
+          "title": "How to make a withdrawal",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "4413517064977_How_to_make_a_withdrawal.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4413517064977-How-to-make-a-withdrawal"
+        },
+        {
+          "id": "4643224105105",
+          "title": "Promo balance and free bets FAQ",
+          "category": "Bonus & Promotions",
+          "section": "Promo-balance-free-bets",
+          "filename": "4643224105105_Promo_balance_and_free_bets_FAQ.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4643224105105-Promo-balance-and-free-bets-FAQ"
+        },
+        {
+          "id": "4646516975377",
+          "title": "Browsing promos",
+          "category": "Bonus & Promotions",
+          "section": "Promo-balance-free-bets",
+          "filename": "4646516975377_Browsing_promos.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4646516975377-Browsing-promos"
+        },
+        {
+          "id": "4646909328401",
+          "title": "Using your promo balance",
+          "category": "Bonus & Promotions",
+          "section": "Promo-balance-free-bets",
+          "filename": "4646909328401_Using_your_promo_balance.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/4646909328401-Using-your-promo-balance"
+        },
+        {
+          "id": "5884876692497",
+          "title": "Bank Transfer",
+          "category": "Payments",
+          "section": "Withdrawals",
+          "filename": "5884876692497_Bank_Transfer.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/5884876692497-Bank-Transfer"
+        },
+        {
+          "id": "6907654511645",
+          "title": "Creating an Account with SBK",
+          "category": "Your Account",
+          "section": "Account",
+          "filename": "6907654511645_Creating_an_Account_with_SBK.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/6907654511645-Creating-an-Account-with-SBK"
+        },
+        {
+          "id": "7054696608785",
+          "title": "Why might my odds change when placing a bet?",
+          "category": "Using SBK",
+          "section": "Technical",
+          "filename": "7054696608785_Why_might_my_odds_change_when_placing_a_bet.md",
+          "url": "https://help.getsbk.com/hc/en-gb/articles/7054696608785-Why-might-my-odds-change-when-placing-a-bet"
+        }
+      ]
+    }
+  },
+  "betting_rules": {
+    "smarkets": [
+      "12_football.md",
+      "13_horse_racing.md",
+      "14_golf.md",
+      "15_cricket.md",
+      "16_tennis.md",
+      "17_basketball.md",
+      "18_rugby_union_and_rugby_league.md",
+      "19_baseball.md",
+      "20_american_football.md",
+      "21_motorsports.md",
+      "22_ice_hockey.md",
+      "23_boxing.md",
+      "24_mma.md",
+      "25_cycling.md",
+      "26_athletics.md",
+      "27_swimming.md",
+      "28_snooker_and_pool.md",
+      "29_darts.md",
+      "30_politics.md",
+      "31_australian_football.md",
+      "32_esports.md",
+      "33_greyhound.md",
+      "34_table_tennis.md",
+      "35_fantasy_football.md",
+      "36_gaelic_games.md",
+      "erroneous_bets.md",
+      "general_rules_1-11.md"
+    ],
+    "sbk": [
+      "12_football.md",
+      "13_horse_racing.md",
+      "14_golf.md",
+      "15_cricket.md",
+      "16_tennis.md",
+      "17_basketball.md",
+      "18_rugby_union_and_rugby_league.md",
+      "19_baseball.md",
+      "20_american_football.md",
+      "21_motorsports.md",
+      "22_ice_hockey.md",
+      "23_boxing.md",
+      "24_mma.md",
+      "25_cycling.md",
+      "26_athletics.md",
+      "27_swimming.md",
+      "28_snooker_and_pool.md",
+      "29_darts.md",
+      "30_politics.md",
+      "31_australian_football.md",
+      "32_esports.md",
+      "33_greyhound.md",
+      "34_table_tennis.md",
+      "35_gaelic_games.md",
+      "erroneous_bets.md",
+      "general_rules_1-11.md"
+    ]
+  },
+  "total_articles": 352,
+  "total_sports_rules": 53
+}

@@ -1,0 +1,324 @@
+SMARKETS MULTIPLES / FULLCOVER — SPEC EXTRACT FOR CONFIRMATION (2026-09-24)
+==============================================================================
+Source: https://api.smarkets.com/v0/control/openapi/ (unfiltered document, 359 paths,
+fetched 2026-09-24). The public trading_api tag view of the same document exposes only
+18 paths and does NOT include the multiples/fullcover/cashout placement routes below.
+ACTION (spec worker): confirm which of these routes are enabled for this account and
+the exact semantics of stake / stake_multiplier / sell-side risk for each.
+
+MINIMUM STAKE (verbatim, quantity field description on order schemas):
+  "The minimum stake is £0.05 or currency equivalent"   (schema minimum=0 -> business rule)
+  quantity units: 1/10000 of currency;  back_stake = quantity * price / 100000000
+  quantity = stake * 100000000 / price;      D = 10000 / price
+
+==============================================================================
+### POST /v3/multiples_orders/
+  summary: Place a multiple order for the given contract ids at the given price and stake.
+  description:  
+  requestBody required: ['contract_ids', 'price', 'stake', 'reference_id']
+    - bet_token_id             type=integer enum=None example='null'
+    - bonus_bet                type=boolean enum=None example='False'
+    - contract_ids             type=array enum=None example='214223'
+    - free_bet_token_id        type=integer enum=None example='null'
+    - granular_errors          type=boolean enum=None example='True'
+      desc: Whether to return more specific/generic errors types. Always pass True, unless you are mammoth
+    - is_retry                 type=boolean enum=None example='False'
+      desc: Does nothing. Used purely for logging (or not)
+    - price                    type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - promotion_id             type=integer enum=None example='null'
+    - reference_id             type=integer enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+    - side                     type=string enum=['buy', 'sell'] example='buy'
+      desc:  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+    - stake                    type=number enum=None example='24.08'
+      desc: Stake of an order
+  response codes: ['200', '400', '401', '403', '404', '409', '429', '451', '500', '503']
+  200 body keys: ['bet_delay', 'bet_id', 'contract_id', 'market_id', 'order_id']
+
+==============================================================================
+### POST /v3/multiples_orders/cashout/
+  summary: Place a multiple cashout for the given contract ids at the given price and quantity.
+  description:  
+  requestBody required: ['contract_ids', 'price', 'quantity', 'side', 'reference_id']
+    - contract_ids             type=array enum=None example='214223'
+    - price                    type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - quantity                 type=integer enum=None example='500'
+    - reference_id             type=integer enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+    - release_money            type=boolean enum=None example='False'
+      desc: Perform cashout request as part of bet placement.
+    - side                     type=string enum=['buy', 'sell'] example='buy'
+      desc:  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+    - traded_out_order_id      type=string enum=None example='1518455672861'
+      desc: This ID uniquely identifies an order
+  response codes: ['200', '400', '401', '403', '404', '409', '429', '451', '500', '503']
+  200 body keys: ['bet_delay', 'bet_id', 'contract_id', 'market_id', 'order_id']
+
+==============================================================================
+### POST /v3/fullcover/
+  summary: Place a fullcover order for the given contract ids at the given price and stake.
+  description:  
+  requestBody required: ['fullcover_type', 'contract_ids', 'price', 'stake', 'reference_id', 'stake_multiplier']
+    - bet_token_id             type=integer enum=None example='null'
+    - contract_ids             type=array enum=None example='214223'
+    - cover_depth              type=integer enum=None example='1'
+      desc: Levels of cover to add the the bet
+    - ew_contract_ids          type=array enum=None example=''
+    - ew_price                 type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - free_bet_token_id        type=integer enum=None example='null'
+    - fullcover_type           type=string enum=None example='doubles'
+    - granular_errors          type=boolean enum=None example='True'
+      desc: Whether to return more specific/generic errors types. Always pass True, unless you are mammoth
+    - price                    type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - promotion_id             type=integer enum=None example='null'
+    - reference_id             type=string enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+    - side                     type=string enum=['buy', 'sell'] example='buy'
+      desc:  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+    - stake                    type=number enum=None example='24.08'
+      desc: Stake of an order
+    - stake_multiplier         type=integer enum=None example='3'
+  response codes: ['200', '400', '401', '403', '404', '409', '429', '451', '500', '503']
+  200 body keys: ['bet_delay', 'bet_id', 'estimate', 'ew_reference_id', 'failure_reason', 'place_bet_id', 'reference_id', 'win_bet_id']
+
+==============================================================================
+### POST /v3/fullcover/cashout/
+  summary: Place cashout for a fullcover order with trade_out_reference_id and cashout value.
+  description:  
+  requestBody required: ['reference_id', 'trade_out_reference_id', 'cashout_value']
+    - cashout_value            type=number enum=None example='24.08'
+      desc: Stake of an order
+    - granular_errors          type=boolean enum=None example='True'
+      desc: Whether to return more specific/generic errors types. Always pass True, unless you are mammoth
+    - reference_id             type=string enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+    - trade_out_reference_id   type=string enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+  response codes: ['200', '400', '401', '403', '404', '409', '429', '451', '500', '503']
+  200 body keys: ['bet_delay', 'bet_id', 'estimate', 'ew_reference_id', 'failure_reason', 'place_bet_id', 'reference_id', 'win_bet_id']
+
+==============================================================================
+### POST /v3/multi_tick_orders/
+  summary: Place a bet averaged across multiple ticks at the given price and stake.
+  description:  
+  requestBody required: ['contract_id', 'price', 'stake', 'reference_id']
+    - bet_token_id             type=integer enum=None example='null'
+    - bonus_bet                type=boolean enum=None example='False'
+    - contract_id              type=string enum=None example='123456'
+      desc: This ID uniquely identifies the contract
+    - free_bet_token_id        type=integer enum=None example='null'
+    - granular_errors          type=boolean enum=None example='True'
+      desc: Whether to return more specific/generic errors types. Always pass True, unless you are mammoth
+    - is_retry                 type=boolean enum=None example='False'
+      desc: Does nothing. Used purely for logging (or not)
+    - price                    type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - promotion_id             type=integer enum=None example='null'
+    - reference_id             type=integer enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+    - stake                    type=number enum=None example='24.08'
+      desc: Stake of an order
+  response codes: ['200', '400', '401', '403', '404', '409', '429', '451', '500', '503']
+  200 body keys: ['bet_delay', 'bet_id', 'order_id']
+
+==============================================================================
+### POST /v3/multi_tick_orders/cashout/
+  summary: Place a cashout bet at the given price and quantity.
+  description:  
+  requestBody required: ['contract_id', 'price', 'quantity', 'reference_id']
+    - contract_id              type=string enum=None example='123456'
+      desc: This ID uniquely identifies the contract
+    - price                    type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - quantity                 type=number enum=None example='500'
+    - reference_id             type=integer enum=None example='123'
+      desc: To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+    - release_money            type=boolean enum=None example='False'
+      desc: Perform cashout request as part of bet placement.
+    - traded_out_order_id      type=string enum=None example='1518455672861'
+      desc: This ID uniquely identifies an order
+  response codes: ['200', '400', '401', '403', '404', '409', '429', '451', '500', '503']
+  200 body keys: ['bet_delay', 'bet_id', 'order_id']
+
+==============================================================================
+### POST /v3/markets/{market_id}/cash_outs/
+  summary: Request cash out for given market and member's primary account.
+  description:  
+  requestBody required: ['amount']
+    - amount                   type=integer enum=None example='400'
+      desc: Cash out in decimals, e.g. 400 = £4.
+  param: market_id in=path required=True | 
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '501']
+
+==============================================================================
+### GET /v3/markets/{market_ids}/cash_outs/
+  summary: 
+  description:  
+  param: market_ids in=path required=True | maxItems:300
+  response codes: ['200', '400', '401', '403', '429', '500', '501', '503', '504']
+  200 body keys: ['cash_outs']
+
+==============================================================================
+### GET /v3/fullcover/cashout/prices/
+  summary: Get the cashout offer value for a fullcover bet.
+  description:  
+  param: trade_out_reference_id in=query required=None | To handle retries over flaky network. Same value sent twice will result in `DUPLICATE_TRADE` error instead of 2 duplicate bets
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '503']
+  200 body keys: ['cashout_value']
+
+==============================================================================
+### GET /v3/fullcover/{contract_ids}/prices/
+  summary: Get the price averaged across all contracts for a fullcover bet.
+  description:  
+  param: side in=query required=None |  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+  param: cover_depth in=query required=None | Levels of cover to add the the bet
+  param: contract_ids in=path required=True | maxItems:10
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '503']
+  200 body keys: ['bad_contracts', 'contract_group_prices', 'prices', 'reasons']
+
+==============================================================================
+### GET /v3/fullcover/{u_id}/status/
+  summary: Get the status of the full cover order with the given reference id.
+  description:  
+  param: u_id in=path required=True | 
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '503']
+  200 body keys: ['failure_reason', 'order_ids', 'status']
+
+==============================================================================
+### GET /v3/multiples/cashout/{contract_ids}/prices/
+  summary: Get the price used for a cashout on a multiple.
+  description:  
+  param: side in=query required=None |  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+  param: traded_out_order_id in=query required=None | This ID uniquely identifies an order
+  param: contract_ids in=path required=True | maxItems:300<br>minItems:300
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '503']
+  200 body keys: ['bad_contracts', 'contract_equivalent_replacements', 'max_stake', 'price', 'price_error', 'reasons']
+
+==============================================================================
+### GET /v3/multiples/{contract_ids}/prices/
+  summary: Create an entry for and get the price of a multiple based on the given contract ids.
+  description:  
+  param: side in=query required=None |  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+  param: contract_ids in=path required=True | maxItems:300<br>minItems:300
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '503']
+  200 body keys: ['bad_contracts', 'contract_equivalent_replacements', 'max_stake', 'price', 'price_error', 'reasons']
+
+==============================================================================
+### GET /v3/multiples/{contract_ids}/{u_id}/status/
+  summary: 
+  description:  
+  param: contract_ids in=path required=True | maxItems:300<br>minItems:300
+  param: u_id in=path required=True | 
+  response codes: ['200', '400', '401', '403', '404', '429', '500', '503']
+  200 body keys: ['failure_reason', 'order_id', 'status']
+
+==============================================================================
+### GET /v3/balance/
+  summary: 
+  description:  
+  response codes: ['200', '400', '401', '403', '429', '500', '503']
+  200 body keys: ['balance']
+
+==============================================================================
+### POST /v3/sessions/
+  summary: Login using this route.
+  description: ## Description This will return a token that can be used in the Authentication header in the form "Session-Token <your_token>" on authenticated requests.<br> The token is valid for 30min, but if you make an authenticated request with it, it will be renewed for the next 30min.  ##  Rate limits Maximum 5 requests per 300 seconds<br>
+  requestBody required: ['password', 'username']
+    - create_social_member     type=boolean enum=None example='True'
+      desc: If true, and the user logging in does not have an associated social member,this call will also take care of creating the social member for this user
+    - password                 type=string enum=None example='verysecurepassword'
+      desc: Your account password
+    - remember                 type=boolean enum=None example='True'
+      desc: True if the client wants Smarkets to allow this device to renew the token even after its expiration
+    - reopen_account           type=boolean enum=None example='False'
+      desc: If true, and the user has closed their own account,then their account will be reopened and they will log in as normal.
+    - use_auth_v2              type=boolean enum=None example='False'
+      desc: If true, and the user logging will be forced to use auth v2,and should expect refresh_token and access_token in the cookies and response
+    - username                 type=string enum=None example='john.doe@company.com'
+      desc: Your username
+  response codes: ['201', '400', '401', '403', '429', '451', '500', '503']
+
+### DELETE /v3/sessions/
+  summary: Logout from the current session.
+  description:  ##  Rate limits Maximum 30 requests per 60 seconds<br>
+  response codes: ['200', '400', '401', '403', '429', '451', '500', '503']
+  200 body keys: ['success']
+
+==============================================================================
+### POST /v3/orders/
+  summary: Place orders on the exchange.
+  description: ## Description This route only works for Smarkets API users, other users will receive a 403 status code response.<br><br> For immediate_or_cancel orders type, the route will return when the order is matched (or cancelled).<br> For all other order types, the route will return when the order is accepted by the exchange.<br> In the latter case, GET v3/orders should be used to check the status of the order, using the order id returned by this response.  Do not call _check_bet_permissions() here as i
+  requestBody required: ['market_id', 'contract_id', 'price', 'quantity', 'side']
+    - contract_id              type=string enum=None example='123456'
+      desc: This ID uniquely identifies the contract
+    - label                    type=string enum=None example='strategy_1'
+      desc: Label is a user-defined string that will be stored in the order. It can be used to identify different trading strategies
+    - market_id                type=string enum=None example='128939'
+      desc: This ID uniquely identifies the market
+    - minimum_accepted_quantity type=integer enum=None example='10000'
+      desc:  If this minimum accepted quantity is not matched on bet placement time, the order will be cancelled and nothing will be matched.<br> Only applicable to immediate_or_cancel order types.     
+    - price                    type=integer enum=None example='5000'
+      desc:  This price is in percentage basis points.<br> Example: 5000 = 50% <br> To convert it to decimal odds, just divide 10000 by it<br> Example: 10000 / 5000 = 2.0 (decimal odds).<br> This price has to conform to a valid tick on the exchange; an invalid price error
+    - quantity                 type=integer enum=None example='10000'
+      desc:      Quantity is the sum of the total pot (back+lay) in case the order is matched<br>     The units are 1/10000 * one unit of the user's currency.<br>     Example: Quantity 500 = 0.05 GBP<br>     To convert it to back stake, just multiply by the price and divi
+    - side                     type=string enum=['buy', 'sell'] example='buy'
+      desc:  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+    - type                     type=string enum=['good_til_cancelled', 'keep_in_play', 'good_til_halted', 'immediate_or_cancel'] example='good_til_halted'
+      desc: Order types can have the following values:     <ul>     <li>good_til_cancelled: this order will be open until a reduction     factor is applied or a market state changes to live, which will cancel the order.     <li>keep_in_play: the same as good_til_cancelled
+  response codes: ['200', '400', '401', '403', '429', '451', '500', '503']
+  200 body keys: ['available_balance', 'available_quantity', 'contract_id', 'executed_avg_price', 'exposure', 'market_id', 'order_id', 'orig_price', 'price', 'quantity', 'side', 'total_executed_quantity']
+
+### GET /v3/orders/
+  summary: Retrieve current orders on Smarkets, these include open and recently settled orders.
+  description:  
+  param: contract_id in=query required=None | This ID uniquely identifies the contract
+  param: created_datetime_max in=query required=None | When was the order created
+  param: created_datetime_min in=query required=None | When was the order created
+  param: id in=query required=None | Order IDs to filter by
+  param: limit in=query required=None | Maximum number of orders to be retrieved in one API call
+  param: market_id in=query required=None | Market IDs to filter by
+  param: pagination_last_id in=query required=None |  The last order id from the previous page, so we can fetch the subsequent orders.<br> It should be used in conjuntion with the sort parameter
+  param: sequence_number_max in=query required=None | This refers to the sequence number in the account activity - statement endpoint
+  param: sequence_number_min in=query required=None | This refers to the sequence number in the account activity - statement endpoint
+  param: state in=query required=None | Order states to filter by. By default all order states are returned
+  param: side in=query required=None |  side can either be:<ul> <li>buy: backing a contract <li>sell: laying a contract </ul>
+  param: sort in=query required=None | How to sort the results, it should be used in conjuntion with the pagination parameter
+  param: include_promotion_data in=query required=None |  Whether to enrich the response with bet token and promotion data.<br> Set to false to skip the promotion lookup when those fields are not needed, in which case they are returned e
+  response codes: ['200', '400', '401', '403', '429', '500', '503', '504']
+  200 body keys: ['orders', 'otc_available', 'pagination']
+
+### DELETE /v3/orders/
+  summary: Cancel all orders.
+  description:  ##  Rate limits Maximum 1 request per 60 seconds<br>
+  param: market_id in=query required=None | This ID uniquely identifies the market
+  response codes: ['200', '400', '401', '403', '429', '500', '503']
+
+==============================================================================
+### GET /v3/orders/fullcover/
+  summary: Get all fullcover orders for an account.
+  description:  
+  param: states in=query required=None | Order states to filter by. By default all order states are returned
+  param: limit in=query required=None | Maximum number of orders to be retrieved in one API call
+  param: pagination_last_id in=query required=None |  Epoch timestamp of the last order from the previous page, so we can fetch the subsequent orders.<br> Pages are sorted by the bet created time descending.
+  param: include_promotion_data in=query required=None |  Whether to enrich the response with bet token and promotion data.<br> Set to false to skip the promotion lookup when those fields are not needed, in which case they are returned e
+  response codes: ['200', '400', '401', '403', '429', '500', '503', '504']
+  200 body keys: ['orders', 'pagination']
+
+==============================================================================
+### GET /v3/markets/{market_ids}/quotes/
+  summary: Get the current prices from the exchange.
+  description: ## Description If session token is not sent, these prices will be delayed.<br><br> The rate limits below are applicable to API users. The rate limits for non-API users are lower.  ##  Rate limits Maximum 50 requests per 60 seconds
+  param: market_ids in=path required=True | Market IDs to filter by<br>maxItems:200
+  response codes: ['200', '400', '401', '403', '429', '500', '503']
+
+==============================================================================
+### GET /v3/markets/{market_ids}/volumes/
+  summary: Retrieve traded volumes by market ids.
+  description:  
+  param: market_ids in=path required=True | Market IDs to filter by<br>maxItems:300
+  response codes: ['200', '400', '401', '403', '414', '429', '500', '503']
+  200 body keys: ['volumes']

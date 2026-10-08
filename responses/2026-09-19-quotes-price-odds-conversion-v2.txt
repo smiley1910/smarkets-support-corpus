@@ -1,0 +1,15 @@
+Hi [name],
+
+Prices in both the bids and offers arrays are quoted in percentage basis points out of 10,000, so decimal odds = 10,000 / price. For example:
+
+5000 = 50% = decimal odds 2.0
+2500 = 25% = decimal odds 4.0
+8000 = 80% = decimal odds 1.25
+
+The quantity is separate from the odds calculation. It is in units of 1/10,000 of one unit of your currency, and represents the total pot of the match (the back stake plus the other side) once the order is matched, so quantity 500 = £0.05 and quantity 100,000 = £10.00. To get the back stake behind a quote, multiply the quantity by the price and divide by 100,000,000: 100,000 x 5000 / 100,000,000 = £5.00.
+
+Both conversions are described under the price and quantity fields for GET /v3/markets/{market_ids}/quotes/ in the API documentation.
+
+Kind regards,
+[name]
+Smarkets Support

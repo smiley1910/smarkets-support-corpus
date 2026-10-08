@@ -1,0 +1,15 @@
+Hi [name],
+
+Thanks for your email. I've checked the endpoints you tested.
+
+Matched volume is available through the API. GET /v3/markets/{market_ids}/volumes/ returns the traded volume for each market you request, measured in GBP and calculated as the back stake on the back side plus the liability on the lay side. That is the same volume figure shown on the Smarkets website. Volume is returned per market for up to 300 market ids per request. For contract level detail, the last traded price and its execution timestamp are available from GET /v3/markets/{market_ids}/last_executed_prices/. There is no contract level traded volume figure. The endpoints you tried do not carry volume. The events states endpoint returns event state, not volume. Market state comes back as a field on each market in GET /v3/events/{event_ids}/markets/. There is no separate markets states endpoint or trades endpoint, so those requests return 404.
+
+The API is REST only. We don't offer websockets or a streaming feed, so there is no websocket URL or authentication method for one. There are no subscription levels or upgrades that unlock streaming. The volume endpoint above is part of the API. Price and volume updates come from polling the endpoints above, within your rate limits. If you came across a streaming endpoint somewhere, send me the link and I'll tell you whether it applies to our API.
+
+The API is provided for viewing market prices and placing bets on your Smarkets account. Section 5 of the API terms states: "Additionally, usage of the API or its data to benchmark markets, prices, liquidity or systems is not permitted." The terms also prohibit monitoring or benchmarking our services for competitive purposes, and collecting data through the API without a corresponding level of trading. The restriction is on using the API as a monitoring or benchmarking feed rather than as a trading tool. A tool that compares our liquidity against other exchanges falls within it, whether or not you also place bets, so it is not a use the access permits. Trading on your Smarkets account is unaffected.
+
+If the access is not a fit for your purposes, under Section 3 your setup fee will be refunded if you permanently withdraw from API usage within the first 60 days. If you'd like to talk it through before deciding, reply to this email.
+
+Kind regards,
+[name]
+Smarkets Support

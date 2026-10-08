@@ -1,0 +1,26 @@
+[
+  {
+    "req": "200 ids",
+    "status": 200,
+    "bytes": 99938,
+    "t_s": 0.29,
+    "ratelimit": {
+      "X-RateLimit-Limit": null,
+      "X-RateLimit-Remaining": null,
+      "X-RateLimit-Reset": null
+    },
+    "body_head": "{\"445856705\": {\"bids\": [{\"price\": 5618, \"quantity\": 160199}, {\"price\": 5587, \"quantity\": 125290}, {\"price\": 5525, \"quantity\": 1809955}, {\"price\": 5495, \"quantity\": 5232693}, {\"price\": 5464, \"quantity\": 12370}], \"offers\": [{\"price\": 5988, \"quantity\": 270942}, {\"price\": 6024, \"quantity\": 5896100}, {\"price\": 7353, \"quantity\": 3777862}]}, \"445856706\": {\"bids\": [{\"price\": 1351, \"quantity\": 7139602}, {\"price\": 1, \"quantity\": 2147483646}], \"offers\": [{\"price\": 1695, \"quantity\": 5848087}, {\"price\": 1754, \"quantity\": 1212709}]}, \"445856707\": {\"bids\": [{\"price\": 2500, \"quantity\": 5875700}, {\"price\": 2439, \"quantity\": 4100041}], \"offers\": [{\"price\": 2817, \"quantity\": 1269100}, {\"price\": 2941, \"quantity\": 4047500}, {\"price\": 2985, \"quantity\": 1425517}]}, \"445856708\": {\"bids\": [{\"price\": 952, \"quantity\": 6652500}, {\"price\": 909, \"quantity\": 11001100}, {\"price\": 800, \"quantity\": 7764000}], \"offers\": [{\"price\": 1163, \"quantity\": 3232800}, {\"price\": 1220, \"quantity\": 8135400}, {\"price\": 1351, \"quantity\": 4277949}, {\"price\": 1389, \"quantity\": 1045174}]}, \"445856709\": {\"bids\": [{\"price\": 588, \"quantity\": 5397700}, {\"price\": 500, \"quantity\": 20000000}], \"offers\": [{\"price\": 714, \"quantity\": 3076800}, {\"price\": 952, \"quantity\": 5083993}, {\"price\": 1000, \"quantity\": 1000000}]}, \"445856710\": {\"bids\": [{\"price\": 167, \"quantity\": 8194900}, {\"price\": 154, \"quantity\": 7293100}, {\"price\": 91, \"quantity\": 109890110}], \"offers\": [{\"price\": 227, \"quantity\": 2923500}, {\"price\": 345, \"quantity\": 4660795}, {\"price\": 417, \"quantity\": 1043515}]}, \"445856711\": {\"bids\": [{\"price\": 40, \"quantity\": 5279700}, {\"price\": 1, \"quantity\": 2147483646}], \"offers\": [{\"price\": 71, \"quantity\": 2877600}, {\"price\": 91, \"quantity\": 4541325}, {\"price\": 9999, \"quantity\": 2147483646}]}, \"445856712\": {\"bids\": [{\"price\": 1562, \"quantity\": 6182700}, {\"price\": 1471, \"quantity\": 6798097}, {\"price\": 1389, \"quantity\": 7840000}], \"offers\": [{\"price\": 1786, \"quantity\": 8696000}, {\"price\": 1852, \"quantity\": 3506100}, {\"price\": 188"
+  },
+  {
+    "req": "400 ids",
+    "status": 404,
+    "bytes": 82,
+    "t_s": 0.21,
+    "ratelimit": {
+      "X-RateLimit-Limit": null,
+      "X-RateLimit-Remaining": null,
+      "X-RateLimit-Reset": null
+    },
+    "body": "{\"data\":{\"description\":\"Nothing matches the given URI\"},\"error_type\":\"NOT_FOUND\"}\n"
+  }
+]

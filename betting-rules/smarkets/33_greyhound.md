@@ -1,0 +1,27 @@
+<!-- 
+sport: Greyhound
+product: smarkets
+article_num: 33
+url: https://help.smarkets.com/hc/en-gb/articles/360007024158-33-Greyhound-rules
+scraped: 2026-06-29
+-->
+Title: 33. Greyhound rules
+
+URL Source: https://help.smarkets.com/hc/en-gb/articles/360007024158-33-Greyhound-rules
+
+Markdown Content:
+**Smarkets [general betting rules](https://help.smarkets.com/hc/en-gb/articles/212183509-1-11-General-Smarkets-betting-rules) (1-11) will apply unless superseded by the [Terms and Conditions](https://help.smarkets.com/hc/en-gb/articles/213469085-Smarkets-Terms-and-Conditions) or sports specific betting rules.**
+
+## **33.1 General**
+
+33.1 When trap numbers are provided all bets are placed on the trap number and greyhound names are displayed for information purposes only. Except in the case of a non-runner or reserve runner as described in rule 33.3 below, if a greyhound name is listed incorrectly bets will be settled based on trap numbers. If trap numbers are not provided bets may be voided in case of an error with the names of greyhounds in the race.
+
+33.2 The official result at the time the track gives the result green light status, either in the form of an announcement or by display will be deemed to be final for market settlement. Subsequent disqualifications, appeals or amendments to the result will be disregarded.
+
+33.3 If a non-runner or reserve runner is declared then all matched bets prior to the update of the market on Smarkets will be void and unmatched bets, including those to be kept in play, will be cancelled.
+
+33.4 All bets will be void if there are no finishers in any race or any race is declared void before the official result.
+
+33.5 If the number of places offered is equal or greater than the number of runners, all bets in this market will be voided.
+
+Last modified: February 21, 2022

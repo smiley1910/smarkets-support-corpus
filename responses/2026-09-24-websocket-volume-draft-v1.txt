@@ -1,0 +1,15 @@
+Hi [name],
+
+Thanks for your email. I've checked the endpoints you tested.
+
+Matched volume is available through the API. GET /v3/markets/{market_ids}/volumes/ returns the traded volume for each market you request, measured in GBP and calculated as the back stake on the back side plus the liability on the lay side. That is the same volume figure shown on the Smarkets website. The last traded price for each contract, with its execution timestamp, comes from GET /v3/markets/{market_ids}/last_executed_prices/. The endpoints you tried are not where this data sits: the events states endpoint returns lifecycle state only, and there is no markets states endpoint or trades endpoint, so those requests return 404.
+
+The API is REST only. We don't offer websockets or a streaming feed, so there is no websocket URL or authentication method for one, and no level of access includes a streaming feed. Price and volume updates are retrieved by polling the endpoints above, within your rate limits.
+
+I should also be clear about the scope of the access. The API is provided for viewing market prices and placing bets on your Smarkets account. Section 5 of the API terms states: "usage of the API or its data to benchmark markets, prices, liquidity or systems is not permitted." The fair usage terms treat using the API solely to monitor markets as a breach of the terms. A tool that compares our liquidity against other exchanges falls within those restrictions, so it is not a use the access permits.
+
+If the access is not a fit for your purposes, under Section 3 your setup fee will be refunded if you permanently withdraw from API usage within the first 60 days. If you'd like to discuss this further, reply to this email.
+
+Kind regards,
+[name]
+Smarkets Support

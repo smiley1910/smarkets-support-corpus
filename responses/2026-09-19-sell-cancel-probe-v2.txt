@@ -1,0 +1,15 @@
+Hi [name],
+
+We've been looking at the order activity on your account, including your session on the night of 18 September, and there's something we'd like to compare with you. Your questions are still being worked, and I'll come back to them once this comparison is done.
+
+From our side, we can see sell orders placed through the API from your account being cancelled, with the cancellations recorded as requested from the account itself. That may not match what you are seeing, and any difference there is what we would like to pin down. These are orders that were accepted and later cancelled, a different event from the rejections you have been describing.
+
+When you go through your logs and your order history for that session, do you see the same cancellations in your records? Or do your records only show the rejections you wrote in about? Either answer is useful for us.
+
+If you can send us the API logs from that session, with the request and response for your order calls, their timestamps and timezone, we can line the two sets of records up. Anything touching the cancel endpoints, for a single order or for all orders, is especially useful, along with whatever your application logged at those moments. If there are no cancel calls in your logs at all, knowing that helps us just as much. A pasted excerpt or a file is fine, and please redact your session tokens. If it would help, we can share the times of the cancellations we can see.
+
+It would also help to know whether your integration cancels orders as part of how it runs, whether that's on a timer, at the end of a session, after a reconnect, or in a particular error path. If it cancels unfilled orders and replaces them, tell us how that works. And if more than one client or process runs against the account, let us know that too. If none of this applies, that is just as useful to know.
+
+Kind regards,
+[name]
+Smarkets Support
