@@ -236,3 +236,6 @@ Ticket drafting is structured writing. This skill provides tone, format and doc 
 - Write "weighed in result" without a hyphen because "weighed-in" before a noun is a hyphenated compound modifier banned under voice-core.
 - Clear session context with /new between distinct customer tickets because accumulated reference files, intake transcripts, and subagent council verification reports inflate session context past 50,000+ tokens, driving up latency and token burn.
 - Treat voice-core as the winner over any reference on gates because refs can carry stale defaults.
+- Clarify zero balance early when a cancelled pending withdrawal cleared a resettlement negative balance because customers contact support in distress believing they owe a deposit.
+- Write "weighed in result" without a hyphen because "weighed-in" before a noun is a hyphenated compound modifier banned under voice-core.
+- Clear session context with /new between distinct customer tickets because accumulated reference files, intake transcripts, and subagent council verification reports inflate session context past 50,000+ tokens, driving up latency and token burn.
