@@ -1,0 +1,11 @@
+Hi [name],
+
+There isn't a streaming or push price feed for API clients. The streaming service is deprecated, and prices come from polling the REST endpoints.
+
+The quotes endpoint accepts up to 200 market ids per call, and the 50 requests per 60 seconds allowance is shared across any clients or tokens you run. At that batch size, the 1,500 or so markets you want to follow at busy times take eight calls, which should ease the refresh pressure you describe.
+
+We are unable to review quote limit increases at this time. Once you've built a larger sample size of activity, we can review and request this for you.
+
+Kind regards,
+[name]
+Smarkets Support

@@ -1,0 +1,19 @@
+Hi [name],
+
+Thanks for checking the fee details before you get started.
+
+Yes, Standard commission is 2% on your net winnings per market. Bets in a market are netted first, and the charge applies only to a net profit, so a market that finishes level or down carries no commission. Standard is the default for new accounts.
+
+There is one reduced tier: Pro, at 1%. It applies to accounts placing more than 1,500 bets, or staking more than £1m, in a calendar month. Pro is opt in through support: you can request it once you pass 80% of either limit, and once you pass the limit itself, opting in is required to keep trading. Under Pro, commission is charged per matched bet that settles, on the profit if it wins and on the losses if it loses.
+
+At £100,000 a month you would sit below the £1m staked limit, so a lower rate would not apply at that level on staking alone. The bet count is the other route: it counts every bet placed, matched or not, so an automated setup can reach 1,500 bets on a much smaller stake. Both counters reset on the 1st of each month, and you can follow their progress on the Trading Stats & Commission page in your account.
+
+The one other tier in the structure is Select, at 3%, applied automatically to the most profitable accounts, those above £25,000 net profit over the previous 12 months.
+
+For API access, standard commission applies from the start: Pro stays available, as it is a volume tier rather than a promotion, while the 60 day 0% new customer offer and affiliate commission offers aren't available on API access.
+
+If anything else needs clearing up before you get started, just reply here.
+
+Kind regards,
+[name]
+Smarkets Support

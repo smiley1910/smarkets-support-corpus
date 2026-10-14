@@ -1,0 +1,13 @@
+Thank you for checking before applying.
+
+API access is granted for approved trading related use, and the terms prohibit using the API strictly for data extraction purposes without commensurate trading volumes. Your proposal is read only monitoring that generates alerts for decisions made elsewhere, so it would not generate trading activity through the API itself. It would not be approved, regardless of how the alerts are used privately afterwards.
+
+To your data question, traded volume is available through the API at market level, and the last traded price with its execution timestamp is available at runner level. A cumulative matched volume figure per runner is not something the API returns.
+
+There is no published minimum trading activity requirement. Call limits are instead preapproved per account per period, so both are set when your use case is reviewed rather than published in advance; you'd learn both at the same approval stage. These limits exist because the Data Harvesting clause treats requesting high volumes of pricing data without placing a corresponding volume of bets as a breach, and your described use would fall inside that.
+
+The £150 is a setup fee deducted from your account balance upon successful registration for API usage, not at the point of application. If you did proceed and then changed your mind, the fee is refunded in full if you permanently withdraw from API usage within the first 60 days.
+
+Kind regards,
+[name]
+Smarkets Support

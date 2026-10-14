@@ -1,0 +1,29 @@
+Hi,
+
+I've reviewed England v Spain and the available record for bet 203611414723809289.
+
+You state the final data shows Anderson with one foul. That is the final position in the record available to us.
+
+You quote Opta's foul conceded definition and the collection condition. That definition is not in dispute.
+
+You state the referee initially awarded Spain a free kick for the second incident before VAR intervened and the restart changed. You ask whether Opta recorded that as an overturned event and removed it, what part of the decision on Anderson was overturned, and why it was removed if the penalty came from a separate earlier incident.
+
+I cannot confirm the second incident as a separate recorded then deleted entry. The record shows only one foul for Anderson at full time.
+
+As per Opta, "Events overturned by VAR are deleted from collection or amended." Where VAR calls play back to an earlier stage, the later passage is void, and a foul inside that void passage is not counted even if a free kick was first signalled. If play was brought back to the earlier incident for the England penalty, the passage containing Anderson's incident was void with it.
+
+You state you want the reason and the applicable rule, not the statistic again. The reason is the void passage above and the rule is the VAR deletion rule.
+
+Bet 203611414723809289 was settled correctly on the final data and this is the final position on the complaint.
+
+If we are unable to resolve your complaint and a deadlock is in place, you can refer this complaint to IBAS under reference 64179006 (Independent Betting Adjudication Service), who are our third party adjudicators in all disputed matters. All contact with IBAS regarding a dispute is carried out in writing and an adjudication form must be requested in the first instance:
+
+IBAS
+PO Box 62639
+London
+EC3P 3AS
+Email: adjudication@ibas-uk.co.uk
+Website: www.ibas-uk.com
+
+Kind regards
+[Agent name] SBK Support

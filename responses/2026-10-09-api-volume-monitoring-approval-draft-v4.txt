@@ -1,0 +1,9 @@
+Thank you for checking before applying.
+
+I've looked at what you've described against the terms API access is granted under. API access is granted for approved trading related use, and the terms prohibit using the API strictly for data extraction purposes without commensurate trading volumes. Your intended use is read only monitoring that generates alerts for decisions made elsewhere, so it wouldn't generate trading activity through the API itself. That puts it outside what API access is designed for, and I can't advise that it would be approved regardless of how the alerts are used privately afterwards.
+
+To answer your other question, traded volume is available through the API at market level, and the last traded price with its execution timestamp is available at runner level. A cumulative matched volume figure per runner isn't something the API returns.
+
+The £150 is a setup fee deducted from the account balance once an application is approved, not at the point of application. If you did proceed and then changed your mind, the fee is refunded in full if you permanently withdraw from API usage within the first 60 days.
+
+Kind regards, [name] Smarkets Support

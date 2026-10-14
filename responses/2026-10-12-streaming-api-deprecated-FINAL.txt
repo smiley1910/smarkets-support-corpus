@@ -1,0 +1,9 @@
+Hi [name],
+
+There isn't a streaming API for market prices. We don't offer streaming, as it's a deprecated service, and the streaming references you've found online are out of date. The API is REST only, so it has no websocket interface to connect to, and the polling endpoints in our documentation are the current way to get prices.
+
+Price updates come from polling. GET /v3/markets/{market_ids}/quotes/ returns the current prices for the markets you request, within a rate limit of 50 requests per 60 seconds for API users. If you tell me what you're building, I can point you to the endpoints that fit it.
+
+Kind regards,
+[name]
+Smarkets Support

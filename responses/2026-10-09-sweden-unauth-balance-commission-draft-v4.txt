@@ -1,0 +1,10 @@
+Hi [name],
+
+The API is not currently available to accounts in your region, so I can't set API access up for you and there's no authenticated session through which to retrieve your balance. Account data such as your balance is only available through an authenticated session, and no request made without one returns account details.
+
+Commission is charged at 2% on most accounts, on the net winnings of a market, and only when the market finishes with you in profit. For a 100 stake at odds of 3, the market return would be 300, the net winnings would be 200, and the deduction at 2% would be 4, leaving 296.
+
+For account level queries such as your balance, log in through the website or app, where your current balance and full statement are both available.
+
+Kind regards,
+Smarkets Support

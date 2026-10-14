@@ -1,0 +1,12 @@
+Hi [name],
+
+The API is provided only through an approved account with a session token. Account data such as your balance comes from the accounts endpoint, and that endpoint requires an authenticated session, so any request made without one will not return your account details.
+
+To answer this within what unauthenticated access can support, I'd start with what the endpoints actually return. Market data such as events, markets, contracts, and prices is retrievable without a session token, and that coverage does not extend to anything account specific.
+
+Your second question is about commission. Commission is charged at 2% on most accounts, on the net winnings of a market, and only when the market finishes with you in profit. For a 100 stake at odds of 3, the market return would be 300, the net winnings would be 200, and the deduction at 2% would be 4, leaving 296.
+
+For account level queries such as your balance, I'd log in through the website or app, where your current balance and full statement are both available.
+
+Kind regards,
+Smarkets Support

@@ -1,0 +1,19 @@
+Hi [name],
+
+Thanks for laying out how you trade and what you want from the data side. Streaming isn't part of Pro: we don't offer streaming, as it's a deprecated service, and the API is REST only, so it has no websocket interface to connect to. There are no subscription levels or upgrades that unlock one.
+
+The Pro tier and API access are separate: Pro is a commission tier that sets your commission at 1% per matched bet that settles, charged on the profit if the bet wins and on the losses if it loses. Your data and order access come from the API, through the same REST endpoints you use today.
+
+Prices come from polling. The quotes endpoint returns the order book for any market within your approved scope, horse racing win and place, football and tennis, pre match and in play included. Each market comes back with bids and offers at price and quantity rather than a single best price, and as it's the peer to peer book, the website display can include additional liquidity.
+
+Pacing comes from the call allowances rather than a connection or subscription. The quotes endpoint accepts up to 200 market ids per call, and quotes allow 50 requests per 60 seconds for API users, within a default allowance of 1200 requests per 60 seconds across all endpoints, shared across any clients or tokens you run. If any of your batches sit below the 200 market cap, widening them is the most direct way to refresh more often in the final minutes of a race, since fewer calls per sweep means more sweeps from the same allowance.
+
+We are unable to review quote limit increases at this time. Once you've built a larger sample size of activity, we can review and request this for you.
+
+The API reference is at docs.smarkets.com. There is no test or sandbox environment, so when you test order placement you'll be using live funds.
+
+On market maker and liquidity provider arrangements, the Market Maker commission tier isn't available for your account. The Pro tier removes the 1,500 bet and £1m staked monthly limits, and resting orders in the morning racing markets go through the standard order endpoints.
+
+Kind regards,
+[name]
+Smarkets Support
