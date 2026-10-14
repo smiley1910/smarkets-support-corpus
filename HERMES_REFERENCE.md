@@ -1,5 +1,7 @@
 # Smarkets API Support — Hermes Reference
 
+GitHub: https://github.com/smiley1910/smarkets-support-corpus (private)
+
 ## Structure
 - docs/ — documentation files
 - openapi/ — OpenAPI specs (audited May 2026)
