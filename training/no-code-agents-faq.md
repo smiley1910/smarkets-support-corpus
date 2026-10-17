@@ -1,649 +1,246 @@
-# Smarkets API for No-Code Builders — The Full FAQ
+# No-Code API Users — Internal CS Cover Page
 
-*For Zapier, Make, n8n, Bubble, Google Sheets users. No coding needed. If you can copy a URL, a header and a few field names exactly, you can use this API.*
-*There is no official Zapier app, Make app or SDK. You use each tool's generic "HTTP request / API call" module.*
-*Checked against live docs Oct 2026. If this page and docs.smarkets.com disagree, docs.smarkets.com wins.*
+**Status: DRAFT for Michael | Owner: API Support | Last updated: Oct 2026**
+**Audience: CS agents covering API tickets. NOT customer facing. Do not paste this page to customers.**
+**Companion docs: `training/confluence_draft_v2.md` (main triage KB — use that first for all error codes), VOICE_CORE_PINNED.md (every customer reply must pass it), `skills/smarkets-api-support/SKILL.md` (escalation workflow). This page only covers what is DIFFERENT about no-code builders (Zapier / Make / n8n / Bubble / Sheets).**
 
 ## How to use this page
 
-- New here? Read top to bottom once: What it is -> Getting access -> First login -> First price check -> First bet.
-- Stuck? Ctrl+F / Cmd+F the error or code name (401, 403, 429, INSUFFICIENT_FUNDS, INVALID_DATETIMES).
-- Building? Jump to Speed limits and the three working setups at the end.
+1. Ticket mentions Zapier, Make, n8n, Bubble, Sheets, "no code", "webhook module", "HTTP module"? You are on the right page. Otherwise use confluence_draft_v2.md only.
+2. Ctrl+F the customer's symptom below. Each block gives: what it means, what to ASK (one question max — they cannot run curl or read headers easily), what to TELL them (copy-adapt, then run through Voice Core before sending), when to FLAG to technical.
+3. Default first action on every new ticket: 2-4 diagnostic questions. No-code variant in "What to ask" under each block. Do not dump all probes at once.
+4. Step 0 before any order-type answer: ask "Are you using the API or the website/SBK app?" (Same feature, different answer per surface. Real past correction.)
+5. Never rephrase their words into codes they did not use. They wrote "Forbidden for url..." -> you write that back, not "your 403".
 
-## All the links in one place
+## 30-second orientation (read once per shift)
 
-- Interactive API docs (read + try every endpoint in your browser): https://docs.smarkets.com/
-- Raw spec (for the curious): https://api.smarkets.com/v0/control/openapi/?tags=trading_api
-- API Request Form (how you apply): https://support.smarkets.com/p/6MLL-PL7/api-request-form
-- API rules (Access, Integration and T&Cs — the binding version): https://help.smarkets.com/hc/en-gb/articles/34697834941085-Smarkets-API-Access-Integration-T-Cs
-- Commission explained: https://help.smarkets.com/hc/en-gb/articles/212654665-Smarkets-commission-FAQ
-- Help Centre (betting rules, general help): https://help.smarkets.com/hc/en-gb
-- The API itself (every call starts with this): https://api.smarkets.com
-- API tech help (bugs, error codes, limits): api@smarkets.com
-- Account, money, ID, application help: support@smarkets.com
+- There is no Zapier app, Make app, SDK, sandbox, read-only key, webhook-out, websocket or streaming. REST polling only via generic HTTP modules. Anyone asking for those gets Pattern B decline (one T&C quote max).
+- Auth is email + password -> `token` from `POST /v3/sessions/` (201, field `username` not `email`, field `token` not `session_token`) -> header `Authorization: Session-Token <token>` on everything after. MFA adds `POST /v3/sessions/verify/`.
+- The three no-code killers: quantity units (800 = £0.08, 20000 = £2), price units (5000 = 2.0, formula 10000/price), 20-minute rotation (header-only setups 401 around 19-20 min even while active).
+- Limits that matter: global 1200/60s per account; quotes 50/60s approved (~20 pre-approval); login 5/300s; cancel-all 1/60s; place 10/s; cancel-one 10/s. Batch caps: quotes 200, volumes/states/competitors 300, contracts/last-prices 100, markets-by-event 50. Over cap -> 404 "Nothing matches the given URI" (not a dead route).
+- Increase requests: batch advice FIRST (200 IDs/call maths for their volume), then Michael's approved line verbatim: "We are unable to review quote limit increases at this time, once you've built a larger sample size of activity we can review and request this for you." No dates, no thresholds, no aggregate totals (no "10k/min" style claims), never recite all six limits, never reroute to api@smarkets.com in customer text (WE are API support). Internal truth (never in customer text): bar is market maker level.
+- 403 JSON = account permission (approval / 60-day review / revoked / scope / RG_ACK / KYC / NO_DEPOSITS). 403 HTML (`<!DOCTYPE`) or SOURCE_BLOCKED/IP_NOT_TRUSTED = edge/network block (VPS/datacentre IP, jurisdiction). Never diagnose mechanism without the response body — ask for it.
+- Voice Core gates on every reply: plain text only, straight quotes, no em dashes, no hyphenated compound modifiers (exception `in-play`), negative density <= 3, UK English, banned openers ("Unfortunately", "I understand", "I can confirm that", "Please be advised", "furthermore", "additionally"), exactly ONE decision sentence last for complaints, sign-off exactly "Kind regards, / [name] / Smarkets Support".
+- Source hierarchy: live spec https://api.smarkets.com/v0/control/openapi/?tags=trading_api > local openapi/ snapshot (STALE in places) > workspace docs > customer message > inference (label it, never present as fact).
 
-Save both emails now. You will need them.
+## Triage map: symptom -> section
 
----
+- "cannot log in / wrong password / locked out" -> A. Login failures
+- "keeps logging me out / worked then 401 / token expired" -> B. 401s incl 20-min rotation
+- "not allowed / forbidden / blocked / can't bet" -> C. 403 routing (JSON vs HTML)
+- "bet rejected / won't place / insufficient funds / wrong price" -> D. Order rejects
+- "can't cancel" -> E. Cancel
+- "too many requests / rate limited / 429" incl "need higher limit / follow X markets / streaming?" -> F. Rate limits + batching + streaming denial
+- "stake shows wrong (£0.08 not £2)" -> G. Quantity
+- "odds/price rejected or confusing" -> H. Price
+- "empty prices but website shows them" -> I. Quotes empty book
+- "statement/CSV fails" -> J. CSV + account reads
+- "where is my bet / not on website / fill wrong" -> K. Order visibility
+- "commission 2% / Pro 1% / Select 3% / 0% offer" -> L. Commission
+- "need test mode / read-only feed / data only" -> M. Scope denials
+- "VPS / server / cloud blocks" -> N. Infra/network
+- "moved country / travelling" -> 451 in C
+- "500/503/504" -> O. Server side
+- "how do I start / get access / £150 / how long" -> P. Onboarding
+- Anything unmatched, customer sent logs you cannot parse, account/compliance dispute, persistent 5xx -> Q. Escalate
 
-# PART 1 — WHAT IT IS
+## A. Login failures (POST /v3/sessions/)
 
-## What is the Smarkets API?
+**What it means:** 90% are three field mistakes: `email` used as key (must be `username`), expecting 200 (login returns 201), reading `session_token` (field is `token`). Rest: wrong password, MFA code stale, device trust, session limit, suspension/timeout/exclusion, jurisdiction, or 429 (5/300s burns fast while debugging).
 
-A way for your tools to talk to the Smarkets exchange directly instead of you clicking the website.
+**What to ask (pick max 2):** "What exact field names did you put in the login body — did the guide you followed say `email` or `username`?" / "What status did the login step report — check whether your tool treats anything other than 200 as failed?" / "Are you using an authenticator app on the account?"
 
-With it you can check live prices, place and cancel bets, check your balance and exposure, and download your statement — all from an automation.
+**What to tell them:** Login is POST https://api.smarkets.com/v3/sessions/ with `{"username": "their email", "password": "..."}`. Success is 201 with a `token` field — set the step to accept 200 OR 201 and read `token`. Then test with GET /v3/accounts/ + header `Authorization: Session-Token <token>`. MFA accounts add POST /v3/sessions/verify/ with the current 6-digit code before bets will work. Login allows 5 tries per 5 minutes — on 429 wait for the window, do not retry in a loop.
 
-In plain words: your tool sends a web address plus some fields. Smarkets sends a structured reply back. That is all "REST + JSON" means.
+**Do NOT:** tell them to re-apply or pay again; mention paper trading/sandbox (does not exist — say "the public API specification does not document a test or sandbox environment"); paste ReST/markdown tables/curly quotes.
 
-- REST = you call a URL with a method (GET = read, POST = place, DELETE = cancel).
-- JSON = the reply is labelled data like `{"balance": 100000}`. Your tool parses it into fields you can map.
+**Flag to technical:** DEVICE_NOT_TRUSTED / IP_NOT_TRUSTED / SESSION_LIMIT_REACHED / SOURCE_BLOCKED / CLIENT_JURISDICTION_MISMATCH, any 403 on login, HTML body on login, repeated 401 from DELETE /v3/sessions/.
 
-## Is it the exchange or SBK?
+## B. 401s after working ("keeps logging me out")
 
-The API is for the Smarkets exchange only.
+**What it means:** Usual: 30-min idle expiry. No-code signature: 401 at ~19-20 min DESPITE polling every 20s — that is the session rotation, not idle. Header-only clients die at rotation; cookie clients (both cookies sent + renewed token adopted) survive past 30 min. Verified live Oct 2026 (control 401 at 19:58, treatment 105x200 zero 401s). Other causes: MFA never verified (login fine, all orders 401), mixed auth (GET via browser cookie works, POST via header fails), environment switch invalidating tokens.
 
-- Smarkets exchange = you bet against other customers. You can back AND lay. Prices come from other users' orders. Commission applies.
-- SBK = Smarkets' sportsbook app. You bet against the house. No lay side, no order book, no API.
+**What to ask:** "How many minutes after login does it fail — roughly 20, or after sitting idle?" / "Is it one scenario or several sharing the account, and do you use an authenticator app?" (Do NOT ask for token values. Do NOT ask them to run curl.)
 
-Same login can work on both (ask support to enable dual access) but balances and products are separate. If your's strategy mentions Bet Builders, accas, cash out or free bets, that is SBK language — the API does not do those. The API does singles on the exchange: back or lay one outcome at a time.
+**What to tell them:** Short runs: log in fresh each run (every 15 min dodges rotation entirely) and logout at end. Long runs: add a branch — on 401 run Login once, replace stored token, retry that step once, then stop and alert; never loop login (5/300s). If they can set cookies (n8n/advanced): send `Cookie: User-Session-Token=<token>; Refresh-Token=<refresh_token>` every call and adopt each renewed session token from responses.
 
-## What can I do with it?
+**Flag to technical:** customer mentions cookies/auth v2/refresh tokens; 401 on POST but GET fine; `data: None`; 401 persisting after fresh login + MFA verify.
 
-- List events, markets, outcomes and competitors.
-- Read live prices, last matched prices and traded volumes.
-- Place, list and cancel exchange orders.
-- Read balance, exposure and account activity.
-- Automate your own trading on markets approved for your account.
+## C. 403 routing (JSON vs HTML — get the body first)
 
-## What can I NOT do with it?
+**What it means:** Two different faults, same digits. JSON `error_type: FORBIDDEN` (plus RG_ACK_REQUIRED / KYC_PERMISSION_DENIED / ACCOUNT_UNVERIFIED / NO_DEPOSITS / ACTION_BLOCKED / SOURCE_BLOCKED / IP_NOT_TRUSTED / CLIENT_JURISDICTION_MISMATCH) = account permission. HTML starting `<!DOCTYPE` = Cloudflare edge block (datacentre/VPS IP, IP reputation, or server in unsupported jurisdiction — allowlisting only helps supported-jurisdiction datacentre IPs via internal request, never promise it; Finland/Hetzner-Helsinki class = must move server, no hostname workaround).
 
-- No test mode with fake money. Every bet is real money.
-- No read-only or data-only plan. One product: prices + betting together.
-- No push feed, webhook out, websocket or streaming. Poll on a timer instead. The old streaming address (stream.smarkets.com:3801) is dead.
-- No multiples, accas, Bet Builders or cash out via API. Those are SBK/website features.
-- No collecting large amounts of prices without betting, no sharing or selling data, no comparing prices to sell elsewhere, no hiding API calls as browser traffic, no reverse engineering, no extra accounts, no latency arbitrage or court-siding. Full list in Rules below. Breaks go warning -> suspension -> closure.
+**What to ask:** "Can you open the raw response body of that failed step and tell me whether it starts with `{` (JSON) or `<` (a web page)? If JSON, paste the `error_type` and `data` words only — redact the token." / "Are you running from home wifi or a cloud server/VPS, and has the account finished ID checks + first deposit?"
 
-## Is it for me?
+**What to tell them (JSON):** Account-level block. Usual: not yet approved (£150 + form), in 60-day compliance review (normal, can trade), revoked/scope, or one-step website fixes — RG_ACK_REQUIRED: do the gambling popup on smarkets.com (try a market page), lifts instantly; KYC/ACCOUNT_UNVERIFIED: finish verification on website, API follows with no setup change; NO_DEPOSITS: fund first. Do NOT tell RG_ACK/KYC cases to re-apply or pay again.
 
-Yes if:
+**What to tell them (HTML):** Network-level block, not credentials. Prove by running same call from home. No self-serve unblock. Take ownership and ask them to reply with use case + host behaviour; raise internal allowlisting ONLY for supported-jurisdiction datacentre IPs on api.smarkets.com. Only ever confirm api.smarkets.com — never bless sio-live/stream hosts (website internals / deprecated, not API).
 
-1. You have a no-code tool with a generic HTTP module (names below).
-2. You can copy values exactly — one wrong letter in a header or field name fails.
-3. You have or will open a fully verified Smarkets exchange account and pay the £150 setup fee.
+**Flag to technical:** any HTML 403; JSON 403 with SOURCE_BLOCKED/IP_NOT_TRUSTED/CLIENT_JURISDICTION_MISMATCH; 451 COUNTRY_BLOCKED from a normally supported country; suspension/compliance disputes (human judgement, no detailed internal reasoning to customer unless pre-approved).
 
-No if you only place bets by hand. Use the website or app — cheaper and faster.
+## D. Order rejects (POST /v3/orders/)
 
-## Which button do I click in my tool?
+**What it means:** Code names the reason — ask for the exact code, never guess. No-code top three: INSUFFICIENT_FUNDS (exposure locking available — check `available_balance` not total), INVALID_PRICE (not on tick — copy from quotes), INVALID_QUANTITY (under 500). Then HALTED/SUSPENDED (goal/VAR/withdrawal — wait, re-check states; next time keep_in_play to survive halts), THROTTLE (over 10/s), CROSSED_SELF, CAPACITY/LIMIT/STAKE caps, NOT_FOUND/SETTLED/NOT_OPEN (stale IDs or done market), SERVICE_TIMEOUT (server side).
 
-Same idea everywhere, different label:
+**What to ask:** "What is the exact rejection code word in the reply (e.g. ORDER_REJECTED_...)?" / "What available balance did the accounts step return just before, and was the market in-play?" (One question if they already gave the code.)
 
-- Zapier: "Webhooks by Zapier" -> "Custom Request".
-- Make: "HTTP" -> "Make a request".
-- n8n: "HTTP Request" node.
-- Bubble: "API Connector" plugin.
-- Google Sheets: Extensions -> Apps Script with `UrlFetchApp.fetch()` (needs a few lines of script — ask for help or use Make/Zapier instead).
+**What to tell them:** 5 required fields: market_id, contract_id, price, quantity, side (buy=back WILL, sell=lay WON'T). INSUFFICIENT_FUNDS: cancel an open order or stake less. INVALID_PRICE: copy a price from quotes. INVALID_QUANTITY: minimum 500. HALTED/SUSPENDED: wait, re-check GET states, retry; use `type: keep_in_play` to survive halts (only KIP survives — never promise "orders stay in the book"). THROTTLE: slow under 10/s. STAKE/LIMIT/CAPACITY: contact support. SETTLED/NOT_FOUND: re-walk events->markets->contracts for fresh IDs.
 
-Every call needs four things: Method (GET/POST/DELETE), URL, Headers, Body (for POST). Login gives you a token. Every call after that adds one header with that token.
+**Flag to technical:** IOC with minimum_accepted_quantity == quantity still partial-filling (need exact quantity/min values + full reply incl total_executed_quantity + paper/live); SERVICE_TEMPORARILY_UNAVAILABLE persisting; any code not in Groups 1-8.
 
----
+## E. Cancel problems
 
-# PART 2 — GETTING ACCESS (ONBOARDING)
+**What it means:** Usually already filled/cancelled/settled, wrong UUID, or not theirs. Cancel-one 10/s; cancel-ALL 1/60s kills everything — never on auto-retry. Re-cancel of dead order succeeds silently (safe to retry once). After settlement nothing cancels.
 
-## Who can apply?
+**What to ask:** "What does GET /v3/orders/ show for that order ID right now — state and quantity_filled?" / "Was that the cancel-one or cancel-everything step?"
 
-- 18+ (21+ in the US), in a supported jurisdiction (UK, Ireland, Malta, Sweden plus others — ask if unsure).
-- Fully registered and verified Smarkets exchange account.
-- Not self-excluded, not on a gambling timeout, not a Smarkets employee/contractor.
-- Able to describe what you will build in plain words.
+**What to tell them:** Check state first via GET /v3/orders/. Cancel one with DELETE /v3/orders/{order_id}/. Keep cancel-all off triggers/loops. Settled = cannot cancel.
 
-Smarkets can still refuse or revoke access at its discretion, even if you tick every box. Approval is not guaranteed.
+**Flag to technical:** THROTTLE/CAPACITY/LIMIT persisting at low volume; INSUFFICIENT_FUNDS on cancel (rare); SERVICE error persisting.
 
-## How much does it cost?
+## F. Rate limits + batching + streaming asks
 
-- £150 one-off setup fee (or equivalent in your currency). Taken from your balance when approved, not when you apply. You need at least £150 in the account.
-- Refundable if you permanently quit API use within 60 days — email support@smarkets.com to withdraw.
-- After that: normal exchange commission on winnings. No API discount. API users cannot take the 0% new-customer offer or affiliate deals.
+**What it means:** Global 1200/60s per account shared across every tool/server/token on that account. Per-endpoint caps fire first (quotes 50/60s approved, ~20 pre-approval; login 5/300s; logout 30/60s; place 10/s; cancel-one 10/s; cancel-all 1/60s). Structured 429 (most GETs) has count/limit/expiry (RFC 2822 date, NOT ISO — do not tell them to fromisoformat it); quotes/orders/sessions 429 is short with NO expiry. Header is ground truth for their tier (20 vs 50 = usually pre-approval). Over-batch 404 ("Nothing matches the given URI") = too many IDs, not dead route (quotes flips 200->404 at 201; volumes at 301).
 
-Some use cases can carry extra fees or restrictions (see Section 5 of the API T&Cs). Smarkets can change commercial terms with notice — continuing to use the API after a change means you accept it.
+**What to ask:** "How often does the timer run, how many IDs per call, and is any other scenario/server using the same account?" / For increase asks: "How many IDs per quotes call today — check the comma count in that URL?" (Batch size BEFORE any increase talk. Do not recite all limits. Do not ask for full logs when these three numbers diagnose it.)
 
-## Your journey step by step
+**What to tell them:** Wait to `expiry` where present (else ~60s for quotes/orders/sessions), then halve poll rate. Fix is batching, not speed: quotes 200/call, volumes/states/competitors 300, contracts/last-prices 100, markets-by-event 50. Work THEIR numbers: 1500 markets at 200 = 8 calls/sweep (~every 10s within 50/min); at 100 = 15 calls (~every 18s); at 1 = blocked. One timer fanning out beats five timers. Cache event/contract lists; poll only quotes/balance fast. Never poll login or cancel-all. Then increase line ONLY if asked (verbatim, see orientation). Streaming/push/websocket: decline — REST polling only, streaming service deprecated (scope denial to API, never name sio-live/archived SDK, no api@smarkets.com reroute, Pattern B shape).
 
-**Step 1 — Create and verify your Smarkets account.**
-Do this before anything else at smarkets.com. Electronic checks run first (does not affect credit score). If they fail, upload documents:
+**Flag to technical:** hitting limits at genuinely low single-client volume (possible hidden second client); suspension after repeated 429s; approved account stuck on 20 header (server-side mismatch — escalate for correction, never "force 20->50" as agent override); persistent short-429 with no recovery.
 
-- Photo ID: passport, driving licence with photo, or national ID card. Photo or scan, all four corners visible, not angled. Screenshots not accepted.
-- Proof of address: bank/building society statement, utility bill (both within 3 months), or council tax / tax bill (current year), or residency certificate (3 months). Paper or PDF. Screenshots not accepted. Mobile phone bills not accepted.
-- You cannot use the same document for ID and address.
-- Smarkets document review target: within 72 hours. Busy periods slip.
-- You may also be asked for source of funds / wealth later (payslips, bank statements, savings). Standard regulation, not personal. You can decline but the account will be restricted.
+## G. Quantity wrong ("I sent 800 expecting £2")
 
-Until verification completes you can hit deposit blocks, bet blocks or login blocks. Finish it on the website — the API starts working by itself after, no setup change needed.
+**What it means:** Units are 1/10,000ths of currency. 800 IS £0.08. £2 = 20000. Minimum 500 (£0.05). Back-stake formula quantity x price / 100000000.
 
-**Step 2 — Fund the account.**
-Deposit at least enough to cover the £150 fee plus your first stakes. Visa Debit or Instant Bank Transfer is simplest (instant, free, £10 min). Deposits must be in your account currency and from a payment method in your own name. See Money movement below for closed-loop withdrawals.
+**What to ask:** "What quantity number did the step send, and what pounds did you expect?" (That alone diagnoses it.)
 
-**Step 3 — Skim the docs.**
-Open https://docs.smarkets.com/ and confirm your plan fits "viewing prices and placing bets". If your plan is really "collect prices for a model / website / Discord group" without betting, stop — that breaches the T&Cs.
+**What to tell them:** Multiply pounds by 10000: £1 -> 10000, £2 -> 20000, £10 -> 100000. Give THEIR corrected number back. Point to label their orders for Sheets filtering.
 
-**Step 4 — Apply via the Request Form.**
-https://support.smarkets.com/p/6MLL-PL7/api-request-form
-Write 3-5 plain sentences: what you will build, which tool, which sports/markets, roughly how often you will check prices and how many bets. Example: "Make scenario checking 50 pre-match football markets every minute, placing 5-10 back bets a day, plus a Sheets log every 15 minutes." That is enough. You must keep Smarkets updated if the setup changes a lot later.
+**Flag to technical:** rarely — only if corrected quantity still rejects as INVALID_QUANTITY.
 
-**Step 5 — Wait for approval.**
-Reviewed case by case, no fixed SLA. You can use the website while you wait. If it has been a while, nudge api@smarkets.com (tech) or support@smarkets.com (account/application). Once approved the £150 leaves your balance and API access activates.
+## H. Price wrong ("odds rejected / confusing")
 
-**Step 6 — 60-day compliance review.**
-Every new API account gets one. You can trade during it. Some restrictions can apply. You do nothing unless contacted.
+**What it means:** Units are basis points: decimal = 10000/price. 5000 = 2.0, 2500 = 4.0, 1000 = 10.0, 7194 = 1.39. Range 1-9999 on valid ticks only. No `time_in_force` field exists (their layer or another exchange — use `type` + `minimum_accepted_quantity`).
 
-**Step 7 — Build in this order: login -> balance check -> price check -> bet.**
-Do not start with auto-betting. Prove login, then prove you can read, then place one small manual-triggered bet (£0.05-£1), then automate.
+**What to ask:** "What price number did you send and what decimal odds did you want?"
 
-## What do I get when approved?
+**What to tell them:** Divide 10000 by wanted odds (2.0 -> 5000). INVALID_PRICE: copy a price from quotes. FOK = immediate_or_cancel + minimum_accepted_quantity == quantity; partial-ok = minimum lower; always set it explicitly on IOC (omitted can zero-fill).
 
-No API key in the post. You log in with your normal Smarkets email + password. The login reply contains a temporary `token`. That token IS your key for the next calls.
+**Flag to technical:** valid-looking tick from quotes still INVALID_PRICE repeatedly.
 
----
+## I. Quotes empty but website shows prices
 
-# PART 3 — MONEY AND COMMISSION (READ BEFORE YOU BET)
+**What it means:** By design (strong evidence, not Smarkets-confirmed): quotes = P2P book only; website can aggregate extra market-making sources not in API. Thin in-play = often empty via API. NOT a bug to fix in their setup.
 
-## What commission do I pay?
+**What to ask:** "Which market ID, and does last_executed_prices show recent trades on it?"
 
-Standard: 2% of net profit per market. Only when you win that market. Losing markets pay nothing. Calculated per market, not per bet — three bets on one market net off first, commission on the net.
+**What to tell them:** Empty book = no P2P resting orders at that moment. Cross-check last_executed_prices for what really traded. For data confirmation beyond that, take ownership and ask them to reply with use case.
 
-API access does not lower it. Website, app and API all pay the same tiers.
+**Flag to technical:** customer disputes the explanation or shows liquid-market persistent empties with evidence.
 
-## The three tiers
+## J. CSV + account reads
 
-- Standard 2% — everyone starts here. Net profit per market only.
-- Pro 1% — opt-in for volume. Needs 1,500+ bets OR £1M+ staked in a calendar month. You can ask once past 80% of either. Contact support to opt in — it is never automatic, you can stay on 2% if you prefer. Different maths: charged per matched bet on wins AND losses, not net per market. Only worth it at real volume. Leaving needs 3 months. Opting in forfeits any commission promotion permanently.
-- Select 3% — auto-applied with 7 days email notice if you clear £25k net profit over the previous 12 months. Review possible if P&L drops back below £25k (ask support, discretionary). Also forfeits promotions.
+**What it means:** CSV: both ISO 8601 on the hour, exactly 1h apart (14:00->15:00) or 400 INVALID_DATETIMES; no data that hour = 404 NO_CSV_AVAILABLE; too broad = RECKONATOR_REQUEST_TOO_LARGE; reply is gzipped CSV (Make/n8n need Gunzip step, Zapier needs Code/Sheets import, Bubble needs file plugin). Paginated activity uses timestamp_max/offset/limit. Account fields: balance / available_balance / exposure (available = balance - exposure) / commission_type ("0.02"/"0.01"/"0.03") / currency / bonus_balance.
 
-Check yours via GET /v3/accounts/ -> `commission_type`: "0.02" = Standard, "0.01" = Pro, "0.03" = Select.
+**What to ask:** "What exact start/end strings did the CSV step send?" / "What did the accounts step return for available vs balance?"
 
-Worked example (Standard): back £10 at 3.0, wins -> profit £20, commission £0.40, you keep £19.60 profit. Lay side equivalent nets the same way per market.
+**What to tell them:** Snap times to `:00:00Z`, end = start + 1h. INSUFFICIENT_FUNDS with healthy balance = exposure — cancel an open order. commission_type decodes tier (see L).
 
-## Promos?
+**Flag to technical:** valid hour-window still INVALID_DATETIMES; persistent RECKONATOR_TOO_LARGE on narrow windows.
 
-API users are ineligible for the 60-day 0% new-customer offer and affiliate commission offers. Do not plan around them.
+## K. Order visibility ("placed but not on website / fill wrong")
 
----
+**What it means:** POST accepted (has order_id) but: filled instantly (check last_executed_prices), cancelled by halt/close, or looking at wrong account/environment. POST reply has total_executed_quantity + executed_avg_price (null if unmatched) but NEVER quantity_filled/state — those are GET-only. IOC partials depend on minimum_accepted_quantity. GTC/GTH/KIP confirmations only mean accepted — matching needs the other side.
 
-# PART 4 — YOUR FIRST LOGIN (DO THIS ONCE, REUSE FOREVER)
+**What to ask:** "What order_id did the place step return, and what do total_executed_quantity / executed_avg_price say?" / "What does GET /v3/orders/ show for it now?"
 
-## The idea in one paragraph
+**What to tell them:** Track by order_id via GET /v3/orders/ (created/partial/filled/settled + quantity_filled). IOC: total_executed_quantity is the instant fill. Non-IOC: acceptance only, fills when matched. In-play delay (4s racing/darts, 8s rest) = pending + invisible, normal. Instant Match = 8-14s confirmation; material event inside can void.
 
-Login with email + password -> save the `token` from the reply -> paste it into a header on every other call. Token lasts about 30 minutes of use and rotates about every 20 minutes (see below). Logout when done. That is the whole auth system.
+**Flag to technical:** IOC full-minimum partial fills with proof; acceptance never appearing anywhere with valid ID.
 
-## Call 1 — Login
+## L. Commission questions
 
-- Method: POST
-- URL: https://api.smarkets.com/v3/sessions/
-- Header: `Content-Type: application/json`
-- Body:
-```json
-{
-  "username": "your.email@example.com",
-  "password": "yourpassword"
-}
-```
+**What it means:** Standard 2% net-per-market (win only). API gives NO discount. 0%/affiliate offers: API users ineligible (T&Cs s3). Pro 1%: opt-in only at 1500 bets or £1M/month (ask at 80%), charged per matched bet on wins AND losses, forfeits promos, 3-month minimum. Select 3%: auto at £25k/12mo net (+7d email), forfeits promos, review if P&L drops (discretionary). Check commission_type first.
 
-Notes that fix 90% of first-login failures:
+**What to ask:** "What commission_type does GET /v3/accounts/ show — 0.02, 0.01 or 0.03?"
 
-1. Field MUST be called `username` even though the value is your email. `email` fails with REQUEST_VALIDATION_ERROR.
-2. Success is HTTP 201, not 200. Set your tool to accept 200 OR 201 or a working login shows as failed.
-3. Read the field called `token` (long string). Not `session_token`. Save it to a variable / Data Store.
-4. The reply also contains `refresh_token`, `stop` (expiry hint) and `verify`/`factor` (MFA status). Save `refresh_token` too if your tool supports cookies (see 20-minute note).
+**What to tell them:** Decode their value. Standard: 2% net per market only. Pro: thresholds + must contact support to opt in (can stay on 2%). Select: automatic on profit, not a penalty. Never promise Pro approval or Select removal.
 
-In Sheets Apps Script the same call is `UrlFetchApp.fetch(url, {method: "post", contentType: "application/json", payload: JSON.stringify({username: email, password: pw})})` then `JSON.parse(resp).token`.
+**Flag to technical:** tier looks wrong for verified volume/profit with evidence (needs human judgement).
 
-## Every call after — attach the token
+## M. Scope denials (read-only / data-only / test mode / multiples / streaming)
 
-- Header: `Authorization: Session-Token YOUR_TOKEN`
-- Exact words `Session-Token`, one space, then token. Not `Bearer`. Not `X-Smarkets-Token`. Not in the URL. Not in the body.
+**What it means:** All Pattern B: one acknowledging line, direct answer quoting the operative T&C line (one quote max), <=2 sentences constraint, optional alternative, close. No padding, no multiple theories.
 
-Prove it with a balance check: GET https://api.smarkets.com/v3/accounts/ + that header. Returns `account_id`, `balance`, `available_balance`, `exposure`, `currency`, `commission_type`, `signup_date`. If balance comes back, login works.
+**Lines (adapt, keep quote exact):** Read-only/data-only: no reduced tier exists — single product, £150 + full process; T&Cs s2: "All other uses are strictly prohibited, including but not limited to, odds scraping, concealing API calls, browser impersonation or reverse engineering." Alternative: public event/competitor/contract endpoints, or apply if research justifies fee (refundable 60d). Test mode: "The public API specification does not document a test or sandbox environment." Multiples/accas/Bet Builders/cash out via API: not API features (SBK/website only). Streaming/websocket/push: not offered, REST polling only, deprecated service (scope to API). Benchmarking: s5 prohibits competitive benchmarking. Data resale/sharing: s5 needs written approval. Second accounts for fees: fraud.
 
-## MFA (authenticator app) users
+**Flag to technical:** customer pushes back with "but endpoint X responds without auth" (runtime vs spec contradiction — do not debate, escalate with their evidence).
 
-Login returns a limited token. Add one call before anything else:
+## N. Infra / network (VPS, cloud, Make/Zapier Cloud HTML 403s)
 
-- POST https://api.smarkets.com/v3/sessions/verify/ + your current 6-digit code.
+**What it means:** Cloud/datacentre IPs challenged more. Home-works + cloud-HTML-403 = host IP, not setup. Never keep retrying through the block. Never promise whitelisting. Only confirm api.smarkets.com for allowlisting requests.
 
-Then place bets. Symptom you skipped this: login looks fine but every order returns 401.
+**What to ask:** "Does the identical call work from home wifi? What are the first characters of the failure body (`{` or `<`)?"
 
-Lost your MFA device? Email support from your registered address with proof of ID to disable it.
+**What to tell them:** Home test proves host vs setup. Take ownership, ask them to reply with use case + both behaviours. Internal allowlisting raisable ONLY for supported-jurisdiction datacentre IPs (UK/Malta/Ireland/Sweden). Unsupported-jurisdiction server (e.g. Helsinki class) = must relocate, no workaround, no alt hostname.
 
-## Logout
+**Flag to technical:** always (network investigation, not CS-fixable). Include IP class + jurisdiction + JSON-vs-HTML finding.
 
-- DELETE https://api.smarkets.com/v3/sessions/ with the same Authorization header.
-- Limit 30 per 60 seconds. Optional but tidy for scheduled runs. Scheduled-every-15-min setups often just login -> work -> logout each run.
+## O. Server side (500 / 503 / 504)
 
-## How long does login last?
+**What it means:** Ours, not theirs. 500 INTERNAL_ERROR, 503 subsystem codes (KYC/AUTH/ORDER/EVENTS/CHARTS/MDS/FOREX/RECKONATOR/PROMOTION/ZEUS + TIMEOUT variants), 504 ZEUS_TIMEOUT/RECKONATOR_UNAVAILABLE. Nothing they change fixes it.
 
-About 30 minutes, renewed by each authenticated call — but tokens also rotate on a ~20 minute cycle (verified live Oct 2026: header-only setups die around 19-20 min even while polling).
+**What to ask:** "Has this happened since the first time, and can you give the exact code + time (UTC) + endpoint?" (Recurrence question, not reconstruction.)
 
-- Short runs (under 15 min): ignore. Fresh login each run dodges it entirely.
-- Long runs: add a branch — on any 401, run Login once, replace the stored token, retry that step once, then stop and alert if it fails again. Never loop login.
-- Advanced (n8n / code): send `Cookie: User-Session-Token=<token>; Refresh-Token=<refresh_token>` with every call and adopt each renewed `User-Session-Token` from responses. Log response cookies — the rotation is only visible there.
-- Never hammer login to work around expiry: 5 tries per 5 minutes, then 429 lockout for ~4-5 min. During debugging that burns fast.
+**What to tell them:** Wait minutes, retry once with backoff. Still failing: report to api@smarkets.com path via escalation with timestamp + endpoint + code (subsystem code tells engineering where to look).
 
-## Login errors — matcher
+**Flag to technical:** always if persistent; immediately if customer confirms recurrence.
 
-- INVALID_CREDENTIALS (401) — email or password wrong. Reset on smarkets.com.
-- PASSWORD_RESET_NEEDED (401) — reset on smarkets.com first.
-- INVALID_TOKEN (400) — wrong MFA code. Generate a fresh 30-second code.
-- DEVICE_NOT_TRUSTED / IP_NOT_TRUSTED (403) — finish device trust on smarkets.com.
-- SESSION_LIMIT_REACHED (403) — too many open sessions. Logout elsewhere first.
-- USER_SUSPENDED (403) — contact support@smarkets.com.
-- USER_SELF_SUSPENDED / USER_ON_TIMEOUT / USER_EXCLUDED (403) — timeout or self-exclusion active. Wait it out or contact support.
-- SOURCE_BLOCKED / CLIENT_JURISDICTION_MISMATCH (403) — source or country mismatch. Contact support.
-- COUNTRY_BLOCKED (451) — Smarkets not licensed there. No workaround — a server in that country must move.
-- 429 on login — you hit 5 per 5 min. Wait for the window, check the `expiry` time.
+## P. Onboarding ("how do I start / £150 / how long / test?")
 
----
+**What it means:** Standard path: verified account (ID + address, no screenshots, no mobile bills, 72h doc target, SoF possible) -> fund (>= £150 + stakes, own-name method) -> skim docs.smarkets.com (prices+bets only) -> Request Form (3-5 plain sentences: tool, sports, cadence, bet volume; must update Smarkets on big setup changes) -> wait (case by case, nudge if stale) -> £150 deducted on approval (refundable on permanent quit within 60d via support@smarkets.com) -> login with normal email/password (no separate key) -> 60-day review (can trade). Not eligible: unverified, self-excluded/timeout, unsupported jurisdiction, employees.
 
-# PART 5 — FINDING EVENTS, MARKETS AND PRICES
+**What to ask:** "Where are you stuck — verification, deposit, the form, or first login?" / "What tool and roughly how many markets/min and bets/day?"
 
-## The 4 levels (learn once)
+**What to tell them:** Point to the stuck step only (verify on smarkets.com / fund / form link / login recipe in A). Build order: login -> GET accounts -> GET quotes (one batched call) -> one £0.05-£1 manual-triggered bet -> then automate. No sandbox/test-mode promise.
 
-1. Event — the thing happening (Arsenal vs Chelsea).
-2. Market — what you can bet on in it (Match Winner, Over/Under 2.5 Goals).
-3. Contract — the outcome (Arsenal Win / Draw / Chelsea Win).
-4. Order — your bet on a contract.
+**Flag to technical:** approval-delay disputes, jurisdiction edge cases, fee-refund disputes.
 
-You walk down: get event ID -> get its markets -> get a market's contracts -> place order on a contract. Wrong ID at any level = 404.
+## Q. Escalate — exact handoff
 
-## Which call for what
+Flag when: HTML 403 / edge / jurisdiction doubt; suspension/compliance dispute; "code works in docs but not my tool" debugging; cookies/auth-v2/refresh; persistent 5xx; unparseable logs; any pattern miss; limit suspension; IOC partial-fill dispute; quotes-empty dispute; approved-but-20-header mismatch; anything needing human judgement.
 
-Free lists (no login needed):
+Handoff must include: platform (API confirmed), account approval state if known, exact symptom in CUSTOMER'S words, full error (status + error_type + data + expiry if 429 + JSON-vs-HTML), exact call (method + URL + field names, secrets redacted), expected vs actual, start time, poll rate + batch size + tool count sharing account, home vs cloud IP, what confluence section was already given. One message, key points only, no re-explained reasoning.
 
-- GET /v3/events/ — what is on. Filter via query params in docs.
-- GET /v3/events/{ids}/states/ — open / halted / settled. Check before betting.
-- GET /v3/events/{ids}/competitors/ — teams, runners, participants.
-- GET /v3/events/{ids}/markets/ — markets for events (max 50 IDs per call).
-- GET /v3/events/{ids}/markets_count/ — how many markets each event has.
-- GET /v3/markets/{ids}/contracts/ — outcomes in a market (max 100 IDs per call).
-- GET /v3/currencies/{code}/ — FX rate (codes: AUD BRL CAD CHF CZK DKK EUR GBP HKD HUF JPY NOK PLN SEK USD).
+Routing: API bugs/codes/limits/auth/batching -> api@smarkets.com path via tech. Account/money/ID/application/RG/closed loop/fee/compliance -> support@smarkets.com path. SBK app -> support@getsbk.com / live chat 09:00-23:00 GMT / +44 207 617 7413. Outages: status.smarkets.com / @SmarketsTech.
 
-Live numbers (always send your login header):
+## Copy-adapt replies (run each through Voice Core before sending)
 
-- GET /v3/markets/{ids}/quotes/ — current order book (best bid/ask + depth).
-- GET /v3/markets/{ids}/last_executed_prices/ — what actually traded last + when.
-- GET /v3/markets/{ids}/volumes/ — how much traded.
-- GET /v3/orders/ — your open + recently settled orders.
-- GET /v3/orders/fullcover/ — fullcover orders if any (a multiple-bet type; cannot be placed on Smarkets, list only).
-- GET /v3/accounts/ and GET /v3/accounts/activity/ — balance and paginated statement.
+**Login fix (no-code):** "Thanks for your message. Log in with POST https://api.smarkets.com/v3/sessions/ using `username` (your email as the value) and `password`. A working login returns 201 with a `token` — set that step to accept 200 or 201 and save `token`. Then add the header `Authorization: Session-Token <token>` to every later call and test with GET https://api.smarkets.com/v3/accounts/. Login allows 5 tries per 5 minutes, so pause before retrying if you hit a 429. Kind regards, [name] Smarkets Support"
 
-Full URLs are https://api.smarkets.com + path, e.g. https://api.smarkets.com/v3/events/
+**Logged-out loop:** "Thanks for your message. Sessions rotate about every 20 minutes, so long runs need a re-login branch: on a 401 run Login once, replace the stored token and retry that step once, then stop and alert if it fails again. For runs under 15 minutes the simplest fix is a fresh login each run with a logout at the end. Kind regards, [name] Smarkets Support"
 
-IDs are comma-separated lists in the URL: `/v3/events/id1,id2/states/`. One call can carry many IDs up to that endpoint's cap (see Speed limits).
+**Quantity:** "Thanks for your message. The API counts stake in 1/10,000ths of your currency, so [their number] is [£x]. To stake [£y] send quantity [N] (pounds x 10000, minimum 500). Kind regards, [name] Smarkets Support"
 
-## Walkthrough: price for one football match
+**Price:** "Thanks for your message. The API counts odds as 10000 divided by decimal odds, so [their number] means [odds]. To bet at [odds] send price [N]. If a price is rejected, copy one straight from the quotes reply. Kind regards, [name] Smarkets Support"
 
-1. GET /v3/events/ -> find "Arsenal vs Chelsea", note `id` e.g. 12345.
-2. GET /v3/events/12345/markets/ -> find "Match Winner", note `market_id`.
-3. GET /v3/markets/{market_id}/contracts/ -> note three `contract_id`s (Home/Draw/Away).
-4. GET /v3/markets/{market_id}/quotes/ with login header -> live book. Pick a price from here for your order.
-5. GET /v3/events/12345/states/ -> confirm open before placing.
+**Rate limit + batch:** "Thanks for your message. The quotes allowance is 50 requests per 60 seconds per account, shared across every tool on the account. The fix that changes most setups is batching: quotes takes up to 200 market IDs in one call, so [their volume] needs [N] calls per sweep. Wait until [expiry / about a minute] then re-run at that batch size with one timer. We are unable to review quote limit increases at this time, once you've built a larger sample size of activity we can review and request this for you. Kind regards, [name] Smarkets Support"
 
-Do the same walkthrough once by hand in docs.smarkets.com (it fills your token for you), then copy the working URLs into your tool.
+**Batch 404:** "Thanks for your message. That 404 means the batch held more IDs than the endpoint takes, not that the route is dead. Quotes takes up to 200 IDs per call [volumes/states/competitors 300, contracts/last prices 100, markets by event 50]. Split to those sizes and re-run. Kind regards, [name] Smarkets Support"
 
-## Empty quotes but website shows a price?
+**RG_ACK:** "Thanks for your message. Your account is approved — place no new application. Log in at smarkets.com and complete the Responsible Gambling acknowledgement popup (try a market page if it does not show), then retry the same API call with no other change. Kind regards, [name] Smarkets Support"
 
-Usually fine, not broken. Quotes shows only other customers' peer-to-peer orders. The website can show extra pricing sources the API does not expose. Thin in-play markets are often empty via API. Cross-check last_executed_prices for what really traded. If still confused, email api@smarkets.com with the market ID.
+**Streaming:** "Thanks for your message. Prices come from polling the documented REST endpoints — there is no streaming or push feed for API users and the old streaming service is deprecated. Poll quotes (up to 200 market IDs per call, 50 requests per 60 seconds) on a timer instead. Kind regards, [name] Smarkets Support"
 
-## Can I get prices pushed to me?
+*Tune every draft: negative density count, one decision sentence last for complaints, no spec/OpenAPI wording (say "API documentation"), no api@smarkets.com reroute (we ARE support), no dates/thresholds/aggregates on increases.*
 
-No. No webhooks out, no websocket, no streaming. REST polling on a timer is the only documented way. Anyone mentioning sio-live or stream hosts found via DevTools is looking at website internals, not the API — do not build on them.
+## Pitfalls specific to no-code tickets
 
----
+- Treating the visual builder as the fault ("Zapier is broken") — 90% is a field name/unit/header copied wrong. Ask for the exact field names and numbers they sent.
+- Asking them to run curl / read headers / parse Set-Cookie — they cannot. Ask for: status shown, error words, field names used, numbers sent, minutes-until-fail, timer cadence, ID count, home vs cloud.
+- Approving limit increases, promising approval/pro promos/Select removal, quoting undocumented caps ("10 req/s general"), reciting all limits, naming sio-live/stream SDK, translating their words into codes they never used.
+- Forgetting Step 0 (API vs website/SBK) on order-type/cash-out/Bet Builder questions — same words, different product answer.
+- Missing exposure (available vs total), missing KIP-only survival (never "orders stay in the book"), missing CSV hour rule, missing cancel-all 1/60s danger on triggers.
+- Timer-stack blindness: five 5s scenarios + balance checks + two tools = shared-pool 429 that looks like "low usage". Always ask tool count + cadence + batch size.
 
-# PART 6 — PLACING YOUR FIRST BET
-
-## The call
-
-- POST https://api.smarkets.com/v3/orders/ + Authorization header + JSON body with 5 required fields: `market_id`, `contract_id`, `price`, `quantity`, `side`.
-
-Minimal example (back £2 at 2.0):
-
-```json
-{
-  "market_id": "123456",
-  "contract_id": "789",
-  "price": 5000,
-  "quantity": 20000,
-  "side": "buy",
-  "type": "good_til_halted",
-  "label": "make-arsenal-1"
-}
-```
-
-`type` and `label` are optional but you should use them (see below).
-
-## Side: buy vs sell
-
-- `buy` = back = WILL happen ("Arsenal will win").
-- `sell` = lay = WON'T happen ("Arsenal won't win"). Lay ties up liability — needs enough available balance.
-
-Migrating from Betfair? buy=BACK, sell=LAY. There is no `time_in_force` field — Smarkets uses `type` + `minimum_accepted_quantity` instead.
-
-## Price: the odds conversion
-
-API price is NOT decimal odds. Formula: decimal odds = 10000 / price.
-
-| You want | Send | Maths |
-|---|---|---|
-| 1.11 (heavy favourite) | 9000 | 10000/9000 |
-| 1.39 | 7194 | 10000/7194 |
-| 2.0 (evens) | 5000 | 10000/5000 |
-| 4.0 (3/1) | 2500 | 10000/2500 |
-| 10.0 (9/1) | 1000 | 10000/1000 |
-
-Valid 1 to 9999 and must sit on a valid exchange tick (not every number valid). Rejected with ORDER_INVALID_INVALID_PRICE? Copy a price from quotes instead of typing your own.
-
-## Quantity: the stake conversion
-
-API quantity is in 1/10,000ths of your currency. Pounds = quantity / 10000.
-
-| You want | Send |
-|---|---|
-| £0.05 (minimum) | 500 |
-| £0.08 | 800 |
-| £1 | 10000 |
-| £2 | 20000 |
-| £10 | 100000 |
-
-Max is 4294967295 (32-bit limit — you will never hit it). Back-stake maths from the spec: quantity x price / 100000000. Example: 100000 x 5000 / 100000000 = £5 back stake.
-
-Top ticket of all time: "I sent 800 expecting £2." 800 IS £0.08. For £2 send 20000.
-
-## Type: what happens when things change
-
-Leave blank -> `good_til_halted`.
-
-| Type | Market goes live | Market halts | Use when |
-|---|---|---|---|
-| `good_til_halted` (default) | Kept | Cancelled | Normal pre-match into live |
-| `keep_in_play` (KIP) | Kept | Kept, resumes after | You want to survive pauses (goals, VAR) |
-| `good_til_cancelled` | Cancelled | Cancelled | Pre-match only, never carry live |
-| `immediate_or_cancel` (IOC) | Fills now or cancels rest | — | Take what is available now, do not queue |
-
-Only KIP survives a halt. Do not assume "my orders stay in the book" — only KIP does.
-
-Fill-or-kill = IOC + `minimum_accepted_quantity` = `quantity` (all or nothing). Fill-at-least-X = IOC + `minimum_accepted_quantity` lower than quantity. Always set it explicitly on IOC — omitting it can accept a zero fill. No `time_in_force` field exists.
-
-## Label: tag everything
-
-Free text like "zapier-arsenal-1" or "make-strategy-B-2026-10-17". Shows in order history. Costs nothing, saves hours when filtering in Sheets or debugging two strategies sharing one account.
-
-## What the reply tells you
-
-POST reply includes: `order_id` (save it — how you track/cancel), `total_executed_quantity` (how much matched instantly — key for IOC), `executed_avg_price` (null if nothing matched), `available_balance`, `exposure`, plus echo of price/quantity/side/contract/market.
-
-It does NOT include `quantity_filled` or `state` — those only come from GET /v3/orders/ (states: created, partial, filled, settled).
-
-## Live delays are normal
-
-- Horse racing + darts: 4 seconds. Everything else: 8 seconds. During delay your order is pending and invisible — not an error.
-- Instant Match: 8-14 second confirmation instead of a delay.
-- You cannot place new orders while a market is halted. In-play markets with a delay are NOT halted for every goal/penalty/red — the delay absorbs them.
-
----
-
-# PART 7 — CHECKING, CANCELLING, BALANCE
-
-## Check my bets
-
-GET https://api.smarkets.com/v3/orders/ -> open + recently settled. Each has `quantity_filled` and `state` (created / partial / filled / settled). Filter by your `label` in Sheets.
-
-Placed but not showing? It filled instantly (check last_executed_prices), or was cancelled because the market closed/halted, or you are looking at the wrong account/environment.
-
-## Cancel
-
-- One: DELETE https://api.smarkets.com/v3/orders/{order_id}/ (10 per second).
-- All: DELETE https://api.smarkets.com/v3/orders/ — max 1 per 60 seconds, kills EVERYTHING open. Never wire this to auto-retry or a flapping trigger.
-- Cannot cancel? Order already filled/cancelled/settled, wrong ID, or not yours. Check GET first. After settlement nothing can be cancelled. Re-sending cancel for an already-cancelled order succeeds silently.
-
-## Balance, exposure, available
-
-GET https://api.smarkets.com/v3/accounts/ fields: `balance` (total), `exposure` (locked in open orders), `available_balance` (balance minus exposure — what you can actually stake), `bonus_balance`, `commission_type`, `currency`, `account_id`, `signup_date`.
-
-"I have money but cannot bet" = exposure. Cancel an open order to free it.
-
-## Statement
-
-- Paginated: GET https://api.smarkets.com/v3/accounts/activity/ (params timestamp_max, offset, limit). Good for "last N transactions" in Sheets.
-- CSV hour: GET https://api.smarkets.com/v3/account_activity_csv/{start}/{end}/ — strict: both ISO 8601 on the hour (2026-05-19T14:00:00Z), exactly 1 hour apart. Else 400 INVALID_DATETIMES. No data that hour -> 404 NO_CSV_AVAILABLE. Reply is gzipped CSV: Make/n8n add a Gunzip/Decompress step; Zapier needs a Code step or Sheets import; Bubble needs a file handling plugin.
-
----
-
-# PART 8 — SPEED LIMITS (READ BEFORE YOU POLL)
-
-## The two layers
-
-- Global: 1200 calls per 60 seconds per account, across ALL endpoints and ALL tools/servers sharing that account. Unauthenticated public calls (no token) do not count against it — but you need auth for live prices anyway.
-- Per-endpoint stricter caps on 7 endpoints. These fire first.
-
-| Call | Cap | What it means for no-code |
-|---|---|---|
-| List events GET /v3/events/ | 600 / 60s | Fine normally |
-| Prices GET quotes | 50 / 60s approved (about 20 if not yet approved) | Your main constraint |
-| Login POST /v3/sessions/ | 5 / 300s | Never loop login |
-| Logout DELETE /v3/sessions/ | 30 / 60s | Fine |
-| Place POST /v3/orders/ | 10 / second | Fine unless bursting |
-| Cancel one DELETE /v3/orders/id/ | 10 / second | Fine |
-| Cancel all DELETE /v3/orders/ | 1 / 60s | Keep off retry |
-
-Everything else shares the 1200 pool with no individual cap.
-
-Responses can carry `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` (seconds to reset; occasionally negative/missing — wait at least 5s). Log them in n8n/Make for tuning.
-
-## Hitting 429 (too fast)
-
-- Most GETs return structured 429 with `count` (used), `limit` (cap), `expiry` (when window resets, RFC 2822 date). Stop until `expiry`, then halve your rate.
-- Quotes, orders and sessions return a shorter 429 WITHOUT count/limit/expiry. Wait ~60s and slow down.
-- Seeing a lower limit header than docs (e.g. 20 not 50 on quotes)? Header is ground truth for your account tier — usually means not yet approved as API user. Approval lifts it. Approved but still wrong? Email api@smarkets.com.
-- Repeat violations can suspend then permanently revoke API access. Slow down first time, every time.
-
-## Batching: the single biggest win
-
-Every list endpoint takes many IDs in ONE call. Bigger batch = fewer calls.
-
-| Call | Max IDs per call |
-|---|---|
-| quotes | 200 |
-| volumes | 300 |
-| event states | 300 |
-| competitors | 300 |
-| contracts | 100 |
-| last_executed_prices | 100 |
-| markets by event | 50 |
-| markets_count | 50 |
-
-Maths: 1,500 markets at 200 per call = 8 calls per sweep. At 50 calls/min that is a full refresh about every 10 seconds. Same 1,500 at 1 per call = blocked instantly.
-
-Over the cap gives a confusing 404 `{"error_type":"NOT_FOUND","data":{"description":"Nothing matches the given URI"}}`. Count your IDs — the route is not dead, your batch is too big. Verified live: quotes 200 OK / 201 fails; volumes 300 OK / 301 fails.
-
-Before asking for a limit increase, double your batch first — it usually removes the need. Increases are discretionary and currently rarely granted; ask via api@smarkets.com with your use case, batch size and volumes, and expect to be asked to batch first.
-
-## Polling recipes
-
-Safe: 1 scenario polling quotes every 10s batched at 200 = 6 calls/min. Huge headroom.
-
-Blocked: 5 scenarios each polling every 5s unbatched = 60+/min on quotes alone, plus balance checks. Merge into one timer scenario that fans results out (Router in Make, Loop in n8n, Paths in Zapier).
-
-Sharing one account across Zapier + Make + VPS stacks against the same 1200. Give each job its own cadence and a shared sheet for last-poll time if needed.
-
-Cache what barely changes (event lists, contracts) for minutes; poll only quotes/balance fast. Prefer batch endpoints over one-ID loops. Never poll login, never poll cancel-all.
-
----
-
-# PART 9 — ERRORS (FIND YOURS, FIX IT)
-
-Status codes: 2xx = worked (200 OK, 201 created). 4xx = your request needs fixing. 5xx = Smarkets side, wait and retry.
-
-## Quick matcher
-
-- 401 AUTH_REQUIRED — token missing/expired/MFA missing/20-min rotation. Re-login (full flow), finish MFA verify, check header exactly `Authorization: Session-Token …`. Long jobs: re-login-once-then-retry-once branch.
-- 403 FORBIDDEN (JSON `error_type: FORBIDDEN`) — account permission. Not approved / in 60-day review / revoked / outside approved markets / endpoint blocks below. Check fee paid + approval. Email api@smarkets.com with IDs.
-- 403 HTML page (starts `<!DOCTYPE`, Cloudflare) or codes SOURCE_BLOCKED / IP_NOT_TRUSTED — network edge block, common on datacentre/VPS/cloud IPs or unsupported country. Not a password problem. Prove by running same call from home. No self-serve unblock. Contact support; server in unsupported jurisdiction must move.
-- 400 REQUEST_VALIDATION_ERROR — wrong field/ID/price. Read `data` — it names the bad field. IDs must come from the level above. Login with `email` instead of `username` fails here.
-- 400 BAD_REQUEST — malformed market/price params. Same fix.
-- 400 INVALID_DATETIMES — CSV times not on hour / not 1h apart. Snap to `:00:00Z`, end = start + 1h.
-- 400 RECKONATOR_REQUEST_TOO_LARGE — activity query too broad. Narrow dates.
-- 404 NO_CSV_AVAILABLE — no statement data that hour. Try another hour.
-- 404 NO_RESULTS_FOUND — states query matched nothing. Check IDs current.
-- 404 "Nothing matches the given URI" on a batch — too many IDs. Split to caps above.
-- 414 REQUEST_TOO_LARGE — too many IDs. Same, smaller batches.
-- 429 RATE_LIMIT_EXCEEDED — too fast. Wait to `expiry` (or ~60s for quotes/orders/sessions), batch more, poll slower.
-- 451 COUNTRY_BLOCKED — account or IP country unsupported. Contact support if you moved.
-- 500 INTERNAL_ERROR / 503 / 504 ZEUS_TIMEOUT — Smarkets side (trading engine timeout etc). Wait, retry once with backoff. Still failing with timestamp + endpoint + code -> api@smarkets.com. Note the subsystem code (e.g. EVENTS_UNAVAILABLE) — it tells engineering where to look.
-
-## Bet rejected? Match the code name
-
-- ORDER_REJECTED_INSUFFICIENT_FUNDS — available tied in exposure. Cancel an order or stake less. Check GET /v3/accounts/ available, not total.
-- ORDER_INVALID_INVALID_PRICE — not on tick. Copy from quotes.
-- ORDER_INVALID_INVALID_QUANTITY — under 500. Increase.
-- ORDER_REJECTED_MARKET_HALTED / ORDER_CANCELLED_MARKET_HALTED / TRADING_SUSPENDED — paused (goal, VAR, withdrawal, halt). Wait, re-check states, retry. Next time use keep_in_play to survive halts.
-- ORDER_REJECTED_MARKET_SETTLED / CONTRACT_SETTLED / MARKET_NOT_OPEN / MARKET_NOT_FOUND / CONTRACT_NOT_FOUND — market done or wrong ID. Re-fetch events -> markets -> contracts.
-- ORDER_REJECTED_STAKE_LIMIT_EXCEEDED / LIMIT_EXCEEDED / CAPACITY_REACHED — over account/market cap. Contact support.
-- ORDER_REJECTED_CROSSED_SELF — would match your own order. Change price.
-- ORDER_REJECTED_THROTTLE_EXCEEDED — placing too fast. Slow to under 10/s.
-- RG_ACK_REQUIRED (403) — do the gambling acknowledgement on smarkets.com (popup, try a market page if hidden). Instant fix, no setup change.
-- KYC_PERMISSION_DENIED / ACCOUNT_UNVERIFIED (403) — finish verification on website.
-- NO_DEPOSITS (403) — fund first.
-- ACTION_BLOCKED / ACCOUNT_SUSPENDED (403) — contact support.
-- CREATE_ORDER_TIMEOUT / ORDER_UNAVAILABLE / AUTH_UNAVAILABLE / KYC_SERVICE_* (503) — subsystem down. Wait, retry once, escalate with code if persistent.
-
-## Cancel rejected?
-
-Order already filled/cancelled/settled, wrong UUID, or not yours. GET first. After settlement nothing cancels. Re-cancel of an already-cancelled order succeeds silently — safe to retry once.
-
----
-
-# PART 10 — BETTING RULES YOU WILL ACTUALLY HIT
-
-Full rules: Help Centre -> Betting Rules (General 1-11 + sport). Below is what breaks automations.
-
-- Settlement: ASAP after the official result from the governing body on the day. Later amendments do not change it. Can be delayed if uncertain, voided if unresolvable, resettled if settled in error or new info (disqualification, cheating) emerges.
-- Voids (all voided -> stake back): event cancelled, not concluded within 36h of scheduled start, postponed more than 36h past original start, change of opponents or venue, modified event length. Change of surface alone does NOT void. Dead heats split winnings proportionately.
-- Football default: 90 minutes + stoppage only. Extra time/penalties do NOT count unless stated (exception: "To Advance" includes them). Own goals do not count for goalscorer markets. Cards: yellow 1, straight red 2, two yellows + red 3, max 3 per player; subs/managers do not count. Abandoned -> void unless already decided (e.g. half-time result if abandoned second half); if no resumption news within 3h, undecided bets voided.
-- Tennis: first set not completed -> all void (except already-decided lines). Retirement after set one -> retiree loses Match Winner, Set Betting voided. Venue/surface change -> bets stand. Final-set Championship Tie Break counts as 1 game.
-- Horse racing: first past the post then weighed-in result counts; later appeals ignored. Non-runner -> bets on it voided; if places >= runners all voided. Ante-post stands run or not. Place terms by runners: 5-7 pays 2, 8-15 pays 3, 16+ non-handicap 3, 16+ handicap 4 (market name wins if different).
-- Reduction factors (non-runner): New odds = Old odds x ((100 - RF) / 100). Example 4.0 with 25% RF -> 3.0. Win market: RF under 2.5% -> stands; 2.5%+ -> matched adjusted, unmatched cancelled, market reopened. Place market: ANY RF adjusts winnings, unmatched cancelled. Can apply after the race if a non-runner is found late.
-- In-play: delays 4s racing/darts, 8s everything else. Markets with a delay are NOT halted for every goal/penalty/red — the delay covers it. Instant Match has 8-14s confirmation; a material event inside it can void the bet. Betting after the outcome is known is voided. Keep Bets In-Play must be set per bet (Rule 10) — unmatched non-KIP dies at halt but keeps queue if KIP.
-- Trade out (exchange) is per contract and never guaranteed — fails if suspended or odds moved. SBK cash out is a different product (full bet, house counter-bet).
-- Clearly erroneous bets: report within 60 minutes to support@smarkets.com with time, contract/market, matched price and reason, before the result stands (unless exceptional). Outliers beyond ±20% of fair price can be looked at later at Smarkets' discretion. If the other side already traded out you can remain liable for the difference.
-
-Why was my bet voided? Walk: abandoned/cancelled/36h? -> non-runner RF? -> bet-builder leg voided (same-event builder: ANY voided leg voids the WHOLE bet, stake back, even if other legs lost; cross-event: voided leg just reduces odds)? -> erroneous? -> resettled in error?
-
----
-
-# PART 11 — ACCOUNT, MONEY MOVEMENT, SAFER GAMBLING
-
-## Deposits
-
-Free, mostly instant, £10 min (£25 for PayPal), in your account currency, from your own method. Visa Debit or Instant Bank Transfer recommended. Bank Transfer takes 5-10 business days. E-wallets (Skrill/Neteller) cap lower per transaction. Name must match the account or it fails.
-
-Set deposit limits at smarkets.com Settings -> Limits (daily/weekly/monthly, net and/or gross). Lowering is instant. Raising needs a cooling period (~72h). UK defaults can apply (£4,999.99 monthly net + £1,000 daily net for newer accounts; raising can need proof of income).
-
-## Withdrawals + closed loop (why withdrawals "stick")
-
-Withdraw to the SAME method you deposited with (anti-money-laundering law, not optional). Per method: Net Deposits = Deposits - Withdrawals. You must zero each positive method before skimming profit elsewhere.
-
-Example: deposit £100 Visa + £50 Mastercard. To take £150 to Mastercard, first withdraw £100 to Visa (zeroing it), then move the rest.
-
-Timings: Instant Bank Transfer ~12h, Trustly/e-wallets 1-2 days, cards 1-6 days, Bank Transfer 5-10 days (£20 min, last resort when nothing else works, currency must match, needs statement + verification). E-wallets: 4th+ withdrawal in 7 days takes 24h. Some Mastercards only return net deposits — profit must leave another way. Card gone? Deposit min with the new card then ask support to remove the old (may need bank statements + card photo showing first 6/last 4 + name/expiry only).
-
-Stuck? Check: above minimum? Withdrawing to deposit method? Card used too many times in 12h? Address/country changed? Deposited via a removed method? Else add a fresh Instant Bank Transfer deposit or ask support about bank transfer.
-
-## Timeouts, self-exclusion, RG
-
-Same controls on API as website — no exemption.
-
-- RG_ACK_REQUIRED: do the acknowledgement popup on smarkets.com (try a market page). Lifts instantly.
-- Timeout: 1, 7, 31 or 42 days. Locks everything including cashier withdrawals (contact support to pull funds mid-timeout). Auto-reopens. Cannot be undone early.
-- Self-exclusion: 6 months, 1 year, 5 years or permanent. Balance back within 48h. Never reopens early; when a fixed term ends you must contact support to reopen (not automatic). Permanent never reopens.
-- Deposit/loss/stake limits in Settings -> Limits.
-- UK multi-operator exclusion: GAMSTOP. Blocking software: GamBlock, BetBlocker, NetNanny. Help: Gamblers Anonymous, GamCare, GambleAware, NHS, National Problem Gambling Clinic, Gambling Therapy; US 1-800-GAMBLER.
-- Source of funds/wealth or affordability checks can land anytime: job/income, payslips/P60/SA302, card/bank/savings statements, solicitor letter for property. Smarkets never contacts your employer. Provide or face restriction.
-
----
-
-# PART 12 — RULES THAT PROTECT YOUR ACCOUNT
-
-Allowed: viewing prices and placing bets on approved markets, automating your own trading. Tell Smarkets if the setup changes materially.
-
-Banned (API T&Cs Sections 2/5/6/7): odds scraping, concealing API calls as browser traffic, browser impersonation, reverse engineering, requesting lots of data without matching trading, sharing/selling/distributing prices/market/event data without written approval, benchmarking markets/prices/liquidity/systems, extra accounts to dodge fees/commission (fraud), latency arbitrage, court-siding, anything Smarkets deems harmful to the exchange.
-
-Monitored: request patterns, data-to-trade ratios, trading behaviour, rate-limit circumvention. Do not circumvent limits to the detriment of others.
-
-Penalties: warning -> temporary suspension -> permanent API/account removal, plus bets voided/transactions cancelled and possible legal action. Serious (fraud, data theft) can skip to removal. Access can be withdrawn anytime without notice; Smarkets is not liable for losses from restricted access.
-
-Security is on you: email, password, tokens. Never in shared templates, public sheets, client-side pages or public repos. If leaked: change password on smarkets.com immediately, DELETE sessions, email support@smarkets.com. No account sharing — one person per account.
-
----
-
-# PART 13 — GETTING HELP + WORKING SETUPS
-
-## Who do I email?
-
-- API bugs, error codes, limits, batching, auth: api@smarkets.com
-- Account, payments, verification, application, RG, closed loop: support@smarkets.com
-- SBK app (not API): support@getsbk.com, live chat 09:00-23:00 GMT logged in, phone +44 207 617 7413 (09:00-19:00).
-- Outages: status.smarkets.com and @SmarketsTech.
-
-## What to include (copy this template)
-
-1. Full error: status + `error_type` + `data` (+ `expiry` if 429) + whether a 403 body was JSON or HTML (open the raw response — `<!DOCTYPE` = HTML).
-2. Exact call: method + URL + field names (redact token/password).
-3. Expected vs actual.
-4. When it started, poll rate (calls/min), batch size (IDs/call), one tool or many sharing the account, VPS/cloud or home IP, approved API user or pending.
-
-Example: "GET /v3/markets/<id>/quotes/ -> 429 since 10:20 UTC, polling 1 ID every 5s from Make (12/min), approved user, home IP. Expected prices. No expiry field in body."
-
-## Three setups that work
-
-**A. Sheets tracker (every 15 min) — start here.**
-Timer -> Login (fresh each run) -> GET /v3/accounts/ -> GET /v3/orders/ -> write rows (time, label, contract, price/10000, quantity/10000, state) -> Logout. Fresh login dodges the 20-min rotation. 4 calls per 15 min — nowhere near limits.
-
-**B. Price alert (every 1-10 min).**
-Timer -> Login -> ONE batched GET quotes with up to 200 IDs -> Filter (e.g. decimal 10000/price < 2.5) -> notify (email/Slack/Sheets) -> Logout. Never one scenario per market. 1500 markets = 8 calls. About every 10s at full tilt fits 50/min; every minute is 8/min — comfortable.
-
-**C. Auto-bet (manual trigger first, automate later).**
-Trigger -> GET states (open?) -> GET accounts (available enough?) -> POST orders with label + keep_in_play if wanted -> log order_id + total_executed_quantity. Add: on 401 -> Login once -> retry once -> alert and stop. Add: check INSUFFICIENT_FUNDS before placing (available < stake + exposure buffer -> skip). Never auto-retry cancel-all; never loop login; cap to 10 placements/second.
-
-**Cloud 403s (Zapier/Make/n8n Cloud)?**
-Cloud runs on datacentre IPs, challenged more. Prove it: run the same call from home. Home works + cloud gives HTML 403 = host IP, not your setup. Do not hammer through the block. Email support with the template + both IPs' behaviour.
-
----
-
-# PART 14 — GLOSSARY (PLAIN ENGLISH)
-
-- Event / Market / Contract / Order — match -> bet type -> outcome -> your bet.
-- Back (buy) / Lay (sell) — WILL happen / WON'T happen.
-- Price — odds as 10000/decimal. 5000 = 2.0.
-- Quantity — stake as £x10000. 20000 = £2.
-- Exposure / Available / Balance — locked / spendable / total. Available = balance - exposure.
-- Token / Session — temporary pass from login, ~20-30 min life.
-- MFA / TOTP / Verify — authenticator code + extra login step.
-- KIP / GTH / GTC / IOC / FOK — survive halt / die on halt / die going live / take-now-or-cancel / all-or-nothing.
-- Quotes / Last executed / Volumes — live book / last trade / how much traded.
-- 401 / 403 / 404 / 429 / 451 / 5xx — logged out / not allowed / not found / too fast / country blocked / our side.
-- Batch / Poll — many IDs one call / re-check on a timer.
-- RF (reduction factor) — odds cut when a horse withdraws.
-- Void — stake back, bet never happened.
-- Dead heat — tie, winnings split.
-- Halt / Suspend — trading paused (goal, VAR, withdrawal).
-- In-play delay / Confirmation — 4s/8s wait / 8-14s Instant Match wait.
-- Trade out — exit one contract (exchange). Cash out — exit whole bet (SBK).
-- Closed loop / Net deposits — profit must exit via deposit method / deposits minus withdrawals per method.
-- Rate limit / Expiry / Headers — call cap / when it resets / Limit-Remaining-Reset metadata.
-- RG_ACK / KYC — gambling popup on website / ID checks.
-- Fullcover — multiple-bet type, list-only via API.
-- Commission type 0.02/0.01/0.03 — Standard 2% / Pro 1% / Select 3%.
-
----
-
-*Sources: live OpenAPI spec, docs.smarkets.com, API T&Cs, Commission FAQ, Help Centre betting rules + payments + safer gambling, plus repeat ticket patterns (auth traps, 800-vs-20000, 20-min rotation verified Oct 2026, batch 404s, quotes two-tier 50 vs 20, empty P2P books). Last updated Oct 2026. Not covered? Email api@smarkets.com with the four items in Getting help.*
+*Owner: API Support Team | Sources: live OpenAPI spec, docs.smarkets.com, API T&Cs, Commission FAQ, Help Centre rules/payments/RG, ticket precedents (30 Sep increase wording, 12 Oct batching briefs, 1 Oct rotation + batch-boundary probes) | If docs conflict with this page, docs win — flag the page for update.*
